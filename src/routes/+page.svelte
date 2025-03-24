@@ -28,53 +28,57 @@
 			<div class="logo">
 				<h1>WeBe Solutions</h1>
 			</div>
-			<h2 class="headline">Elite Software Development For Businesses That Demand Results</h2>
-			<p class="subheadline">Strategic software solutions engineered to generate substantial ROI</p>
-			<button class="cta-button" on:click={toggleModal}>Apply For Consultation</button>
+			<h2 class="headline">Automation & Software That Drives Profit, Not Complexity</h2>
+			<p class="subheadline">
+				We build custom automation that eliminates bottlenecks, scales operations, and delivers
+				measurable ROI.
+			</p>
+			<button class="cta-button" on:click={toggleModal}>Apply For a Strategy Call</button>
 		</div>
 	</header>
 
 	<section class="value-proposition">
 		<div class="container">
-			<h2>The High-Performance Alternative To Traditional Development Firms</h2>
+			<h2>The High-Impact Alternative to Bloated Development Firms</h2>
 			<p>
-				WeBe Solutions isn't for everyone. I work exclusively with businesses that recognize
-				software as a strategic investment rather than a necessary expense. My clients understand
-				that premium development directly translates to premium results.
+				WeBe Solutions isn’t for everyone. I work exclusively with businesses that see automation as
+				a growth engine, not just a cost. My clients invest in <strong
+					>custom-built automation</strong
+				> to cut inefficiencies, scale faster, and drive higher profits.
 			</p>
 		</div>
 	</section>
-
 	<section class="advantages">
 		<div class="container">
 			<h2>The WeBe Solutions Performance Guarantee</h2>
 			<div class="advantages-grid">
 				<div class="advantage-card">
-					<h3>Strategic Expertise, Not Just Technical Skill</h3>
+					<h3>Strategic Expertise, Powered by Automation</h3>
 					<p>
-						Your project is architected by a senior developer who understands business objectives
-						first, technology second. Every line of code serves your bottom line.
+						Your project is architected by a senior developer who prioritizes business objectives
+						first, automation second. Every solution is designed to maximize efficiency and directly
+						impact your bottom line.
 					</p>
 				</div>
 				<div class="advantage-card">
 					<h3>Direct Access To The Decision Maker</h3>
 					<p>
-						No account managers. No junior developers. You work directly with me—eliminating
-						communication gaps that plague traditional agencies.
+						No middlemen. You work directly with me, ensuring fast decisions, clear communication,
+						and a streamlined development process that avoids the usual agency delays.
 					</p>
 				</div>
 				<div class="advantage-card">
-					<h3>Premium Execution Speed</h3>
+					<h3>Rapid, Results-Driven Execution</h3>
 					<p>
-						My streamlined methodology delivers market-ready solutions in half the time of
-						conventional development teams—giving you first-mover advantage.
+						My automated workflows and agile methodology deliver market-ready solutions in half the
+						time of traditional dev teams—helping you scale faster.
 					</p>
 				</div>
 				<div class="advantage-card">
-					<h3>Results-Based Delivery</h3>
+					<h3>Measurable Business Outcomes, Not Just Code</h3>
 					<p>
-						My projects aren't complete when the code compiles—they're complete when they deliver
-						measurable business results that exceed your investment.
+						Your project isn’t complete when the code compiles—it’s complete when it automates your
+						operations and drives tangible ROI.
 					</p>
 				</div>
 			</div>
@@ -83,23 +87,29 @@
 
 	<section class="services">
 		<div class="container">
-			<h2>Strategic Solutions For Business Growth</h2>
+			<h2>Strategic Automation Solutions for Scalable Business Growth</h2>
 			<ul class="services-list">
 				<li>
-					<h3>High-Performance Application Development</h3>
-					<p>Custom software engineered to create competitive advantages</p>
+					<h3>Custom Automation Development</h3>
+					<p>
+						Tailored software solutions that automate key workflows and create a competitive edge
+					</p>
 				</li>
 				<li>
-					<h3>Revenue-Generating API Solutions</h3>
-					<p>Integration systems that unlock new profit centers</p>
+					<h3>Revenue-Boosting API Integrations</h3>
+					<p>Seamless systems that unlock new profit streams through automated connections</p>
 				</li>
 				<li>
-					<h3>Strategic Technology Consultation</h3>
-					<p>Decision frameworks that eliminate costly technology mistakes</p>
+					<h3>Technology Strategy & Consultation</h3>
+					<p>
+						Decision frameworks that help businesses invest in automation and avoid costly mistakes
+					</p>
 				</li>
 				<li>
-					<h3>Performance Optimization</h3>
-					<p>Transform underperforming systems into business accelerators</p>
+					<h3>System Optimization & Automation</h3>
+					<p>
+						Transform your existing systems into high-performing, automated business accelerators
+					</p>
 				</li>
 			</ul>
 		</div>
@@ -107,24 +117,24 @@
 
 	<section class="results">
 		<div class="container">
-			<h2>The Investment That Pays For Itself</h2>
+			<h2>The Investment That Pays for Itself</h2>
 			<div class="results-content">
 				<p>
-					My clients don't measure success by code quality or feature counts—they measure it by
-					business impact:
+					My clients don’t measure success by lines of code or feature counts—they measure it by the
+					impact automation has on their bottom line:
 				</p>
 				<ul class="results-list">
 					<li>
-						<span class="highlight">Hundreds</span> of hours per week in labor costs saved through custom
-						systems
+						<span class="highlight">Hundreds of hours</span> per week saved by automating routine tasks
+						and reducing labor costs
 					</li>
 					<li>
-						<span class="highlight">Eliminate</span> weekly business admin bottlenecks by automating
-						critical processes
+						<span class="highlight">Eliminate</span> time-wasting admin bottlenecks by automating key
+						workflows and decision processes
 					</li>
 					<li>
-						<span class="highlight">Enhanced decision-making</span> across the organization with comprehensive
-						data and insights portals
+						<span class="highlight">Data-driven decision-making</span> powered by custom dashboards that
+						provide real-time insights across operations
 					</li>
 				</ul>
 			</div>
@@ -135,14 +145,15 @@
 		<div class="container">
 			<h2>Extremely Limited Availability</h2>
 			<p>
-				To maintain the premium quality my clients expect, I accept only <span class="highlight"
-					>3 new projects per quarter</span
-				>. This exclusivity ensures your project receives the strategic attention required to
-				produce exceptional results.
+				To ensure the premium quality my clients demand, I take on only <span class="highlight"
+					>3 new automation projects per quarter</span
+				>. This limited availability guarantees that your project receives the undivided attention
+				it needs to drive real, measurable results through automation.
 			</p>
-			<button class="cta-button" on:click={toggleModal}>Apply For Consultation</button>
+			<button class="cta-button" on:click={toggleModal}>Apply for Consultation</button>
 			<p class="small-note">
-				*Application process includes a qualification assessment to ensure mutual fit
+				*Application process includes a qualification assessment to ensure we’re the right fit to
+				work together.
 			</p>
 		</div>
 	</section>
@@ -154,21 +165,15 @@
 	</footer>
 
 	{#if showModal}
-		<div
-			class="modal-backdrop"
-			aria-label="modal-backdrop"
-			aria-roledescription="modal"
-			role="button"
-			on:click={toggleModal}
-		>
+		<div class="modal-backdrop" role="button" on:click={toggleModal}>
 			<div class="modal-content" tabindex="0" role="button" on:click|stopPropagation>
 				<div class="modal-header">
 					<button class="close-button" on:click={toggleModal}>×</button>
-					<h2>Application For Strategic Partnership</h2>
+					<h2>Application for Strategic Automation Partnership</h2>
 				</div>
 				<p class="modal-subtext">
-					Complete this brief qualification form to determine if we're the right fit to work
-					together.
+					We carefully select partners based on alignment, readiness, and potential for growth
+					through automation. Apply below to see if we’re a good fit.
 				</p>
 				<form on:submit={submitForm}>
 					<div class="form-group">
@@ -184,12 +189,14 @@
 						<input type="text" id="company" required />
 					</div>
 					<div class="form-group">
-						<label for="budget">Project Investment Range</label>
+						<label for="budget"
+							>Our minimum engagement starts at $10,000. Which best describes your budget?</label
+						>
 						<select id="budget" required>
-							<option value="">Select a range</option>
-							<option value="30-50k">$30,000 - $50,000</option>
-							<option value="50-100k">$50,000 - $100,000</option>
-							<option value="100k+">$100,000+</option>
+							<option value="">Select the option that best applies</option>
+							<option value="10-30k">$10,000 - $30,000</option>
+							<option value="30-75k">$30,000 - $75,000</option>
+							<option value="75k+">$75,000+</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -202,17 +209,29 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="project">Describe your project and desired business outcomes</label>
+						<label for="project"
+							>Describe your project and the business outcomes you're aiming for</label
+						>
 						<textarea id="project" rows="4" required></textarea>
 					</div>
-					<button type="submit" class="submit-button">Submit Application</button>
+					<button type="submit" class="submit-button">Apply for Consideration</button>
 				</form>
+				<p class="modal-subtext">
+					Due to high demand, we only accept a limited number of automation projects each quarter.
+					If selected, we will reach out within 48 hours to discuss next steps.
+				</p>
 			</div>
 		</div>
 	{/if}
 </main>
 
 <style>
+	/* Define CSS variable for teal color */
+	:root {
+		--blue-teal: #00a4cc; /* Default Blue-leaning teal */
+		--blue-teal-dark: #007b99; /* Darker teal for hover effects */
+	}
+
 	/* Global Styles */
 	:global(body) {
 		font-family:
@@ -266,7 +285,7 @@
 
 	/* Button Styles */
 	.cta-button {
-		background-color: #ff3c00;
+		background-color: var(--blue-teal); /* Blue-leaning teal */
 		color: white;
 		border: none;
 		padding: 18px 40px;
@@ -280,9 +299,9 @@
 	}
 
 	.cta-button:hover {
-		background-color: #e03500;
+		background-color: var(--blue-teal-dark); /* Darker teal for hover effect */
 		transform: translateY(-2px);
-		box-shadow: 0 5px 15px rgba(255, 60, 0, 0.3);
+		box-shadow: 0 5px 15px rgba(0, 128, 128, 0.3);
 	}
 
 	/* Section Styles */
@@ -307,7 +326,7 @@
 		transform: translateX(-50%);
 		width: 80px;
 		height: 4px;
-		background-color: #ff3c00;
+		background-color: var(--blue-teal); /* Blue-leaning teal */
 	}
 
 	section p {
@@ -387,7 +406,7 @@
 		padding: 40px 30px;
 		border-radius: 8px;
 		transition: transform 0.3s;
-		border-left: 4px solid #ff3c00;
+		border-left: 4px solid var(--blue-teal); /* Blue-leaning teal */
 	}
 
 	.services-list li:hover {
@@ -436,12 +455,12 @@
 		content: '✓';
 		position: absolute;
 		left: 0;
-		color: #ff3c00;
+		color: var(--blue-teal); /* Blue-leaning teal */
 		font-weight: bold;
 	}
 
 	.highlight {
-		color: #ff3c00;
+		color: var(--blue-teal); /* Blue-leaning teal */
 		font-weight: 700;
 	}
 
@@ -566,7 +585,7 @@
 	}
 
 	.submit-button {
-		background-color: #ff3c00;
+		background-color: var(--blue-teal); /* Blue-leaning teal */
 		color: white;
 		border: none;
 		padding: 15px 25px;
@@ -580,7 +599,7 @@
 	}
 
 	.submit-button:hover {
-		background-color: #e03500;
+		background-color: var(--blue-teal-dark); /* Darker teal for hover effect */
 	}
 
 	/* Responsive Adjustments */
