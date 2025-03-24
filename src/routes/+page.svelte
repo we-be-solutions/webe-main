@@ -150,7 +150,7 @@
 				>. This limited availability guarantees that your project receives the undivided attention
 				it needs to drive real, measurable results through automation.
 			</p>
-			<button class="cta-button" on:click={toggleModal}>Apply for Consultation</button>
+			<button class="cta-button" on:click={toggleModal}>Apply for A Strategy Call</button>
 			<p class="small-note">
 				*Application process includes a qualification assessment to ensure we’re the right fit to
 				work together.
