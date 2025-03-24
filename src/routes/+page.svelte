@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// Import necessary components or functions if needed
 	import { onMount } from 'svelte';
 
@@ -10,7 +10,7 @@
 		showModal = !showModal;
 	}
 
-	function submitForm(event) {
+	function submitForm(event: Event) {
 		event.preventDefault();
 		// Handle form submission logic here
 		toggleModal();
@@ -154,8 +154,14 @@
 	</footer>
 
 	{#if showModal}
-		<div class="modal-backdrop" on:click={toggleModal}>
-			<div class="modal-content" on:click|stopPropagation>
+		<div
+			class="modal-backdrop"
+			aria-label="modal-backdrop"
+			aria-roledescription="modal"
+			role="button"
+			on:click={toggleModal}
+		>
+			<div class="modal-content" tabindex="0" role="button" on:click|stopPropagation>
 				<div class="modal-header">
 					<button class="close-button" on:click={toggleModal}>×</button>
 					<h2>Application For Strategic Partnership</h2>
