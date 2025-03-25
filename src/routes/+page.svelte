@@ -1,6 +1,8 @@
 <script lang="ts">
 	// Import necessary components or functions if needed
 	import { onMount } from 'svelte';
+	import Logo from '../components/svg/logo.svelte';
+	import LogoNoWords from '../components/svg/logoNoWords.svelte';
 
 	// State variables
 	let showModal = false;
@@ -26,6 +28,9 @@
 	<header class="hero">
 		<div class="container">
 			<div class="logo">
+				<div class="logo-sizer">
+					<LogoNoWords />
+				</div>
 				<h1>WeBe Solutions</h1>
 			</div>
 			<h2 class="headline">Automation & Software That Drives Profit, Not Complexity</h2>
@@ -262,6 +267,14 @@
 		text-align: center;
 	}
 
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo-sizer {
+		width: 100px;
+	}
 	.logo h1 {
 		font-size: 2.5rem;
 		margin-bottom: 20px;
