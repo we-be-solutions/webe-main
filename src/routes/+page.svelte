@@ -138,8 +138,8 @@
 						workflows and decision processes
 					</li>
 					<li>
-						<span class="highlight">Data-driven decision-making</span> powered by custom dashboards that
-						provide real-time insights across operations
+						<span class="highlight">Effective collaboration</span> fueled by open, transparent communication
+						that empowers businesses to achieve their goals.
 					</li>
 				</ul>
 			</div>
