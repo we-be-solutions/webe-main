@@ -1,27 +1,34 @@
 <script lang="ts">
-	// Import necessary components or functions if needed
-	import { onMount } from 'svelte';
-	import Logo from '../components/svg/logo.svelte';
 	import LogoNoWords from '../components/svg/logoNoWords.svelte';
+	import { applyAction, enhance } from '$app/forms';
+	import type { SubmitFunction } from '@sveltejs/kit';
+	type FormFailure = {
+		error?: string;
+		issues?: Array<{ message: string; path: string[] }>;
+		values?: Record<string, string>;
+	};
 
+	let form: FormFailure & { success?: boolean; message?: string } = $props();
+	$inspect(form);
+	let issues = $state(form.issues);
+
+	const options: SubmitFunction = ({}) => {
+		return async ({ result }) => {
+			if (result.type === 'failure') {
+				issues = result.data?.issues;
+				await applyAction(result);
+			} else {
+				await applyAction(result);
+			}
+		};
+	};
 	// State variables
-	let showModal = false;
+	let showModal = $state(false);
 
 	// Functions
 	function toggleModal() {
 		showModal = !showModal;
 	}
-
-	function submitForm(event: Event) {
-		event.preventDefault();
-		// Handle form submission logic here
-		toggleModal();
-		// Show success message or redirect
-	}
-
-	onMount(() => {
-		// Any initialization code here
-	});
 </script>
 
 <main class="landing-page">
@@ -33,23 +40,23 @@
 				</div>
 				<h1>WeBe Solutions</h1>
 			</div>
-			<h2 class="headline">Automation & Software That Drives Profit, Not Complexity</h2>
+			<h2 class="headline">Level the Playing Field of Tech</h2>
 			<p class="subheadline">
-				We build custom automation that eliminates bottlenecks, scales operations, and delivers
-				measurable ROI.
+				We help non-tech SMEs unlock smart, simple technology solutions—so you can compete with
+				confidence, not complexity.
 			</p>
-			<button class="cta-button" on:click={toggleModal}>Apply For a Strategy Call</button>
+			<button class="cta-button" onclick={toggleModal}>Apply For a Strategy Call</button>
 		</div>
 	</header>
 
 	<section class="value-proposition">
 		<div class="container">
-			<h2>The High-Impact Alternative to Bloated Development Firms</h2>
+			<h2>The High-Impact Alternative to Big Tech Firms</h2>
 			<p>
-				WeBe Solutions isn’t for everyone. I work exclusively with businesses that see automation as
-				a growth engine, not just a cost. My clients invest in <strong
-					>custom-built automation</strong
-				> to cut inefficiencies, scale faster, and drive higher profits.
+				WeBe Solutions isn’t for everyone. I work exclusively with businesses that want to use
+				technology as a growth engine—not just another cost. My clients invest in <strong
+					>strategic tech advice</strong
+				> to cut inefficiencies, make smarter decisions, and drive higher profits.
 			</p>
 		</div>
 	</section>
@@ -58,32 +65,32 @@
 			<h2>The WeBe Solutions Performance Guarantee</h2>
 			<div class="advantages-grid">
 				<div class="advantage-card">
-					<h3>Strategic Expertise, Powered by Automation</h3>
+					<h3>Strategic Expertise, Powered by Insight</h3>
 					<p>
-						Your project is architected by a senior developer who prioritizes business objectives
-						first, automation second. Every solution is designed to maximize efficiency and directly
-						impact your bottom line.
+						Your tech journey is guided by a consultant who prioritizes your business objectives
+						first, technology second. Every recommendation is designed to maximize impact and
+						directly support your goals.
 					</p>
 				</div>
 				<div class="advantage-card">
 					<h3>Direct Access To The Decision Maker</h3>
 					<p>
-						No middlemen. You work directly with me, ensuring fast decisions, clear communication,
-						and a streamlined development process that avoids the usual agency delays.
+						No middlemen. You work directly with me, ensuring clear communication, fast decisions,
+						and a streamlined process that avoids agency delays.
 					</p>
 				</div>
 				<div class="advantage-card">
-					<h3>Rapid, Results-Driven Execution</h3>
+					<h3>Rapid, Results-Driven Guidance</h3>
 					<p>
-						My automated workflows and agile methodology deliver market-ready solutions in half the
-						time of traditional dev teams—helping you scale faster.
+						My agile approach delivers actionable insights and practical roadmaps in half the time
+						of traditional consultancies—helping you move forward quickly.
 					</p>
 				</div>
 				<div class="advantage-card">
-					<h3>Measurable Business Outcomes, Not Just Code</h3>
+					<h3>Measurable Business Outcomes, Not Just Tech</h3>
 					<p>
-						Your project isn’t complete when the code compiles—it’s complete when it automates your
-						operations and drives tangible ROI.
+						Our work isn’t done when the report is delivered—it’s done when you see real results and
+						feel confident about your tech decisions.
 					</p>
 				</div>
 			</div>
@@ -92,28 +99,33 @@
 
 	<section class="services">
 		<div class="container">
-			<h2>Strategic Automation Solutions for Scalable Business Growth</h2>
+			<h2>Strategic Tech Solutions for Confident Business Growth</h2>
 			<ul class="services-list">
 				<li>
-					<h3>Custom Automation Development</h3>
+					<h3>Tech Strategy Sessions</h3>
 					<p>
-						Tailored software solutions that automate key workflows and create a competitive edge
+						Clarify your business goals and discover how technology can help you achieve them—no
+						jargon, just clear advice.
 					</p>
 				</li>
 				<li>
-					<h3>Revenue-Boosting API Integrations</h3>
-					<p>Seamless systems that unlock new profit streams through automated connections</p>
-				</li>
-				<li>
-					<h3>Technology Strategy & Consultation</h3>
+					<h3>Digital Health Checks</h3>
 					<p>
-						Decision frameworks that help businesses invest in automation and avoid costly mistakes
+						Independent reviews of your current systems and processes, with practical, jargon-free
+						recommendations.
 					</p>
 				</li>
 				<li>
-					<h3>System Optimization & Automation</h3>
+					<h3>On-Call Tech Advisor</h3>
 					<p>
-						Transform your existing systems into high-performing, automated business accelerators
+						Ongoing access to expert advice—get answers, ideas, and confidence whenever you need
+						them.
+					</p>
+				</li>
+				<li>
+					<h3>Vendor & Tool Selection</h3>
+					<p>
+						Guidance on choosing the right solutions—no bias, just what’s best for your business.
 					</p>
 				</li>
 			</ul>
@@ -125,21 +137,21 @@
 			<h2>The Investment That Pays for Itself</h2>
 			<div class="results-content">
 				<p>
-					My clients don’t measure success by lines of code or feature counts—they measure it by the
-					impact automation has on their bottom line:
+					My clients don’t measure success by tech features or complexity—they measure it by the
+					impact smart tech decisions have on their business:
 				</p>
 				<ul class="results-list">
 					<li>
-						<span class="highlight">Hundreds of hours</span> per week saved by automating routine tasks
-						and reducing labor costs
+						<span class="highlight">Hours saved</span> by streamlining workflows and reducing manual
+						tasks
 					</li>
 					<li>
-						<span class="highlight">Eliminate</span> time-wasting admin bottlenecks by automating key
-						workflows and decision processes
+						<span class="highlight">Eliminate costly mistakes</span> by making informed, future-proof
+						tech choices
 					</li>
 					<li>
 						<span class="highlight">Effective collaboration</span> fueled by open, transparent communication
-						that empowers businesses to achieve their goals.
+						and expert guidance
 					</li>
 				</ul>
 			</div>
@@ -148,17 +160,18 @@
 
 	<section class="exclusivity">
 		<div class="container">
-			<h2>Extremely Limited Availability</h2>
+			<h2>Focused Attention for Every Client</h2>
 			<p>
-				To ensure the premium quality my clients demand, I take on only <span class="highlight"
-					>3 new automation projects per quarter</span
-				>. This limited availability guarantees that your project receives the undivided attention
-				it needs to drive real, measurable results through automation.
+				To ensure each business receives the attention and care it deserves, I work closely with
+				just a small number of consulting clients at a time.
 			</p>
-			<button class="cta-button" on:click={toggleModal}>Apply for A Strategy Call</button>
+			<p>
+				This means your business gets the focus and support needed to make real progress in using
+				technology to drive growth and efficiency.
+			</p>
+			<button class="cta-button" onclick={toggleModal}>Apply for a Strategy Call</button>
 			<p class="small-note">
-				*Application process includes a qualification assessment to ensure we’re the right fit to
-				work together.
+				*We start with a conversation to make sure we’re the right fit for your needs.
 			</p>
 		</div>
 	</section>
@@ -170,61 +183,108 @@
 	</footer>
 
 	{#if showModal}
-		<div class="modal-backdrop" role="button" on:click={toggleModal}>
-			<div class="modal-content" tabindex="0" role="button" on:click|stopPropagation>
+		<div
+			class="modal-backdrop"
+			role="button"
+			tabindex="0"
+			onclick={() => toggleModal()}
+			onkeydown={(event) => {
+				if (event.key === 'Escape') {
+					toggleModal();
+				}
+			}}
+		>
+			<div
+				class="modal-content"
+				role="button"
+				tabindex="0"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(event) => {
+					if (event.key === 'Escape') {
+						toggleModal();
+					}
+				}}
+			>
 				<div class="modal-header">
-					<button class="close-button" on:click={toggleModal}>×</button>
-					<h2>Application for Strategic Automation Partnership</h2>
+					<button class="close-button" onclick={toggleModal}>×</button>
+					<h2>Apply for Strategic Tech Advisory Partnership</h2>
 				</div>
 				<p class="modal-subtext">
-					We carefully select partners based on alignment, readiness, and potential for growth
-					through automation. Apply below to see if we’re a good fit.
+					We’re here to help small and medium businesses use technology to grow—without the jargon
+					or overwhelm. If you’re ready to make smarter tech decisions, apply below to see if we’re
+					the right fit for you.
 				</p>
-				<form on:submit={submitForm}>
+				<form method="POST" action="?/apply" use:enhance={options}>
+					{#if form?.error}
+						<p class="error">{form.error}</p>
+					{/if}
+					{#if issues}
+						{#each issues as issue}
+							<p class="error">{issue.path[0]}: {issue.message}</p>
+						{/each}
+					{/if}
 					<div class="form-group">
 						<label for="name">Full Name</label>
-						<input type="text" id="name" required />
+						<input type="text" name="name" id="name" value={form?.values?.name ?? ''} required />
 					</div>
 					<div class="form-group">
 						<label for="email">Email</label>
-						<input type="email" id="email" required />
+						<input
+							type="email"
+							name="email"
+							id="email"
+							value={form?.values?.email ?? ''}
+							required
+						/>
 					</div>
 					<div class="form-group">
 						<label for="company">Company</label>
-						<input type="text" id="company" required />
+						<input
+							type="text"
+							name="company"
+							id="company"
+							value={form?.values?.company ?? ''}
+							required
+						/>
 					</div>
 					<div class="form-group">
-						<label for="budget"
-							>Our minimum engagement starts at $10,000. Which best describes your budget?</label
-						>
-						<select id="budget" required>
-							<option value="">Select the option that best applies</option>
-							<option value="10-30k">$10,000 - $30,000</option>
-							<option value="30-75k">$30,000 - $75,000</option>
-							<option value="75k+">$75,000+</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="timeline">Desired Completion Timeline</label>
-						<select id="timeline" required>
-							<option value="">Select a timeline</option>
-							<option value="1-3">1-3 months</option>
-							<option value="3-6">3-6 months</option>
-							<option value="6+">6+ months</option>
+						<label for="timeline">When would you like to start?</label>
+						<select id="timeline" name="timeline" required>
+							<option value="now" selected={form?.values?.timeline === 'now'}
+								>Ready to start now</option
+							>
+							<option value="1-3" selected={form?.values?.timeline === '1-3'}
+								>Within 1-3 months</option
+							>
+							<option value="3-6" selected={form?.values?.timeline === '3-6'}
+								>Within 3-6 months</option
+							>
 						</select>
 					</div>
 					<div class="form-group">
 						<label for="project"
-							>Describe your project and the business outcomes you're aiming for</label
+							>What’s your biggest tech challenge right now? What results would you like to achieve?</label
 						>
-						<textarea id="project" rows="4" required></textarea>
+						<textarea id="project" name="project" required>{form?.values?.project ?? ''}</textarea>
 					</div>
-					<button type="submit" class="submit-button">Apply for Consideration</button>
+					<button type="submit" class="submit-button">Apply for a Strategy Call</button>
 				</form>
+
+				{#if form?.success}
+					<p class="success">Thank you! Your application has been received.</p>
+				{/if}
 				<p class="modal-subtext">
-					Due to high demand, we only accept a limited number of automation projects each quarter.
-					If selected, we will reach out within 48 hours to discuss next steps.
+					We work closely with a select number of clients to ensure each business gets the attention
+					it deserves. If you’re a fit, we’ll reach out within 48 hours to discuss your next steps.
 				</p>
+				<div class="offer-call">
+					<h3>Ready to make tech work for your business?</h3>
+					<p>
+						If you want clear guidance and practical solutions for your tech challenges, <strong
+							>apply now</strong
+						>. Let’s turn your biggest tech challenge into your next business breakthrough.
+					</p>
+				</div>
 			</div>
 		</div>
 	{/if}
@@ -613,6 +673,10 @@
 
 	.submit-button:hover {
 		background-color: var(--blue-teal-dark); /* Darker teal for hover effect */
+	}
+
+	.error {
+		color: red;
 	}
 
 	/* Responsive Adjustments */
