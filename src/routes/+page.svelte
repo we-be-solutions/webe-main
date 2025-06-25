@@ -44,7 +44,7 @@
 			</div>
 			<h2 class="headline">Level the Playing Field of Tech</h2>
 			<p class="subheadline">
-				We help non-tech SMEs unlock smart, simple technology solutions—so you can compete with
+				I help non-tech SMEs unlock smart, simple technology solutions—so you can compete with
 				confidence, not complexity.
 			</p>
 			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
@@ -91,7 +91,7 @@
 				<div class="advantage-card">
 					<h3>Measurable Business Outcomes, Not Just Tech</h3>
 					<p>
-						Our work doesn’t end with a report or a prototype—it continues through building,
+						My work doesn’t end with a report or a prototype—it continues through building,
 						refining, and supporting systems until you see real results and feel confident in the
 						decisions that got you there.
 					</p>
@@ -175,7 +175,7 @@
 			</p>
 			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 			<p class="small-note">
-				*We start with a conversation to make sure we’re the right fit for your needs.
+				*We will start with a conversation to make sure I'm the right fit for your needs.
 			</p>
 		</div>
 	</section>
@@ -183,6 +183,7 @@
 	<footer>
 		<div class="container">
 			<p>&copy; {new Date().getFullYear()} WeBe Solutions. All rights reserved.</p>
+			<p>ABN 33 620 124 892</p>
 		</div>
 	</footer>
 
