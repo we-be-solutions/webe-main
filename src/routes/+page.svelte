@@ -2,6 +2,7 @@
 	import LogoNoWords from '../components/svg/logoNoWords.svelte';
 	import { applyAction, enhance } from '$app/forms';
 	import type { SubmitFunction } from '@sveltejs/kit';
+	import { fade, scale } from 'svelte/transition';
 	type FormFailure = {
 		error?: string;
 		issues?: Array<{ message: string; path: string[] }>;
@@ -18,6 +19,7 @@
 				issues = result.data?.issues;
 				await applyAction(result);
 			} else {
+				toggleModal();
 				await applyAction(result);
 			}
 		};
@@ -45,7 +47,7 @@
 				We help non-tech SMEs unlock smart, simple technology solutions—so you can compete with
 				confidence, not complexity.
 			</p>
-			<button class="cta-button" onclick={toggleModal}>Apply For a Strategy Call</button>
+			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 		</div>
 	</header>
 
@@ -55,7 +57,7 @@
 			<p>
 				WeBe Solutions isn’t for everyone. I work exclusively with businesses that want to use
 				technology as a growth engine—not just another cost. My clients invest in <strong
-					>strategic tech advice</strong
+					>strategic tech</strong
 				> to cut inefficiencies, make smarter decisions, and drive higher profits.
 			</p>
 		</div>
@@ -67,8 +69,8 @@
 				<div class="advantage-card">
 					<h3>Strategic Expertise, Powered by Insight</h3>
 					<p>
-						Your tech journey is guided by a consultant who prioritizes your business objectives
-						first, technology second. Every recommendation is designed to maximize impact and
+						Your tech journey is guided by a consultant who prioritises your business objectives
+						first, technology second. Every recommendation is designed to maximise impact and
 						directly support your goals.
 					</p>
 				</div>
@@ -82,15 +84,16 @@
 				<div class="advantage-card">
 					<h3>Rapid, Results-Driven Guidance</h3>
 					<p>
-						My agile approach delivers actionable insights and practical roadmaps in half the time
-						of traditional consultancies—helping you move forward quickly.
+						My agile approach delivers actionable insights and practical application in half the
+						time of traditional consultancies—helping you move forward quickly.
 					</p>
 				</div>
 				<div class="advantage-card">
 					<h3>Measurable Business Outcomes, Not Just Tech</h3>
 					<p>
-						Our work isn’t done when the report is delivered—it’s done when you see real results and
-						feel confident about your tech decisions.
+						Our work doesn’t end with a report or a prototype—it continues through building,
+						refining, and supporting systems until you see real results and feel confident in the
+						decisions that got you there.
 					</p>
 				</div>
 			</div>
@@ -109,10 +112,10 @@
 					</p>
 				</li>
 				<li>
-					<h3>Digital Health Checks</h3>
+					<h3>System Design & Prototyping</h3>
 					<p>
-						Independent reviews of your current systems and processes, with practical, jargon-free
-						recommendations.
+						Turn ideas into working prototypes or technical blueprints—built collaboratively to
+						align with your goals and budget.
 					</p>
 				</li>
 				<li>
@@ -123,9 +126,10 @@
 					</p>
 				</li>
 				<li>
-					<h3>Vendor & Tool Selection</h3>
+					<h3>Implementation Support</h3>
 					<p>
-						Guidance on choosing the right solutions—no bias, just what’s best for your business.
+						Hands-on help bringing your systems to life—from integrations and automation to custom
+						builds and delivery.
 					</p>
 				</li>
 			</ul>
@@ -169,7 +173,7 @@
 				This means your business gets the focus and support needed to make real progress in using
 				technology to drive growth and efficiency.
 			</p>
-			<button class="cta-button" onclick={toggleModal}>Apply for a Strategy Call</button>
+			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 			<p class="small-note">
 				*We start with a conversation to make sure we’re the right fit for your needs.
 			</p>
@@ -186,6 +190,8 @@
 		<div
 			class="modal-backdrop"
 			role="button"
+			in:fade={{ duration: 150 }}
+			out:fade={{ duration: 150 }}
 			tabindex="0"
 			onclick={() => toggleModal()}
 			onkeydown={(event) => {
@@ -197,6 +203,8 @@
 			<div
 				class="modal-content"
 				role="button"
+				in:scale={{ duration: 200, start: 0.9 }}
+				out:scale={{ duration: 200, start: 1 }}
 				tabindex="0"
 				onclick={(e) => e.stopPropagation()}
 				onkeydown={(event) => {
@@ -211,10 +219,10 @@
 				</div>
 				<p class="modal-subtext">
 					We’re here to help small and medium businesses use technology to grow—without the jargon
-					or overwhelm. If you’re ready to make smarter tech decisions, apply below to see if we’re
-					the right fit for you.
+					or overwhelm. If you’re ready to make smarter tech decisions, reach out below to see if
+					we’re the right fit for you.
 				</p>
-				<form method="POST" action="?/apply" use:enhance={options}>
+				<form method="POST" use:enhance={options}>
 					{#if form?.error}
 						<p class="error">{form.error}</p>
 					{/if}
@@ -265,14 +273,16 @@
 						<label for="project"
 							>What’s your biggest tech challenge right now? What results would you like to achieve?</label
 						>
-						<textarea id="project" name="project" required>{form?.values?.project ?? ''}</textarea>
+						<textarea
+							id="project"
+							name="project"
+							placeholder="I am unsure. I am open to assistance."
+							required>{form?.values?.project ?? ''}</textarea
+						>
 					</div>
-					<button type="submit" class="submit-button">Apply for a Strategy Call</button>
+					<button type="submit" class="submit-button">Send</button>
 				</form>
 
-				{#if form?.success}
-					<p class="success">Thank you! Your application has been received.</p>
-				{/if}
 				<p class="modal-subtext">
 					We work closely with a select number of clients to ensure each business gets the attention
 					it deserves. If you’re a fit, we’ll reach out within 48 hours to discuss your next steps.
@@ -579,6 +589,7 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 1000;
+		animation: fade 0.2s ease-out;
 	}
 
 	.modal-content {
@@ -589,9 +600,16 @@
 		border-radius: 8px;
 		width: 90%;
 		max-height: 80%;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: none;
 		max-width: 600px;
-		position: relative;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition-duration: 0.3;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+		animation: modal-appear 2s ease-in-out forwards;
 	}
 
 	.modal-header {
