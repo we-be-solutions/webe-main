@@ -25,7 +25,6 @@ const formSchema = z
 		timeline: z.enum(['now', '1-3', '4+']),
 		project: z
 			.string()
-			.min(1, 'Project description should be at least 10 characters')
 			.max(2000, 'Project description is too long')
 			.transform((val) => val.trim())
 	})

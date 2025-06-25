@@ -278,7 +278,7 @@
 							id="project"
 							name="project"
 							placeholder="I am unsure. I am open to assistance."
-							required>{form?.values?.project ?? ''}</textarea
+							>{form?.values?.project ?? ''}</textarea
 						>
 					</div>
 					<button type="submit" class="submit-button">Send</button>
