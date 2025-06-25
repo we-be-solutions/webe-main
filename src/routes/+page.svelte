@@ -281,6 +281,10 @@
 							>{form?.values?.project ?? ''}</textarea
 						>
 					</div>
+					<div class="honeypot">
+						<label for="honeypot">Honey pot</label>
+						<input type="text" name="honeypot" id="honeypot" value={form?.values?.honeypot ?? ''} />
+					</div>
 					<button type="submit" class="submit-button">Send</button>
 				</form>
 
@@ -322,6 +326,10 @@
 		margin: 0;
 		padding: 0;
 		background-color: #fafafa;
+	}
+	/* Honey pot is a hidden field to capture bots */
+	.honeypot {
+		display: none;
 	}
 
 	.container {

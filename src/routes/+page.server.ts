@@ -26,7 +26,8 @@ const formSchema = z
 		project: z
 			.string()
 			.max(2000, 'Project description is too long')
-			.transform((val) => val.trim())
+			.transform((val) => val.trim()),
+		honeypot: z.string().max(0, 'honeypot')
 	})
 	.strict();
 
@@ -42,6 +43,10 @@ export const actions = {
 				message: issue.message,
 				path: issue.path.map((p) => String(p)) // ensure path is string[]
 			}));
+			const honeypot = issues.filter((val) => val.message === 'honeypot');
+			if (honeypot) {
+				return { success: true, message: `honeypot` };
+			}
 			console.error('failed validation');
 			return fail(400, {
 				error: 'Validation failed',
