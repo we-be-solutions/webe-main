@@ -44,8 +44,8 @@
 			</div>
 			<h2 class="headline">Level the Playing Field of Tech</h2>
 			<p class="subheadline">
-				I help non-tech SMEs unlock smart, simple technology solutions—so you can compete with
-				confidence, not complexity.
+				I help businesses plan, build, and use the right technology—so you can grow without the tech
+				headaches.
 			</p>
 			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 		</div>
