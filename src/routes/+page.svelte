@@ -216,7 +216,7 @@
 			>
 				<div class="modal-header">
 					<button class="close-button" onclick={toggleModal}>×</button>
-					<h2>Apply for Strategic Tech Advisory Partnership</h2>
+					<h2>Start Your Tech Plan with WeBe</h2>
 				</div>
 				<p class="modal-subtext">
 					We’re here to help small and medium businesses use technology to grow—without the jargon
