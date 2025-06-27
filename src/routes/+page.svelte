@@ -34,6 +34,7 @@
 </script>
 
 <main class="landing-page">
+	<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 	<header class="hero">
 		<div class="container">
 			<div class="logo">
@@ -47,7 +48,6 @@
 				I help businesses plan, build, and use the right technology—so you can grow without the tech
 				headaches.
 			</p>
-			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
 		</div>
 	</header>
 
@@ -173,10 +173,6 @@
 				This means your business gets the focus and support needed to make real progress in using
 				technology to drive growth and efficiency.
 			</p>
-			<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
-			<p class="small-note">
-				*We will start with a conversation to make sure I'm the right fit for your needs.
-			</p>
 		</div>
 	</section>
 
@@ -214,14 +210,14 @@
 					}
 				}}
 			>
+				<button class="close-button" onclick={toggleModal}>×</button>
 				<div class="modal-header">
-					<button class="close-button" onclick={toggleModal}>×</button>
 					<h2>Start Your Tech Plan with WeBe</h2>
 				</div>
 				<p class="modal-subtext">
 					We’re here to help small and medium businesses use technology to grow—without the jargon
-					or overwhelm. If you’re ready to make smarter tech decisions, reach out below to see if
-					we’re the right fit for you.
+					or overwhelm. If you’re ready to make smarter tech decisions, reach out with the form
+					below.
 				</p>
 				<form method="POST" use:enhance={options}>
 					{#if form?.error}
@@ -296,7 +292,7 @@
 					<h3>Ready to make tech work for your business?</h3>
 					<p>
 						If you want clear guidance and practical solutions for your tech challenges, <strong
-							>apply now</strong
+							>reach out now</strong
 						>. Let’s turn your biggest tech challenge into your next business breakthrough.
 					</p>
 				</div>
@@ -310,6 +306,12 @@
 	:root {
 		--blue-teal: #00a4cc; /* Default Blue-leaning teal */
 		--blue-teal-dark: #007b99; /* Darker teal for hover effects */
+		--blue-teal-transparent: #00a4ccdd; /* Default Blue-leaning teal */
+		--cyberpunk-pink: #ff2ecb; /* Vivid neon magenta */
+		--cyberpunk-pink-dark: #c0219b; /* Deeper magenta for hover/dark variants */
+		--cyberpunk-pink-transparent: #ff2ecbdd; /* Same neon pink, with transparency */
+		--black: #1a1a1a;
+		--black-transparent: #1a1a1add;
 	}
 
 	/* Global Styles */
@@ -343,13 +345,13 @@
 		background: linear-gradient(135deg, #1a1a1a, #000000);
 		color: white;
 		padding: 100px 0;
-		text-align: center;
+		text-align: left;
 	}
 
 	.logo {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: start;
 	}
 	.logo-sizer {
 		width: 100px;
@@ -377,23 +379,32 @@
 
 	/* Button Styles */
 	.cta-button {
-		background-color: var(--blue-teal); /* Blue-leaning teal */
+		position: fixed;
+		top: 45px;
+		right: 45px;
+		text-align: center;
+		background-color: var(--black-transparent);
 		color: white;
 		border: none;
-		padding: 18px 40px;
+		padding: 18px 20px;
 		font-size: 1.1rem;
 		font-weight: 700;
-		border-radius: 4px;
+		border: 1px solid var(--cyberpunk-pink);
+		border-radius: 500px;
+		width: 140px;
+		height: 140px;
 		cursor: pointer;
-		transition: all 0.3s;
+		transition: all 0.1s;
 		text-transform: uppercase;
 		letter-spacing: 1px;
+		z-index: 1;
+		box-shadow: 4px 1px 4px 1px var(--cyberpunk-pink-dark);
 	}
 
 	.cta-button:hover {
-		background-color: var(--blue-teal-dark); /* Darker teal for hover effect */
-		transform: translateY(-2px);
-		box-shadow: 0 5px 15px rgba(0, 128, 128, 0.3);
+		box-shadow: 4px 1px 4px 1px var(--blue-teal-dark);
+		border: 1px solid var(--blue-teal);
+		transform: translateY(-1px);
 	}
 
 	/* Section Styles */
@@ -568,22 +579,12 @@
 		margin-bottom: 40px;
 	}
 
-	.exclusivity .cta-button {
-		margin-bottom: 20px;
-	}
-
-	.small-note {
-		font-size: 0.9rem;
-		opacity: 0.7;
-		max-width: 500px;
-	}
-
 	/* Footer */
 	footer {
 		background-color: #1a1a1a;
 		color: white;
 		padding: 30px 0;
-		text-align: center;
+		text-align: left;
 	}
 
 	/* Modal */
@@ -726,6 +727,11 @@
 
 		.results-content {
 			padding: 30px;
+		}
+
+		.cta-button {
+			bottom: 20px;
+			top: auto;
 		}
 	}
 </style>
