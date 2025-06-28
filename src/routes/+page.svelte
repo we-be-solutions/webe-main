@@ -3,6 +3,9 @@
 	import { applyAction, enhance } from '$app/forms';
 	import type { SubmitFunction } from '@sveltejs/kit';
 	import { fade, scale } from 'svelte/transition';
+	import whiteTri from '$lib/assets/white_tri.png';
+	import wave from '$lib/assets/wave_dark.png';
+
 	type FormFailure = {
 		error?: string;
 		issues?: Array<{ message: string; path: string[] }>;
@@ -34,7 +37,7 @@
 </script>
 
 <main class="landing-page">
-	<button class="cta-button" onclick={toggleModal}>Free Discovery Call</button>
+	<button class="cta-button" onclick={toggleModal}>free discovery call</button>
 	<header class="hero">
 		<div class="container">
 			<div class="logo">
@@ -63,6 +66,7 @@
 		</div>
 	</section>
 	<section class="advantages">
+		<img id="wave" src={wave} alt="wave background" />
 		<div class="container">
 			<h2>The WeBe Solutions Performance Guarantee</h2>
 			<div class="advantages-grid">
@@ -101,14 +105,29 @@
 	</section>
 
 	<section class="services">
+		<img id="tri" src={whiteTri} alt="white triangle art" />
 		<div class="container">
 			<h2>Strategic Tech Solutions for Confident Business Growth</h2>
 			<ul class="services-list">
+				<li>
+					<h3>AI Strategy & Advisory</h3>
+					<p>
+						Get clear, practical advice on how to use AI in your business—so you can work smarter
+						without adding risk or complexity.
+					</p>
+				</li>
 				<li>
 					<h3>Tech Strategy Sessions</h3>
 					<p>
 						Clarify your business goals and discover how technology can help you achieve them—no
 						jargon, just clear advice.
+					</p>
+				</li>
+				<li>
+					<h3>Business Process Automation</h3>
+					<p>
+						Identify time-consuming tasks and turn them into automations—so you and your team can
+						focus on what matters most.
 					</p>
 				</li>
 				<li>
@@ -130,6 +149,22 @@
 					<p>
 						Hands-on help bringing your systems to life—from integrations and automation to custom
 						builds and delivery.
+					</p>
+				</li>
+
+				<li>
+					<h3>Tool & Workflow Optimisation</h3>
+					<p>
+						Simplify your tech stack and refine your workflows—so your tools actually help instead
+						of getting in the way.
+					</p>
+				</li>
+
+				<li>
+					<h3>Vendor & Platform Guidance</h3>
+					<p>
+						Not sure what software to choose? Get unbiased advice on the best tools for your
+						needs—no sales pitches, just what works.
 					</p>
 				</li>
 			</ul>
@@ -302,6 +337,28 @@
 </main>
 
 <style>
+	#tri {
+		padding-top: 280px;
+		padding-left: 80px;
+		z-index: 0;
+		position: absolute;
+		width: 300px;
+	}
+	#wave {
+		z-index: 0;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		border-bottom: 1px solid var(--blue-teal);
+	}
+	#sawtooth {
+		z-index: 0;
+		width: 100%;
+		height: 10%;
+		position: absolute;
+		bottom: 0px;
+	}
+
 	/* Define CSS variable for teal color */
 	:root {
 		--blue-teal: #00a4cc; /* Default Blue-leaning teal */
@@ -338,6 +395,8 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 0 20px;
+		z-index: 1;
+		position: relative;
 	}
 
 	/* Hero Section */
@@ -397,7 +456,7 @@
 		transition: all 0.1s;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		z-index: 1;
+		z-index: 2;
 		box-shadow: 4px 1px 4px 1px var(--cyberpunk-pink-dark);
 	}
 
@@ -410,6 +469,7 @@
 	/* Section Styles */
 	section {
 		padding: 100px 0;
+		position: relative;
 	}
 
 	section h2 {
@@ -461,7 +521,8 @@
 		background-color: white;
 		padding: 40px 30px;
 		border-radius: 8px;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+		border: 1px solid var(--cyberpunk-pink);
+		box-shadow: 0 5px 8px var(--cyberpunk-pink-dark);
 		transition:
 			transform 0.3s,
 			box-shadow 0.3s;
@@ -470,6 +531,8 @@
 	.advantage-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+		border: 1px solid var(--blue-teal);
+		box-shadow: 0 5px 8px var(--blue-teal-dark);
 	}
 
 	.advantage-card h3 {
@@ -487,7 +550,7 @@
 
 	/* Services List */
 	.services {
-		background-color: #1a1a1a;
+		background-color: var(--black);
 		color: white;
 	}
 
@@ -510,6 +573,7 @@
 		border-radius: 8px;
 		transition: transform 0.3s;
 		border-left: 4px solid var(--blue-teal); /* Blue-leaning teal */
+		box-shadow: 0px 0px 8px white;
 	}
 
 	.services-list li:hover {
