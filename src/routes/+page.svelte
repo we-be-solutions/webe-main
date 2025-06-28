@@ -55,6 +55,7 @@
 	</header>
 
 	<section class="value-proposition">
+		<img id="top-wave" src={wave} alt="wave background" />
 		<div class="container">
 			<h2>The High-Impact Alternative to Big Tech Firms</h2>
 			<p>
@@ -110,61 +111,66 @@
 			<h2>Strategic Tech Solutions for Confident Business Growth</h2>
 			<ul class="services-list">
 				<li>
-					<h3>AI Strategy & Advisory</h3>
+					<h3>Work Smarter with AI</h3>
 					<p>
-						Get clear, practical advice on how to use AI in your business—so you can work smarter
-						without adding risk or complexity.
-					</p>
-				</li>
-				<li>
-					<h3>Tech Strategy Sessions</h3>
-					<p>
-						Clarify your business goals and discover how technology can help you achieve them—no
-						jargon, just clear advice.
-					</p>
-				</li>
-				<li>
-					<h3>Business Process Automation</h3>
-					<p>
-						Identify time-consuming tasks and turn them into automations—so you and your team can
-						focus on what matters most.
-					</p>
-				</li>
-				<li>
-					<h3>System Design & Prototyping</h3>
-					<p>
-						Turn ideas into working prototypes or technical blueprints—built collaboratively to
-						align with your goals and budget.
-					</p>
-				</li>
-				<li>
-					<h3>On-Call Tech Advisor</h3>
-					<p>
-						Ongoing access to expert advice—get answers, ideas, and confidence whenever you need
-						them.
-					</p>
-				</li>
-				<li>
-					<h3>Implementation Support</h3>
-					<p>
-						Hands-on help bringing your systems to life—from integrations and automation to custom
-						builds and delivery.
+						Streamline operations and make smarter decisions by confidently using AI—without adding
+						risk or complexity.
 					</p>
 				</li>
 
 				<li>
-					<h3>Tool & Workflow Optimisation</h3>
+					<h3>Achieve Goals with the Right Tech</h3>
 					<p>
-						Simplify your tech stack and refine your workflows—so your tools actually help instead
-						of getting in the way.
+						Move your business forward faster by uncovering how technology can directly support your
+						growth—minus the jargon.
 					</p>
 				</li>
 
 				<li>
-					<h3>Vendor & Platform Guidance</h3>
+					<h3>Free Up Time Through Automation</h3>
 					<p>
-						Not sure what software to choose? Get unbiased advice on the best tools for your
-						needs—no sales pitches, just what works.
+						Reclaim hours each week by turning repetitive tasks into efficient automations—so your
+						team can focus on high-impact work.
+					</p>
+				</li>
+
+				<li>
+					<h3>Bring Your Ideas to Life</h3>
+					<p>
+						See your vision in action with working prototypes and system blueprints—designed to
+						match your goals and budget.
+					</p>
+				</li>
+
+				<li>
+					<h3>Make Confident Tech Decisions</h3>
+					<p>
+						Get expert guidance when you need it—so you’re never stuck, second-guessing, or wasting
+						time on the wrong tools.
+					</p>
+				</li>
+
+				<li>
+					<h3>Turn Plans into Reality</h3>
+					<p>
+						Launch smoothly with hands-on support—from system builds to integrations—ensuring your
+						tech works from day one.
+					</p>
+				</li>
+
+				<li>
+					<h3>Get More from Your Tools</h3>
+					<p>
+						Eliminate friction and boost productivity by simplifying your tech stack and
+						streamlining daily workflows.
+					</p>
+				</li>
+
+				<li>
+					<h3>Choose the Right Tools with Confidence</h3>
+					<p>
+						Avoid costly mistakes by getting clear, unbiased recommendations on platforms that
+						actually fit your needs.
 					</p>
 				</li>
 			</ul>
@@ -172,6 +178,7 @@
 	</section>
 
 	<section class="results">
+		<img id="top-wave" src={wave} alt="wave background" />
 		<div class="container">
 			<h2>The Investment That Pays for Itself</h2>
 			<div class="results-content">
@@ -192,9 +199,28 @@
 						<span class="highlight">Effective collaboration</span> fueled by open, transparent communication
 						and expert guidance
 					</li>
+					<li>
+						<span class="highlight">Faster delivery</span> of projects with clear plans and hands-on
+						support
+					</li>
+					<li>
+						<span class="highlight">Less stress</span> from unclear systems or scattered tools
+					</li>
+					<li>
+						<span class="highlight">Stronger decision-making</span> backed by plain-language insights
+						and real-world experience
+					</li>
+					<li>
+						<span class="highlight">More confident teams</span> who know how and why things work
+					</li>
+					<li>
+						<span class="highlight">Real business results</span> from tech that’s built to support your
+						goals
+					</li>
 				</ul>
 			</div>
 		</div>
+		<img id="wave" src={wave} alt="wave background" />
 	</section>
 
 	<section class="exclusivity">
@@ -347,16 +373,17 @@
 	#wave {
 		z-index: 0;
 		width: 100%;
+		height: 70px;
 		position: absolute;
 		bottom: 0px;
-		border-bottom: 1px solid var(--blue-teal);
 	}
-	#sawtooth {
+	#top-wave {
 		z-index: 0;
 		width: 100%;
-		height: 10%;
+		height: 70px;
 		position: absolute;
-		bottom: 0px;
+		top: 0px;
+		transform: rotate(180deg);
 	}
 
 	/* Define CSS variable for teal color */
@@ -401,7 +428,8 @@
 
 	/* Hero Section */
 	.hero {
-		background: linear-gradient(135deg, #1a1a1a, #000000);
+		/* background: linear-gradient(135deg, #1a1a1a, #000000); */
+		background-color: var(--black);
 		color: white;
 		padding: 100px 0;
 		text-align: left;
@@ -443,7 +471,7 @@
 		right: 45px;
 		text-align: center;
 		background-color: var(--black-transparent);
-		color: white;
+		color: var(--cyberpunk-pink);
 		border: none;
 		padding: 18px 20px;
 		font-size: 1.1rem;
@@ -462,6 +490,7 @@
 
 	.cta-button:hover {
 		box-shadow: 4px 1px 4px 1px var(--blue-teal-dark);
+		color: var(--blue-teal);
 		border: 1px solid var(--blue-teal);
 		transform: translateY(-1px);
 	}
@@ -554,10 +583,6 @@
 		color: white;
 	}
 
-	.services h2:after {
-		background-color: white;
-	}
-
 	.services-list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -634,7 +659,7 @@
 	/* Exclusivity */
 	.exclusivity {
 		text-align: center;
-		background-color: #000;
+		background-color: var(--black);
 		color: white;
 	}
 
@@ -645,7 +670,7 @@
 
 	/* Footer */
 	footer {
-		background-color: #1a1a1a;
+		background-color: #000;
 		color: white;
 		padding: 30px 0;
 		text-align: left;
