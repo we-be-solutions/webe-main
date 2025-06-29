@@ -48,8 +48,8 @@
 			</div>
 			<h2 class="headline">Level the Playing Field of Tech</h2>
 			<p class="subheadline">
-				I help businesses plan, build, and use the right technology—so you can grow without the tech
-				headaches.
+				Helping your business plan, build, and use the right technology the right way—so you can
+				grow without the tech headaches.
 			</p>
 		</div>
 	</header>
@@ -59,10 +59,9 @@
 		<div class="container">
 			<h2>The High-Impact Alternative to Big Tech Firms</h2>
 			<p>
-				WeBe Solutions isn’t for everyone. I work exclusively with businesses that want to use
-				technology as a growth engine—not just another cost. My clients invest in <strong
-					>strategic tech</strong
-				> to cut inefficiencies, make smarter decisions, and drive higher profits.
+				WeBe Solutions is built for businesses that see technology as a growth engine—not just
+				another expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate
+				inefficiencies, make smarter decisions, and accelerate profits.
 			</p>
 		</div>
 	</section>
@@ -89,8 +88,8 @@
 				<div class="advantage-card">
 					<h3>Rapid, Results-Driven Guidance</h3>
 					<p>
-						My agile approach delivers actionable insights and practical application in half the
-						time of traditional consultancies—helping you move forward quickly.
+						A agile approach delivers actionable insights and practical application in half the time
+						of traditional consultancies—helping you move forward quickly.
 					</p>
 				</div>
 				<div class="advantage-card">
@@ -441,7 +440,7 @@
 		justify-content: start;
 	}
 	.logo-sizer {
-		width: 100px;
+		width: 115px;
 	}
 	.logo h1 {
 		font-size: 2.5rem;
@@ -471,7 +470,7 @@
 		right: 45px;
 		text-align: center;
 		background-color: var(--black-transparent);
-		color: var(--cyberpunk-pink);
+		color: white;
 		border: none;
 		padding: 18px 20px;
 		font-size: 1.1rem;
