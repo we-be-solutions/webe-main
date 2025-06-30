@@ -36,330 +36,309 @@
 	}
 </script>
 
-<main class="landing-page">
-	<button class="cta-button" onclick={toggleModal}>free discovery call</button>
-	<header class="hero">
-		<div class="container">
-			<div class="logo">
-				<div class="logo-sizer">
-					<LogoNoWords />
-				</div>
-				<h1>WeBe Solutions</h1>
+<button class="cta-button" onclick={toggleModal}>free discovery call</button>
+<header class="hero">
+	<div class="container">
+		<div class="logo">
+			<div class="logo-sizer">
+				<LogoNoWords />
 			</div>
-			<h2 class="headline">Level the Playing Field of Tech</h2>
-			<p class="subheadline">
-				Helping your business plan, build, and use the right technology the right way—so you can
-				grow without the tech headaches.
-			</p>
+			<h1>WeBe Solutions</h1>
 		</div>
-	</header>
+		<h2 class="headline">Level the Playing Field of Tech</h2>
+		<p class="subheadline">
+			Helping your business plan, build, and use the right technology the right way—so you can grow
+			without the tech headaches.
+		</p>
+	</div>
+</header>
 
-	<section class="value-proposition">
-		<img id="top-wave" src={wave} alt="wave background" />
-		<div class="container">
-			<h2>The High-Impact Alternative to Big Tech Firms</h2>
+<section class="value-proposition">
+	<img id="top-wave" src={wave} alt="wave background" />
+	<div class="container">
+		<h2>The High-Impact Alternative to Big Tech Firms</h2>
+		<p>
+			WeBe Solutions is built for businesses that see technology as a growth engine—not just another
+			expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate inefficiencies,
+			make smarter decisions, and accelerate profits.
+		</p>
+	</div>
+</section>
+<section class="advantages">
+	<img id="wave" src={wave} alt="wave background" />
+	<div class="container">
+		<h2>The WeBe Solutions Performance Guarantee</h2>
+		<div class="advantages-grid">
+			<div class="advantage-card">
+				<h3>Strategic Expertise, Powered by Insight</h3>
+				<p>
+					Your tech journey is guided by a consultant who prioritises your business objectives
+					first, technology second. Every recommendation is designed to maximise impact and directly
+					support your goals.
+				</p>
+			</div>
+			<div class="advantage-card">
+				<h3>Direct Access To The Decision Maker</h3>
+				<p>
+					No middlemen. You work directly with me, ensuring clear communication, fast decisions, and
+					a streamlined process that avoids agency delays.
+				</p>
+			</div>
+			<div class="advantage-card">
+				<h3>Rapid, Results-Driven Guidance</h3>
+				<p>
+					A agile approach delivers actionable insights and practical application in half the time
+					of traditional consultancies—helping you move forward quickly.
+				</p>
+			</div>
+			<div class="advantage-card">
+				<h3>Measurable Business Outcomes, Not Just Tech</h3>
+				<p>
+					My work doesn’t end with a report or a prototype—it continues through building, refining,
+					and supporting systems until you see real results and feel confident in the decisions that
+					got you there.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="services">
+	<img id="tri" src={whiteTri} alt="white triangle art" />
+	<div class="container">
+		<h2>Strategic Tech Solutions for Confident Business Growth</h2>
+		<ul class="services-list">
+			<li>
+				<h3>Work Smarter with AI</h3>
+				<p>
+					Streamline operations and make smarter decisions by confidently using AI—without adding
+					risk or complexity.
+				</p>
+			</li>
+
+			<li>
+				<h3>Achieve Goals with the Right Tech</h3>
+				<p>
+					Move your business forward faster by uncovering how technology can directly support your
+					growth—minus the jargon.
+				</p>
+			</li>
+
+			<li>
+				<h3>Free Up Time Through Automation</h3>
+				<p>
+					Reclaim hours each week by turning repetitive tasks into efficient automations—so your
+					team can focus on high-impact work.
+				</p>
+			</li>
+
+			<li>
+				<h3>Bring Your Ideas to Life</h3>
+				<p>
+					See your vision in action with working prototypes and system blueprints—designed to match
+					your goals and budget.
+				</p>
+			</li>
+
+			<li>
+				<h3>Make Confident Tech Decisions</h3>
+				<p>
+					Get expert guidance when you need it—so you’re never stuck, second-guessing, or wasting
+					time on the wrong tools.
+				</p>
+			</li>
+
+			<li>
+				<h3>Turn Plans into Reality</h3>
+				<p>
+					Launch smoothly with hands-on support—from system builds to integrations—ensuring your
+					tech works from day one.
+				</p>
+			</li>
+
+			<li>
+				<h3>Get More from Your Tools</h3>
+				<p>
+					Eliminate friction and boost productivity by simplifying your tech stack and streamlining
+					daily workflows.
+				</p>
+			</li>
+
+			<li>
+				<h3>Choose the Right Tools with Confidence</h3>
+				<p>
+					Avoid costly mistakes by getting clear, unbiased recommendations on platforms that
+					actually fit your needs.
+				</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="results">
+	<img id="top-wave" src={wave} alt="wave background" />
+	<div class="container">
+		<h2>The Investment That Pays for Itself</h2>
+		<div class="results-content">
 			<p>
-				WeBe Solutions is built for businesses that see technology as a growth engine—not just
-				another expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate
-				inefficiencies, make smarter decisions, and accelerate profits.
+				My clients don’t measure success by tech features or complexity—they measure it by the
+				impact smart tech decisions have on their business:
 			</p>
-		</div>
-	</section>
-	<section class="advantages">
-		<img id="wave" src={wave} alt="wave background" />
-		<div class="container">
-			<h2>The WeBe Solutions Performance Guarantee</h2>
-			<div class="advantages-grid">
-				<div class="advantage-card">
-					<h3>Strategic Expertise, Powered by Insight</h3>
-					<p>
-						Your tech journey is guided by a consultant who prioritises your business objectives
-						first, technology second. Every recommendation is designed to maximise impact and
-						directly support your goals.
-					</p>
-				</div>
-				<div class="advantage-card">
-					<h3>Direct Access To The Decision Maker</h3>
-					<p>
-						No middlemen. You work directly with me, ensuring clear communication, fast decisions,
-						and a streamlined process that avoids agency delays.
-					</p>
-				</div>
-				<div class="advantage-card">
-					<h3>Rapid, Results-Driven Guidance</h3>
-					<p>
-						A agile approach delivers actionable insights and practical application in half the time
-						of traditional consultancies—helping you move forward quickly.
-					</p>
-				</div>
-				<div class="advantage-card">
-					<h3>Measurable Business Outcomes, Not Just Tech</h3>
-					<p>
-						My work doesn’t end with a report or a prototype—it continues through building,
-						refining, and supporting systems until you see real results and feel confident in the
-						decisions that got you there.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="services">
-		<img id="tri" src={whiteTri} alt="white triangle art" />
-		<div class="container">
-			<h2>Strategic Tech Solutions for Confident Business Growth</h2>
-			<ul class="services-list">
+			<ul class="results-list">
 				<li>
-					<h3>Work Smarter with AI</h3>
-					<p>
-						Streamline operations and make smarter decisions by confidently using AI—without adding
-						risk or complexity.
-					</p>
+					<span class="highlight">Hours saved</span> by streamlining workflows and reducing manual tasks
 				</li>
-
 				<li>
-					<h3>Achieve Goals with the Right Tech</h3>
-					<p>
-						Move your business forward faster by uncovering how technology can directly support your
-						growth—minus the jargon.
-					</p>
+					<span class="highlight">Eliminate costly mistakes</span> by making informed, future-proof tech
+					choices
 				</li>
-
 				<li>
-					<h3>Free Up Time Through Automation</h3>
-					<p>
-						Reclaim hours each week by turning repetitive tasks into efficient automations—so your
-						team can focus on high-impact work.
-					</p>
+					<span class="highlight">Effective collaboration</span> fueled by open, transparent communication
+					and expert guidance
 				</li>
-
 				<li>
-					<h3>Bring Your Ideas to Life</h3>
-					<p>
-						See your vision in action with working prototypes and system blueprints—designed to
-						match your goals and budget.
-					</p>
+					<span class="highlight">Faster delivery</span> of projects with clear plans and hands-on support
 				</li>
-
 				<li>
-					<h3>Make Confident Tech Decisions</h3>
-					<p>
-						Get expert guidance when you need it—so you’re never stuck, second-guessing, or wasting
-						time on the wrong tools.
-					</p>
+					<span class="highlight">Less stress</span> from unclear systems or scattered tools
 				</li>
-
 				<li>
-					<h3>Turn Plans into Reality</h3>
-					<p>
-						Launch smoothly with hands-on support—from system builds to integrations—ensuring your
-						tech works from day one.
-					</p>
+					<span class="highlight">Stronger decision-making</span> backed by plain-language insights and
+					real-world experience
 				</li>
-
 				<li>
-					<h3>Get More from Your Tools</h3>
-					<p>
-						Eliminate friction and boost productivity by simplifying your tech stack and
-						streamlining daily workflows.
-					</p>
+					<span class="highlight">More confident teams</span> who know how and why things work
 				</li>
-
 				<li>
-					<h3>Choose the Right Tools with Confidence</h3>
-					<p>
-						Avoid costly mistakes by getting clear, unbiased recommendations on platforms that
-						actually fit your needs.
-					</p>
+					<span class="highlight">Real business results</span> from tech that’s built to support your
+					goals
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
+	<img id="wave" src={wave} alt="wave background" />
+</section>
 
-	<section class="results">
-		<img id="top-wave" src={wave} alt="wave background" />
-		<div class="container">
-			<h2>The Investment That Pays for Itself</h2>
-			<div class="results-content">
-				<p>
-					My clients don’t measure success by tech features or complexity—they measure it by the
-					impact smart tech decisions have on their business:
-				</p>
-				<ul class="results-list">
-					<li>
-						<span class="highlight">Hours saved</span> by streamlining workflows and reducing manual
-						tasks
-					</li>
-					<li>
-						<span class="highlight">Eliminate costly mistakes</span> by making informed, future-proof
-						tech choices
-					</li>
-					<li>
-						<span class="highlight">Effective collaboration</span> fueled by open, transparent communication
-						and expert guidance
-					</li>
-					<li>
-						<span class="highlight">Faster delivery</span> of projects with clear plans and hands-on
-						support
-					</li>
-					<li>
-						<span class="highlight">Less stress</span> from unclear systems or scattered tools
-					</li>
-					<li>
-						<span class="highlight">Stronger decision-making</span> backed by plain-language insights
-						and real-world experience
-					</li>
-					<li>
-						<span class="highlight">More confident teams</span> who know how and why things work
-					</li>
-					<li>
-						<span class="highlight">Real business results</span> from tech that’s built to support your
-						goals
-					</li>
-				</ul>
-			</div>
-		</div>
-		<img id="wave" src={wave} alt="wave background" />
-	</section>
+<section class="exclusivity">
+	<div class="container">
+		<h2>Focused Attention for Every Client</h2>
+		<p>
+			To ensure each business receives the attention and care it deserves, I work closely with just
+			a small number of consulting clients at a time.
+		</p>
+		<p>
+			This means your business gets the focus and support needed to make real progress in using
+			technology to drive growth and efficiency.
+		</p>
+	</div>
+</section>
 
-	<section class="exclusivity">
-		<div class="container">
-			<h2>Focused Attention for Every Client</h2>
-			<p>
-				To ensure each business receives the attention and care it deserves, I work closely with
-				just a small number of consulting clients at a time.
-			</p>
-			<p>
-				This means your business gets the focus and support needed to make real progress in using
-				technology to drive growth and efficiency.
-			</p>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container">
-			<p>&copy; {new Date().getFullYear()} WeBe Solutions. All rights reserved.</p>
-			<p>ABN 33 620 124 892</p>
-		</div>
-	</footer>
-
-	{#if showModal}
+{#if showModal}
+	<div
+		class="modal-backdrop"
+		role="button"
+		in:fade={{ duration: 150 }}
+		out:fade={{ duration: 150 }}
+		tabindex="0"
+		onclick={() => toggleModal()}
+		onkeydown={(event) => {
+			if (event.key === 'Escape') {
+				toggleModal();
+			}
+		}}
+	>
 		<div
-			class="modal-backdrop"
+			class="modal-content"
 			role="button"
-			in:fade={{ duration: 150 }}
-			out:fade={{ duration: 150 }}
+			in:scale={{ duration: 200, start: 0.9 }}
+			out:scale={{ duration: 200, start: 1 }}
 			tabindex="0"
-			onclick={() => toggleModal()}
+			onclick={(e) => e.stopPropagation()}
 			onkeydown={(event) => {
 				if (event.key === 'Escape') {
 					toggleModal();
 				}
 			}}
 		>
-			<div
-				class="modal-content"
-				role="button"
-				in:scale={{ duration: 200, start: 0.9 }}
-				out:scale={{ duration: 200, start: 1 }}
-				tabindex="0"
-				onclick={(e) => e.stopPropagation()}
-				onkeydown={(event) => {
-					if (event.key === 'Escape') {
-						toggleModal();
-					}
-				}}
-			>
-				<button class="close-button" onclick={toggleModal}>×</button>
-				<div class="modal-header">
-					<h2>Start Your Tech Plan with WeBe</h2>
+			<button class="close-button" onclick={toggleModal}>×</button>
+			<div class="modal-header">
+				<h2>Start Your Tech Plan with WeBe</h2>
+			</div>
+			<p class="modal-subtext">
+				We’re here to help small and medium businesses use technology to grow—without the jargon or
+				overwhelm. If you’re ready to make smarter tech decisions, reach out with the form below.
+			</p>
+			<form method="POST" use:enhance={options}>
+				{#if form?.error}
+					<p class="error">{form.error}</p>
+				{/if}
+				{#if issues}
+					{#each issues as issue}
+						<p class="error">{issue.path[0]}: {issue.message}</p>
+					{/each}
+				{/if}
+				<div class="form-group">
+					<label for="name">Full Name</label>
+					<input type="text" name="name" id="name" value={form?.values?.name ?? ''} required />
 				</div>
-				<p class="modal-subtext">
-					We’re here to help small and medium businesses use technology to grow—without the jargon
-					or overwhelm. If you’re ready to make smarter tech decisions, reach out with the form
-					below.
-				</p>
-				<form method="POST" use:enhance={options}>
-					{#if form?.error}
-						<p class="error">{form.error}</p>
-					{/if}
-					{#if issues}
-						{#each issues as issue}
-							<p class="error">{issue.path[0]}: {issue.message}</p>
-						{/each}
-					{/if}
-					<div class="form-group">
-						<label for="name">Full Name</label>
-						<input type="text" name="name" id="name" value={form?.values?.name ?? ''} required />
-					</div>
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							value={form?.values?.email ?? ''}
-							required
-						/>
-					</div>
-					<div class="form-group">
-						<label for="company">Company</label>
-						<input
-							type="text"
-							name="company"
-							id="company"
-							value={form?.values?.company ?? ''}
-							required
-						/>
-					</div>
-					<div class="form-group">
-						<label for="timeline">When would you like to start?</label>
-						<select id="timeline" name="timeline" required>
-							<option value="now" selected={form?.values?.timeline === 'now'}
-								>Ready to start now</option
-							>
-							<option value="1-3" selected={form?.values?.timeline === '1-3'}
-								>Within 1-3 months</option
-							>
-							<option value="3-6" selected={form?.values?.timeline === '3-6'}
-								>Within 3-6 months</option
-							>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="project"
-							>What’s your biggest tech challenge right now? What results would you like to achieve?</label
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" value={form?.values?.email ?? ''} required />
+				</div>
+				<div class="form-group">
+					<label for="company">Company</label>
+					<input
+						type="text"
+						name="company"
+						id="company"
+						value={form?.values?.company ?? ''}
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label for="timeline">When would you like to start?</label>
+					<select id="timeline" name="timeline" required>
+						<option value="now" selected={form?.values?.timeline === 'now'}
+							>Ready to start now</option
 						>
-						<textarea
-							id="project"
-							name="project"
-							placeholder="I am unsure. I am open to assistance."
-							>{form?.values?.project ?? ''}</textarea
+						<option value="1-3" selected={form?.values?.timeline === '1-3'}
+							>Within 1-3 months</option
 						>
-					</div>
-					<div class="honeypot">
-						<label for="honeypot">Honey pot</label>
-						<input type="text" name="honeypot" id="honeypot" value={form?.values?.honeypot ?? ''} />
-					</div>
-					<button type="submit" class="submit-button">Send</button>
-				</form>
+						<option value="3-6" selected={form?.values?.timeline === '3-6'}
+							>Within 3-6 months</option
+						>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="project"
+						>What’s your biggest tech challenge right now? What results would you like to achieve?</label
+					>
+					<textarea id="project" name="project" placeholder="I am unsure. I am open to assistance."
+						>{form?.values?.project ?? ''}</textarea
+					>
+				</div>
+				<div class="honeypot">
+					<label for="honeypot">Honey pot</label>
+					<input type="text" name="honeypot" id="honeypot" value={form?.values?.honeypot ?? ''} />
+				</div>
+				<button type="submit" class="submit-button">Send</button>
+			</form>
 
-				<p class="modal-subtext">
-					We work closely with a select number of clients to ensure each business gets the attention
-					it deserves. If you’re a fit, we’ll reach out within 48 hours to discuss your next steps.
+			<p class="modal-subtext">
+				We work closely with a select number of clients to ensure each business gets the attention
+				it deserves. If you’re a fit, we’ll reach out within 48 hours to discuss your next steps.
+			</p>
+			<div class="offer-call">
+				<h3>Ready to make tech work for your business?</h3>
+				<p>
+					If you want clear guidance and practical solutions for your tech challenges, <strong
+						>reach out now</strong
+					>. Let’s turn your biggest tech challenge into your next business breakthrough.
 				</p>
-				<div class="offer-call">
-					<h3>Ready to make tech work for your business?</h3>
-					<p>
-						If you want clear guidance and practical solutions for your tech challenges, <strong
-							>reach out now</strong
-						>. Let’s turn your biggest tech challenge into your next business breakthrough.
-					</p>
-				</div>
 			</div>
 		</div>
-	{/if}
-</main>
+	</div>
+{/if}
 
 <style>
 	#tri {
@@ -385,33 +364,6 @@
 		transform: rotate(180deg);
 	}
 
-	/* Define CSS variable for teal color */
-	:root {
-		--blue-teal: #00a4cc; /* Default Blue-leaning teal */
-		--blue-teal-dark: #007b99; /* Darker teal for hover effects */
-		--blue-teal-transparent: #00a4ccdd; /* Default Blue-leaning teal */
-		--cyberpunk-pink: #ff2ecb; /* Vivid neon magenta */
-		--cyberpunk-pink-dark: #c0219b; /* Deeper magenta for hover/dark variants */
-		--cyberpunk-pink-transparent: #ff2ecbdd; /* Same neon pink, with transparency */
-		--black: #1a1a1a;
-		--black-transparent: #1a1a1add;
-	}
-
-	/* Global Styles */
-	:global(body) {
-		font-family:
-			'Inter',
-			-apple-system,
-			BlinkMacSystemFont,
-			'Segoe UI',
-			Roboto,
-			sans-serif;
-		line-height: 1.6;
-		color: #333;
-		margin: 0;
-		padding: 0;
-		background-color: #fafafa;
-	}
 	/* Honey pot is a hidden field to capture bots */
 	.honeypot {
 		display: none;
@@ -665,14 +617,6 @@
 	.exclusivity p {
 		font-size: 1.3rem;
 		margin-bottom: 40px;
-	}
-
-	/* Footer */
-	footer {
-		background-color: #000;
-		color: white;
-		padding: 30px 0;
-		text-align: left;
 	}
 
 	/* Modal */
