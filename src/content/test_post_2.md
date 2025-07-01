@@ -2,10 +2,10 @@
 ---
 title: Second
 description: Second post.
-date: '3-6-2025'
+date: '6-2-2025'
 categories:
-  - sveltekit
-  - svelte
+  - AI
+  - Tools
 published: true
 ---
 

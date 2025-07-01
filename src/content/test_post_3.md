@@ -1,17 +1,17 @@
 
 ---
-title: Test post 1
-description: First post.
-date: '7-1-2025'
+title: Test post 3
+description: Third post.
+date: '8-3-2025'
 categories:
-  - Automation
+  - Business Operations
   - AI
 published: true
 ---
 
 ## Markdown
 
-Hey people! 👋
+Hey AI! 👋
 
 ```ts
 function greet(name: string) {
