@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="32 25 145 141">
 	<!-- Circular Tech-Inspired Icon -->
 	<circle cx="100" cy="100" r="60" stroke="#00a4cc" stroke-width="12" fill="none" />
 
@@ -15,4 +15,3 @@
 		/>
 	</g>
 </svg>
-

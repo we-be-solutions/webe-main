@@ -30,8 +30,8 @@ function getContent() {
 	posts = posts.sort((first, second) => {
 		const [fDay, fMonth, fYear] = first.date.split('-');
 		const [sDay, sMonth, sYear] = second.date.split('-');
-		const fDate = new Date(parseInt(fYear, 10), parseInt(fMonth, 10) - 1, parseInt(fDay));
-		const sDate = new Date(parseInt(sYear, 10), parseInt(sMonth, 10) - 1, parseInt(sDay));
+		const fDate = new Date(parseInt(fYear, 10), parseInt(fMonth, 10) - 1, parseInt(fDay, 10));
+		const sDate = new Date(parseInt(sYear, 10), parseInt(sMonth, 10) - 1, parseInt(sDay, 10));
 		return sDate.getTime() - fDate.getTime();
 	});
 	console.log(posts);
