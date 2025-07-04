@@ -10,6 +10,12 @@
 				<h2>{p.title}</h2>
 				<h3>{p.date}</h3>
 				<p>{p.description}</p>
+				<p>
+					Tags:
+					{#each p.categories as tag}
+						<span>{tag}</span>
+					{/each}
+				</p>
 			</article>
 		</a>
 	{/each}
@@ -48,7 +54,11 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: start;
+	}
+
+	#article-container a {
+		max-width: 45%;
 	}
 
 	#card {
@@ -62,6 +72,17 @@
 
 	#card:hover {
 		border: 3px solid var(--blue-teal);
+	}
+	article p {
+		margin-top: 2.5rem;
+		font-size: 1.2rem;
+	}
+
+	article span {
+		text-wrap: nowrap;
+		border: 1px solid var(--black);
+		padding: 4px;
+		margin-left: 5px;
 	}
 
 	@media (max-width: 1023px) {
