@@ -2,7 +2,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
-	let { children, data } = $props();
+	let { children } = $props();
 </script>
 
 <main>

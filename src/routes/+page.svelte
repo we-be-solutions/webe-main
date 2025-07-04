@@ -215,7 +215,7 @@
 	}
 
 	.headline {
-		font-size: 2.4rem;
+		font-size: 3.4rem;
 		max-width: 800px;
 		margin: 0 auto 20px;
 		line-height: 1.3;
@@ -406,7 +406,7 @@
 	/* Responsive Adjustments */
 	@media (max-width: 768px) {
 		.headline {
-			font-size: 1.8rem;
+			font-size: 2.8rem;
 		}
 
 		.subheadline {

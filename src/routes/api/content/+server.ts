@@ -34,7 +34,6 @@ function getContent() {
 		const sDate = new Date(parseInt(sYear, 10), parseInt(sMonth, 10) - 1, parseInt(sDay, 10));
 		return sDate.getTime() - fDate.getTime();
 	});
-	console.log(posts);
 
 	return posts;
 }

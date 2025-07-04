@@ -1,58 +1,25 @@
+<script lang="ts">
+	let { data } = $props();
+</script>
+
 <h1>Articles</h1>
 <div id="article-container">
-	<article id="card">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-	</article>
-	<article id="card">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-	</article>
-	<article id="card">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-	</article>
-	<article id="card">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-	</article>
-	<article id="card">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed nisi excepturi ducimus
-			quis placeat dolores harum minima officia quibusdam, mollitia laboriosam magnam eius
-			reprehenderit vel nulla blanditiis perspiciatis facere.
-		</p>
-	</article>
+	{#each data.posts as p}
+		<a href="/blog/{p.slug}">
+			<article id="card">
+				<h2>{p.title}</h2>
+				<h3>{p.date}</h3>
+				<p>{p.description}</p>
+			</article>
+		</a>
+	{/each}
 </div>
 
 <style>
+	a {
+		text-decoration: none;
+	}
+
 	h1 {
 		color: var(--white);
 		margin: 0px;
@@ -73,6 +40,10 @@
 		background-color: var(--blue-teal); /* Blue-leaning teal */
 	}
 
+	h2 {
+		color: black;
+	}
+
 	#article-container {
 		display: flex;
 		flex-direction: row;
@@ -81,26 +52,23 @@
 	}
 
 	#card {
+		flex-grow: 1;
 		margin: 8px;
 		margin: 20px 40px 20px 40px;
 		color: var(--black);
 		border: 3px solid var(--black);
+		padding: 15px;
 	}
 
-	#card p {
-		padding: 20px;
+	#card:hover {
+		border: 3px solid var(--blue-teal);
 	}
 
 	@media (max-width: 1023px) {
 		#card {
 			max-width: 100%;
-			min-width: auto;
 			margin-bottom: 20px;
 			margin-top: 20px;
-		}
-
-		#card p {
-			padding: 20px;
 		}
 	}
 </style>
