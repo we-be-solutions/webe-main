@@ -86,6 +86,9 @@
 	}
 
 	@media (max-width: 1023px) {
+		#article-container a {
+			max-width: 100%;
+		}
 		#card {
 			max-width: 100%;
 			margin-bottom: 20px;
