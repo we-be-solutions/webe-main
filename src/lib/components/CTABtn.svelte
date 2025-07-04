@@ -153,19 +153,18 @@
 		border: none;
 		font-size: 1.1rem;
 		font-weight: 700;
-		border: 1px solid var(--cyberpunk-pink);
 		cursor: pointer;
 		transition: all 0.1s;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		z-index: 2;
-		box-shadow: 1px 1px 4px 1px var(--cyberpunk-pink-dark);
 		margin-right: 20px;
-		padding: 5px;
+		padding: 10px;
+		border: 1px solid var(--black-transparent);
 	}
 
 	.cta-button:hover {
-		box-shadow: 1px 1px 4px 1px var(--blue-teal-dark);
+		box-shadow: 0px 0px 1px 1px var(--blue-teal-dark);
 		color: var(--blue-teal);
 		border: 1px solid var(--blue-teal);
 		transform: translateY(-1px);
@@ -306,7 +305,6 @@
 			padding: 18px 20px;
 			font-size: 1.1rem;
 			font-weight: 700;
-			border: 1px solid var(--cyberpunk-pink);
 			border-radius: 500px;
 			width: 140px;
 			height: 140px;
@@ -315,11 +313,11 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			z-index: 2;
-			box-shadow: 4px 1px 4px 1px var(--cyberpunk-pink-dark);
+			border: 1px solid var(--black-transparent);
 		}
 
 		.cta-button:hover {
-			box-shadow: 4px 1px 4px 1px var(--blue-teal-dark);
+			box-shadow: 0px 0px 1px 1px var(--blue-teal-dark);
 			color: var(--blue-teal);
 			border: 1px solid var(--blue-teal);
 			transform: translateY(-1px);
