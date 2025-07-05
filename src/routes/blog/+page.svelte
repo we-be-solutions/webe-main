@@ -4,21 +4,23 @@
 
 <h1>Articles</h1>
 <div id="article-container">
-	{#each data.posts as p}
-		<a href="/blog/{p.slug}">
-			<article id="card">
-				<h2>{p.title}</h2>
-				<h3>{p.date}</h3>
-				<p>{p.description}</p>
-				<p>
-					Tags:
-					{#each p.categories as tag}
-						<span>{tag}</span>
-					{/each}
-				</p>
-			</article>
-		</a>
-	{/each}
+	{#await data.posts then posts}
+		{#each posts as p}
+			<a href="/blog/{p.slug}">
+				<article id="card">
+					<h2>{p.title}</h2>
+					<h3>{p.date}</h3>
+					<p>{p.description}</p>
+					<p>
+						Tags:
+						{#each p.categories as tag}
+							<span>{tag}</span>
+						{/each}
+					</p>
+				</article>
+			</a>
+		{/each}
+	{/await}
 </div>
 
 <style>
