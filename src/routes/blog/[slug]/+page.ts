@@ -1,4 +1,3 @@
-export const prerender = true;
 import { error, type Load } from '@sveltejs/kit';
 
 export const load: Load = async ({ params }) => {
