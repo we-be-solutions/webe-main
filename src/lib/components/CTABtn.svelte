@@ -3,6 +3,7 @@
 	import { applyAction, enhance } from '$app/forms';
 	import type { SubmitFunction } from '@sveltejs/kit';
 	import { fade, scale } from 'svelte/transition';
+	import CloudFlareTurnStile from './CloudFlareTurnStile.svelte';
 
 	type FormFailure = {
 		error?: string;
@@ -31,6 +32,12 @@
 	function toggleModal() {
 		showModal = !showModal;
 	}
+
+	let cfToken = $state('');
+
+	const handleCFToken = (token: string): void => {
+		cfToken = token;
+	};
 </script>
 
 <button class="cta-button" onclick={toggleModal}>free discovery call</button>
@@ -122,6 +129,8 @@
 					<label for="honeypot">Honey pot</label>
 					<input type="text" name="honeypot" id="honeypot" value={form?.values?.honeypot ?? ''} />
 				</div>
+				<CloudFlareTurnStile handleToken={handleCFToken} />
+				<input type="hidden" name="cf-turnstile-response" value={cfToken} />
 				<button type="submit" class="submit-button">Send</button>
 			</form>
 
