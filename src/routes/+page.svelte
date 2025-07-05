@@ -61,7 +61,7 @@
 </section>
 
 <section class="services">
-	<img id="tri" src={whiteTri} alt="white triangle art" />
+	<img id="tri" src={whiteTri} alt="white triangle art" loading="lazy" />
 	<div class="container">
 		<h2>Strategic Tech Solutions for Confident Business Growth</h2>
 		<ul class="services-list">

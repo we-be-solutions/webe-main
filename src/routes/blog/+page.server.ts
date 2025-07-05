@@ -6,7 +6,7 @@ import type { Post } from '../api/content/+server';
 
 export const load: Load = async ({ fetch }) => {
 	const res = await fetch('/api/content');
-	const posts: Post[] = await res.json();
+	const posts: Promise<Post[]> = res.json();
 	return { posts };
 };
 
