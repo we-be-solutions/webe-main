@@ -56,7 +56,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: start;
+		justify-content: space-evenly;
 	}
 
 	#article-container a {

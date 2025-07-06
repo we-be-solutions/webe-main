@@ -9,8 +9,6 @@ categories:
 published: true
 ---
 
-## What is Automation?
-
 Automation in business operations is more than just a buzzword. It’s a practical approach to scaling your team’s output without burning out or hiring unnecessarily. In essence, automation is the process of systemising repeatable tasks and then using technology to carry them out. This frees time and space so you and your team can focus on what really matters.
 
 If you’ve ever found yourself repeating the same admin process week after week, copying data from one system to another, or sending the same email a dozen times then automation is the solution waiting to be used.

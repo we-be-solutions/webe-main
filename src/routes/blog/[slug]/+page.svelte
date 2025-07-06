@@ -6,10 +6,10 @@
 <div id="article-container">
 	<article id="card">
 		<h1>{data.meta.title}</h1>
-		<h3>Published: {data.meta.date}</h3>
 		<Content />
+		<hr />
+		<p>Published: {data.meta.date}</p>
 		<p>
-			Tags:
 			{#each data.meta.categories as tag}
 				<span>{tag}</span>
 			{/each}
