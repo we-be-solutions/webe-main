@@ -71,11 +71,23 @@
 	}
 
 	@media (max-width: 1023px) {
+		h1 {
+			font-size: 1.4rem;
+		}
+
 		#card {
 			max-width: 100%;
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding: 35px;
+		}
+		article p {
+			margin-top: 1.3rem;
+			font-size: 0.8rem;
+		}
+
+		article span {
+			font-size: 0.8rem;
 		}
 	}
 </style>
