@@ -9,8 +9,6 @@ categories:
 published: true
 ---
 
-## Is Custom Built Software the Answer?
-
 In a world of fast-moving SaaS tools and thousands of platforms at your fingertips, it's tempting to assume there’s an app for everything. But is that app *your* answer?
 
 Custom-built software isn't always the right path, but when it is, it can transform a business.

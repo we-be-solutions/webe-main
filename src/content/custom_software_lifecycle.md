@@ -10,8 +10,6 @@ categories:
 published: true
 ---
 
-## The Lifecycle of a Custom Software Project: From Idea to Launch
-
 Custom software might seem like a big leap—but understanding its lifecycle helps you take the first step with confidence. Knowing what to expect builds trust, sets realistic timelines, and creates the foundation for a strong partnership. If you're a non-technical decision maker looking to grow your business with tech, this guide is for you.
 
 ### 1. Discovery: Finding the Root Problem
