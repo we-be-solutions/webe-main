@@ -6,7 +6,7 @@
 	<div class="container">
 		<h2 class="headline">Level the Playing Field of Tech</h2>
 		<p class="subheadline">
-			Helping your business plan, build, and use the right technology the right way—so you can grow
+			Helping your business plan, build, and use the right technology the right way. So you can grow
 			without the tech headaches.
 		</p>
 	</div>
@@ -16,9 +16,9 @@
 	<div class="container">
 		<h2>The High-Impact Alternative to Big Tech Firms</h2>
 		<p>
-			WeBe Solutions is built for businesses that see technology as a growth engine—not just another
-			expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate inefficiencies,
-			make smarter decisions, and accelerate profits.
+			WeBe Solutions is built for businesses that see technology as a growth engine and not just
+			another expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate
+			inefficiencies, make smarter decisions, and accelerate profits.
 		</p>
 	</div>
 </section>
