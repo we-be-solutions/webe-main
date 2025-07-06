@@ -58,9 +58,13 @@
 
 	article p {
 		margin-top: 2.5rem;
+		font-size: 1.2rem;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	article span {
+		margin-top: 4px;
 		border: 1px solid var(--black);
 		padding: 4px;
 		margin-left: 5px;
