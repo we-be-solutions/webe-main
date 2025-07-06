@@ -3,7 +3,7 @@
 
 	let { handleToken } = $props();
 
-	let container: HTMLElement;
+	let container: HTMLElement | undefined = $state();
 
 	$effect(() => {
 		const renderTurnstile = () => {
@@ -26,10 +26,6 @@
 		return () => clearTimeout(retry);
 	});
 </script>
-
-<svelte:head>
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</svelte:head>
 
 <div bind:this={container}></div>
 

@@ -27,7 +27,8 @@ const formSchema = z
 			.string()
 			.max(2000, 'Project description is too long')
 			.transform((val) => val.trim()),
-		honeypot: z.string().max(0, 'honeypot')
+		honeypot: z.string().max(0, 'honeypot'),
+		'cf-turnstile-response': z.string()
 	})
 	.strict();
 
@@ -36,6 +37,15 @@ export const actions = {
 		const formData = await request.formData();
 		const data = Object.fromEntries(formData);
 
+		//human
+		const cfToken = formData.get('cf-turnstile-response');
+		if (cfToken) {
+			const success = await checkWithCF(cfToken.toString());
+			if (!success) {
+				//Honey pot represents fake success to trick bots
+				return { success: true, message: `honeypot` };
+			}
+		}
 		// Validate and sanitize
 		const result = formSchema.safeParse(data);
 		if (!result.success) {
@@ -78,3 +88,27 @@ export const actions = {
 		}
 	}
 } satisfies Actions;
+
+const checkWithCF = async (token: string) => {
+	const secret = env.CF_TS_SECRET_KEY;
+
+	const formData = new URLSearchParams();
+	formData.append('secret', secret || '');
+	formData.append('response', token);
+
+	const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: formData.toString()
+	});
+
+	if (!res.ok) {
+		console.error('Turnstile verification failed with status', res.status);
+		return false;
+	}
+
+	const data = await res.json();
+	return data.success === true;
+};

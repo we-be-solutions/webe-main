@@ -13,7 +13,6 @@
 
 	let form: FormFailure & { success?: boolean; message?: string } = $props();
 	let issues = $state(form.issues);
-
 	const options: SubmitFunction = ({}) => {
 		return async ({ result }) => {
 			if (result.type === 'failure') {

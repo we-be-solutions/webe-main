@@ -34,7 +34,8 @@ const formSchema = z
 			.string()
 			.max(2000, 'Project description is too long')
 			.transform((val) => val.trim()),
-		honeypot: z.string().max(0, 'honeypot')
+		honeypot: z.string().max(0, 'honeypot'),
+		'cf-turnstile-response': z.string()
 	})
 	.strict();
 
@@ -99,7 +100,7 @@ export const actions = {
 } satisfies Actions;
 
 const checkWithCF = async (token: string) => {
-	const secret = process.env.TURNSTILE_SECRET_KEY;
+	const secret = env.CF_TS_SECRET_KEY;
 
 	const formData = new URLSearchParams();
 	formData.append('secret', secret || '');
