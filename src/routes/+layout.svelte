@@ -24,7 +24,7 @@
 	});
 </script>
 
-<GoogleAnalytics id="G-2S5LJ8KQ4L" />
+<GoogleAnalytics />
 
 <main>
 	<NavBar />
