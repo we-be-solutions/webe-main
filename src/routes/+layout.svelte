@@ -1,4 +1,6 @@
 <script lang="ts">
+	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
+
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
@@ -21,6 +23,8 @@
 		document.body.appendChild(script);
 	});
 </script>
+
+<GoogleAnalytics id="G-2S5LJ8KQ4L" />
 
 <main>
 	<NavBar />
