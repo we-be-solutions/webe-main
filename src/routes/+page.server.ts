@@ -1,7 +1,14 @@
-import { fail, type Actions } from '@sveltejs/kit';
+import { fail, type Actions, type Load } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 import { Resend } from 'resend';
 import * as z from 'zod';
+import type { Post } from './api/content/+server';
+
+export const load: Load = async ({ fetch }) => {
+	const res = await fetch('/api/content?latest=3');
+	const posts: Promise<Post[]> = res.json();
+	return { posts };
+};
 
 const resend = new Resend(env.RESEND_API_KEY);
 

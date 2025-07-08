@@ -1,5 +1,7 @@
 <script lang="ts">
 	import whiteTri from '$lib/assets/white_tri.png';
+
+	let { data } = $props();
 </script>
 
 <header class="hero">
@@ -20,6 +22,27 @@
 			another expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate
 			inefficiencies, make smarter decisions, and accelerate profits.
 		</p>
+	</div>
+</section>
+<section class="articles">
+	<h2>Articles</h2>
+	<div id="article-container">
+		{#await data.posts then posts}
+			{#each posts as p}
+				<a href="/blog/{p.slug}">
+					<article id="card">
+						<h3>{p.title}</h3>
+						<h4>{p.date}</h4>
+						<p>{p.description}</p>
+						<p>
+							{#each p.categories as tag}
+								<span>{tag}</span>
+							{/each}
+						</p>
+					</article>
+				</a>
+			{/each}
+		{/await}
 	</div>
 </section>
 <section class="advantages">
@@ -272,6 +295,10 @@
 		font-weight: 500;
 	}
 
+	.advantages {
+		background-color: #f1f1f1;
+	}
+
 	/* Advantages Grid */
 	.advantages-grid {
 		display: grid;
@@ -419,6 +446,83 @@
 
 		.results-content {
 			padding: 30px;
+		}
+	}
+
+	/* .articles h1 { */
+	/* 	color: var(--white); */
+	/* 	margin: 0px; */
+	/* 	font-size: 3.3rem; */
+	/* 	text-align: center; */
+	/* 	font-weight: 800; */
+	/* 	position: relative; */
+	/* } */
+	/**/
+	/* .articles h1:after { */
+	/* 	content: ''; */
+	/* 	position: absolute; */
+	/* 	bottom: 0; */
+	/* 	left: 50%; */
+	/* 	transform: translateX(-50%); */
+	/* 	width: 150px; */
+	/* 	height: 4px; */
+	/* 	background-color: var(--blue-teal); /* Blue-leaning teal */
+	/* } */
+
+	.articles h3 {
+		color: black;
+	}
+
+	#article-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	#article-container a {
+		max-width: 30%;
+	}
+
+	.articles a {
+		text-decoration: none;
+	}
+
+	#card {
+		margin: 8px;
+		margin: 10px 10px 10px 10px;
+		color: var(--black);
+		border: 3px solid var(--black);
+		padding: 15px;
+		min-height: 100%;
+	}
+
+	#card:hover {
+		border: 3px solid var(--blue-teal);
+	}
+	article p {
+		margin-top: 2.5rem;
+		font-size: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	article span {
+		margin-top: 3px;
+		border: 1px solid var(--black);
+		padding: 4px;
+		margin-left: 5px;
+	}
+
+	@media (max-width: 1023px) {
+		#article-container a {
+			max-width: 100%;
+		}
+		#card {
+			max-width: 100%;
+			min-height: inherit;
+			margin-bottom: 20px;
+			margin-top: 20px;
 		}
 	}
 </style>

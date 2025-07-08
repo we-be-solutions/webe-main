@@ -11,7 +11,7 @@
 		<div class="logo-sizer">
 			<LogoNoWords />
 		</div>
-		<h1>WeBE</h1>
+		<h1>WeBe</h1>
 	</div>
 
 	<!-- Hamburger icon (visible only on mobile) -->
