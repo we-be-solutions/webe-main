@@ -25,7 +25,7 @@
 	</div>
 </section>
 <section class="articles">
-	<h2>Articles</h2>
+	<h2>Latest News</h2>
 	<div id="article-container">
 		{#await data.posts then posts}
 			{#each posts as p}
