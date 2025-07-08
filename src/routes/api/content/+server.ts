@@ -11,7 +11,7 @@ export type Post = {
 	published: boolean;
 };
 
-function getContent() {
+function getContent(latest: string) {
 	let posts: Post[] = [];
 
 	const paths = import.meta.glob('/src/content/*.md', { eager: true });
@@ -35,10 +35,15 @@ function getContent() {
 		return sDate.getTime() - fDate.getTime();
 	});
 
+	if (latest !== 'all') {
+		return posts.slice(0, 3);
+	}
+
 	return posts;
 }
 
-export async function GET() {
-	const res = getContent();
+export async function GET({ url }: { url: URL }) {
+	const latest = url.searchParams.get('latest') ?? 'all';
+	const res = getContent(latest);
 	return json(res);
 }

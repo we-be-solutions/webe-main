@@ -12,7 +12,8 @@ categories:
 published: true
 ---
 
-## How Your Website Can Power Operations: Answers for Business Owners
+
+Here are 10 common questions about the operation potential of your web presence! 
 
 ### 1. Isn’t our website just for marketing? Why would operations care about it?
 
