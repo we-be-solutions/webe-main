@@ -6,120 +6,61 @@
 	let menuOpen = false;
 </script>
 
-<nav use:clickOutside={() => (menuOpen = false)}>
-	<div class="logo">
-		<div class="logo-sizer">
-			<LogoNoWords />
-		</div>
-		<h1>WeBe</h1>
+<nav class="navbar z-10 fixed bg-base-100 shadow-sm" use:clickOutside={() => (menuOpen = false)}>
+	<div class="navbar-start">
+		<a href="/" class="flex items-center gap-2">
+			<div class="w-15">
+				<LogoNoWords />
+			</div>
+			<p class="text-3xl font-bold">WeBe</p>
+		</a>
 	</div>
 
-	<!-- Hamburger icon (visible only on mobile) -->
-	<button class="hamburger" on:click={() => (menuOpen = !menuOpen)}> ☰ </button>
+	<!-- Desktop Menu -->
+	<div class="navbar-center hidden md:flex">
+		<ul class="menu menu-horizontal px-1 text-lg">
+			<li><a href="/">Home</a></li>
+			<li><a href="/blog">Articles</a></li>
+		</ul>
+	</div>
 
-	<!-- Navigation menu -->
-	<ul class:open={menuOpen} on:click={() => (menuOpen = false)}>
-		<li><a href="/">Home</a></li>
-		<li><a href="/blog">Articles</a></li>
-	</ul>
+	<!-- Mobile Hamburger -->
+	<div class="navbar-end md:hidden">
+		<button class="btn btn-ghost" aria-label="Toggle menu" on:click={() => (menuOpen = !menuOpen)}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="w-6 h-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M4.5 6.75h15M4.5 12h15M4.5 17.25h15"
+				/>
+			</svg>
+		</button>
+	</div>
 
-	<CtaBtn />
+	<!-- Desktop CTA -->
+	<div class="navbar-end hidden md:flex">
+		<CtaBtn />
+	</div>
+
+	<!-- Mobile Dropdown Menu -->
+	{#if menuOpen}
+		<div class="absolute top-full left-0 w-full bg-base-100 shadow-md md:hidden z-20">
+			<ul class="menu px-4 py-2 space-y-2">
+				<li><a href="/" on:click={() => (menuOpen = false)}>Home</a></li>
+				<li><a href="/blog" on:click={() => (menuOpen = false)}>Articles</a></li>
+			</ul>
+		</div>
+	{/if}
 </nav>
 
-<style>
-	nav {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		position: sticky;
-		top: 0;
-		background: white;
-		z-index: 3;
-	}
-
-	.logo {
-		display: flex;
-		padding-right: 10px;
-		padding-left: 10px;
-		align-items: center;
-		justify-content: center;
-		/* background-color: var(--black); */
-	}
-	.logo-sizer {
-		width: 75px;
-	}
-	.logo h1 {
-		padding: 0px;
-		margin: 0px;
-		font-size: 2.5rem;
-		letter-spacing: 1px;
-		line-height: 1.6;
-		color: var(--black);
-	}
-
-	ul {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		transition: max-height 0.3s ease;
-	}
-
-	li {
-		list-style-type: none;
-		margin: 0 10px;
-	}
-
-	li a {
-		text-decoration: none;
-		color: inherit;
-		font-size: 1.5rem;
-		font-weight: 600;
-		padding-right: 8px;
-		border-right: 3px solid var(--black);
-	}
-
-	li a:hover {
-		border-right: 3px solid var(--blue-teal);
-		color: var(--blue-teal);
-	}
-
-	.hamburger {
-		display: none;
-		font-size: 2rem;
-		background: none;
-		border: none;
-		cursor: pointer;
-	}
-
-	/* Mobile styles */
-	@media (max-width: 768px) {
-		ul {
-			flex-direction: column;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			background: white;
-			max-height: 0;
-			overflow: hidden;
-			margin: 0;
-		}
-
-		ul.open {
-			max-height: 200px; /* Adjust as needed */
-		}
-
-		.hamburger {
-			align-self: center;
-			margin-right: 20px;
-			display: block;
-		}
-
-		nav {
-			flex-wrap: wrap;
-			align-items: flex-start;
-		}
-	}
-</style>
+<!-- Mobile Sticky CTA Button -->
+<div class="md:hidden fixed bottom-4 right-4 z-30">
+	<CtaBtn />
+</div>

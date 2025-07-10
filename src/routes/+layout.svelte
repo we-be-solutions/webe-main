@@ -26,8 +26,12 @@
 
 <GoogleAnalytics />
 
-<main>
+<div class="min-h-screen flex flex-col">
 	<NavBar />
-	{@render children?.()}
-</main>
-<Footer />
+
+	<main class="flex-grow pt-32">
+		{@render children?.()}
+	</main>
+
+	<Footer />
+</div>

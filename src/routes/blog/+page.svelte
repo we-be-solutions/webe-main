@@ -2,101 +2,29 @@
 	let { data } = $props();
 </script>
 
-<h1>Articles</h1>
-<div id="article-container">
+<div class="text-center">
+	<h1 class="text-4xl font-bold mb-6 mt-6">Articles</h1>
+	<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
+</div>
+
+<div
+	id="article-container"
+	class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-12 my-12 mx-auto lg:max-w-4/5"
+>
 	{#await data.posts then posts}
 		{#each posts as p}
-			<a href="/blog/{p.slug}">
-				<article id="card">
-					<h2>{p.title}</h2>
-					<h3>{p.date}</h3>
+			<a href="/blog/{p.slug}" class="card bg-base-300 shadow-md hover:shadow-lg transition">
+				<article class="card-body">
+					<h2 class="card-title">{p.title}</h2>
+					<h3 class="text-sm text-base-content/60">{p.date}</h3>
 					<p>{p.description}</p>
-					<p>
-						Tags:
+					<div class="mt-2 flex flex-wrap gap-2">
 						{#each p.categories as tag}
-							<span>{tag}</span>
+							<span class="badge badge-outline">{tag}</span>
 						{/each}
-					</p>
+					</div>
 				</article>
 			</a>
 		{/each}
 	{/await}
 </div>
-
-<style>
-	a {
-		text-decoration: none;
-	}
-
-	h1 {
-		color: var(--white);
-		margin: 0px;
-		font-size: 3.3rem;
-		text-align: center;
-		font-weight: 800;
-		position: relative;
-	}
-
-	h1:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 150px;
-		height: 4px;
-		background-color: var(--blue-teal); /* Blue-leaning teal */
-	}
-
-	h2 {
-		color: black;
-	}
-
-	#article-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-	}
-
-	#article-container a {
-		max-width: 45%;
-	}
-
-	#card {
-		flex-grow: 1;
-		margin: 8px;
-		margin: 20px 40px 20px 40px;
-		color: var(--black);
-		border: 3px solid var(--black);
-		padding: 15px;
-	}
-
-	#card:hover {
-		border: 3px solid var(--blue-teal);
-	}
-	article p {
-		margin-top: 2.5rem;
-		font-size: 1.2rem;
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	article span {
-		margin-top: 3px;
-		border: 1px solid var(--black);
-		padding: 4px;
-		margin-left: 5px;
-	}
-
-	@media (max-width: 1023px) {
-		#article-container a {
-			max-width: 100%;
-		}
-		#card {
-			max-width: 100%;
-			margin-bottom: 20px;
-			margin-top: 20px;
-		}
-	}
-</style>
