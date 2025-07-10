@@ -2,7 +2,7 @@
 	let { data } = $props();
 </script>
 
-<div class="text-center">
+<div class="text-center mt-32">
 	<h1 class="text-4xl font-bold mb-6 mt-6">Articles</h1>
 	<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
 </div>

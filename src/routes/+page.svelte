@@ -1,18 +1,63 @@
 <script lang="ts">
+	import CtaBtn from '$lib/components/CTABtn.svelte';
+	import { onMount } from 'svelte';
+
 	let { data } = $props();
+
+	let videoEl: HTMLVideoElement | null = $state(null);
+
+	onMount(() => {
+		if (videoEl) {
+			videoEl.playbackRate = 1.5;
+			videoEl.currentTime = 3.5;
+			videoEl.play();
+		}
+	});
+
+	// if (typeof window !== 'undefined') {
+	// 	showVideo = window.innerWidth > 768; // Skip video on mobile
+	// }
 </script>
 
-<header class="hero bg-base-100 py-16">
-	<div class="container mx-auto px-4 text-center">
-		<h2 class="text-5xl font-bold mb-4">Level the Playing Field of Tech</h2>
+<!-- <header class="hero bg-base-100 py-16"> -->
+<!-- 	<div class="container mx-auto px-4 text-center"> -->
+<!-- 		<h2 class="text-5xl font-bold mb-4">Level the Playing Field of Tech</h2> -->
+<!-- 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div> -->
+<!-- 		<p class="text-2xl text-base-content"> -->
+<!-- 			Helping your business plan, build, and use the right technology the right way. So you can grow -->
+<!-- 			without the tech headaches. -->
+<!-- 		</p> -->
+<!-- 	</div> -->
+<!-- </header> -->
+<header class="relative hero bg-base-100 h-screen overflow-hidden">
+	<!-- Background video (desktop only) -->
+	<video
+		bind:this={videoEl}
+		class="absolute top-0 left-0 w-full h-full object-cover z-10"
+		muted
+		loop
+		poster="/train_placeholder.png"
+	>
+		<source src="/train_hero.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+
+	<!-- Overlay (optional for text readability) -->
+	<div class="absolute inset-0 bg-base-300/90 z-10"></div>
+
+	<!-- Hero Content -->
+	<div class="relative z-10 container mx-auto px-4 text-center">
+		<h2 class="text-5xl font-bold mb-4 text-base-content">Level the Playing Field of Tech</h2>
 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
 		<p class="text-2xl text-base-content">
 			Helping your business plan, build, and use the right technology the right way. So you can grow
 			without the tech headaches.
 		</p>
+		<div class="mt-32">
+			<CtaBtn />
+		</div>
 	</div>
 </header>
-
 <section class="py-16 bg-base-200">
 	<div class="container mx-auto px-4">
 		<h2 class="text-3xl font-semibold mb-4">The High-Impact Alternative to Big Tech Firms</h2>
@@ -165,14 +210,14 @@
 		<h2 class="text-3xl font-semibold mb-4">Focused Attention for Every Client</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<div class="text-l">
-		<p class="mb-4">
-			To ensure each business receives the care it deserves, I work with a small number of clients
-			at a time.
-		</p>
-		<p>
-			This ensures your business gets the focus and support needed to use tech to drive growth and
-			efficiency.
-		</p>
+			<p class="mb-4">
+				To ensure each business receives the care it deserves, I work with a small number of clients
+				at a time.
+			</p>
+			<p>
+				This ensures your business gets the focus and support needed to use tech to drive growth and
+				efficiency.
+			</p>
 		</div>
 	</div>
 </section>

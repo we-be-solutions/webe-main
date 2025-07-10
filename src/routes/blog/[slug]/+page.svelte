@@ -3,7 +3,7 @@
 	let Content = data.content;
 </script>
 
-<div id="article-container" class="max-w-5xl mx-auto p-6">
+<div id="article-container" class="max-w-5xl mx-auto p-6 mt-32">
 	<article class="card bg-base-100 shadow-md">
 		<div class="card-body space-y-4">
 			<h1 class="card-title text-4xl font-bold">{data.meta.title}</h1>

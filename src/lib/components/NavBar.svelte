@@ -6,7 +6,7 @@
 	let menuOpen = false;
 </script>
 
-<nav class="navbar z-10 fixed bg-base-100 shadow-sm" use:clickOutside={() => (menuOpen = false)}>
+<nav class="navbar z-30 fixed bg-base-100 shadow-sm" use:clickOutside={() => (menuOpen = false)}>
 	<div class="navbar-start">
 		<a href="/" class="flex items-center gap-2">
 			<div class="w-15">

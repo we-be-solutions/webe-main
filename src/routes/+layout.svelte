@@ -29,7 +29,7 @@
 <div class="min-h-screen flex flex-col">
 	<NavBar />
 
-	<main class="flex-grow pt-32">
+	<main class="flex-grow">
 		{@render children?.()}
 	</main>
 
