@@ -29,14 +29,18 @@
 <!-- 		</p> -->
 <!-- 	</div> -->
 <!-- </header> -->
-<header class="relative hero bg-base-100 h-screen overflow-hidden">
+<header
+	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
+	style="background-image: url('/train_placeholder.png');"
+>
 	<!-- Background video (desktop only) -->
 	<video
 		bind:this={videoEl}
 		class="absolute top-0 left-0 w-full h-full object-cover z-10"
 		muted
 		loop
-		poster="/train_placeholder.png"
+		autoplay
+		playsinline
 	>
 		<source src="/train_hero.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
