@@ -14,11 +14,11 @@
 			</div>
 			<p class="text-3xl font-bold">WeBe</p>
 		</a>
-		<div class="ml-18 inline-grid *:[grid-area:1/1]">
+		<div class="ml-10 inline-grid *:[grid-area:1/1]">
 			<div class="status status-error animate-ping"></div>
 			<div class="status status-error"></div>
 		</div>
-		<p class="ml-3">UNDER CONSTRUCTION</p>
+		<p class="ml-1">Beta</p>
 	</div>
 
 	<!-- Desktop Menu -->
@@ -64,8 +64,3 @@
 		</div>
 	{/if}
 </nav>
-
-<!-- Mobile Sticky CTA Button -->
-<div class="md:hidden fixed bottom-4 right-4 z-30">
-	<CtaBtn />
-</div>
