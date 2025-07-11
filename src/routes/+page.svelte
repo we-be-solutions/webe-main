@@ -36,7 +36,7 @@
 <!-- 	</div> -->
 <!-- </header> -->
 <svelte:head>
-	<link rel="preload" as="video" href="/output_trimmed.mp4" type="video/mp4" />
+	<link rel="preload" as="video" href="/output_streamable.mp4" type="video/mp4" />
 </svelte:head>
 <header
 	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
@@ -52,7 +52,7 @@
 		preload="auto"
 		playsinline
 	>
-		<source src="/output_trimmed.mp4" type="video/mp4" />
+		<source src="/output_streamable.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
