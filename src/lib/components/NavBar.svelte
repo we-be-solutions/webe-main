@@ -14,6 +14,11 @@
 			</div>
 			<p class="text-3xl font-bold">WeBe</p>
 		</a>
+		<div class="ml-18 inline-grid *:[grid-area:1/1]">
+			<div class="status status-error animate-ping"></div>
+			<div class="status status-error"></div>
+		</div>
+		<p class="ml-3">UNDER CONSTRUCTION</p>
 	</div>
 
 	<!-- Desktop Menu -->
