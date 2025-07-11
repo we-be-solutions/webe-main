@@ -1,6 +1,10 @@
 <script lang="ts">
 	import CtaBtn from '$lib/components/CTABtn.svelte';
 	import { onMount } from 'svelte';
+	import GraphIcon from '../components/svg/graph_icon.svelte';
+	import LightingIcon from '../components/svg/lighting_icon.svelte';
+	import BeakerIcon from '../components/svg/beaker_icon.svelte';
+	import CogIcon from '../components/svg/cog_icon.svelte';
 
 	let { data } = $props();
 
@@ -117,6 +121,11 @@
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
 			<div class="card bg-base-100 shadow">
 				<div class="card-body">
+					<div
+						class="ml-auto mr-auto mb-8 mt-8 w-24 h-24 sm:w-18 sm:h-18 md:w-24 md:h-24 text-primary"
+					>
+						<CogIcon />
+					</div>
 					<h3 class="card-title">Strategic Expertise, Powered by Insight</h3>
 					<p class="prose">
 						Your tech journey is guided by a consultant who prioritises your business objectives
@@ -126,6 +135,11 @@
 			</div>
 			<div class="card bg-base-100 shadow">
 				<div class="card-body">
+					<div
+						class="ml-auto mr-auto mb-8 mt-8 w-24 h-24 sm:w-18 sm:h-18 md:w-24 md:h-24 text-primary"
+					>
+						<BeakerIcon />
+					</div>
 					<h3 class="card-title">Direct Access To The Decision Maker</h3>
 					<p class="prose">
 						No middlemen. You work directly with me, ensuring clear communication, fast decisions,
@@ -135,6 +149,11 @@
 			</div>
 			<div class="card bg-base-100 shadow">
 				<div class="card-body">
+					<div
+						class="ml-auto mr-auto mb-8 mt-8 w-24 h-24 sm:w-18 sm:h-18 md:w-24 md:h-24 text-primary"
+					>
+						<LightingIcon />
+					</div>
 					<h3 class="card-title">Rapid, Results-Driven Guidance</h3>
 					<p class="prose">
 						An agile approach delivers insights and application in half the time of traditional
@@ -144,6 +163,11 @@
 			</div>
 			<div class="card bg-base-100 shadow">
 				<div class="card-body">
+					<div
+						class="ml-auto mr-auto mb-8 mt-8 w-24 h-24 sm:w-18 sm:h-18 md:w-24 md:h-24 text-primary"
+					>
+						<GraphIcon />
+					</div>
 					<h3 class="card-title">Measurable Business Outcomes, Not Just Tech</h3>
 					<p class="prose">
 						My work continues through building and support until you see real results and feel
@@ -155,8 +179,19 @@
 	</div>
 </section>
 
-<section class="py-16">
-	<div class="container mx-auto px-4">
+<section class="relative py-16 bg-cover bg-center">
+	<!-- Overlay -->
+	<div class="absolute inset-0 z-0">
+		<div class="absolute inset-0 bg-black/90"></div>
+		<img
+			src="/red-wall.webp"
+			alt=""
+			class="w-full h-full object-cover"
+			loading="eager"
+			fetchpriority="high"
+		/>
+	</div>
+	<div class="container relative mx-auto px-4 z-30">
 		<h2 class="text-3xl font-semibold mb-8">
 			Strategic Tech Solutions for Confident Business Growth
 		</h2>
@@ -221,17 +256,20 @@
 
 <section class="py-16">
 	<div class="container mx-auto px-4">
-		<h2 class="text-3xl font-semibold mb-4">Focused Attention for Every Client</h2>
-		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<div class="text-l">
-			<p class="mb-4">
-				To ensure each business receives the care it deserves, I work with a small number of clients
-				at a time.
-			</p>
-			<p>
-				This ensures your business gets the focus and support needed to use tech to drive growth and
-				efficiency.
-			</p>
+		<div class="flex flex-col">
+			<h2 class="text-3xl font-semibold mb-4">Focused Attention for Every Client</h2>
+			<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
+			<!-- Text on the right -->
+			<div class="text-lg">
+				<p class="mb-4">
+					To ensure each business receives the care it deserves, I work with a small number of
+					clients at a time.
+				</p>
+				<p>
+					This ensures your business gets the focus and support needed to use tech to drive growth
+					and efficiency.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
