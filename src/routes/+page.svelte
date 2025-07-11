@@ -36,11 +36,11 @@
 <!-- 	</div> -->
 <!-- </header> -->
 <svelte:head>
-	<link rel="preload" as="video" href="/output_streamable.mp4" type="video/mp4" />
+	<link rel="preload" as="video" href="/output-tiny.webm" type="video/mp4" />
 </svelte:head>
 <header
 	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
-	style="background-image: url('/train_placeholder.png');"
+	style="background-image: url('/train_placeholder.webp');"
 >
 	<!-- Background video (desktop only) -->
 	<video
@@ -52,7 +52,7 @@
 		preload="auto"
 		playsinline
 	>
-		<source src="/output_streamable.mp4" type="video/mp4" />
+		<source src="/output-tiny.webm" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
