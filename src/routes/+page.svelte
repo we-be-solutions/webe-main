@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" as="video" href="/laser.webm" type="video/mp4" />
+	<link rel="preload" as="video" href="/laser.webm" type="video/webm" />
 </svelte:head>
 <header
 	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
@@ -42,7 +42,7 @@
 		preload="auto"
 		playsinline
 	>
-		<source src="/laser.webm" type="video/mp4" />
+		<source src="/laser.webm" type="video/webm" />
 		Your browser does not support the video tag.
 	</video>
 
