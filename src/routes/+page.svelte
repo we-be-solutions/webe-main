@@ -12,7 +12,7 @@
 
 	onMount(() => {
 		if (videoEl) {
-			videoEl.playbackRate = 2.5;
+			videoEl.playbackRate = 0.8;
 			videoEl.play();
 
 			videoEl.addEventListener('ended', () => {
@@ -23,28 +23,14 @@
 			});
 		}
 	});
-
-	// if (typeof window !== 'undefined') {
-	// 	showVideo = window.innerWidth > 768; // Skip video on mobile
-	// }
 </script>
 
-<!-- <header class="hero bg-base-100 py-16"> -->
-<!-- 	<div class="container mx-auto px-4 text-center"> -->
-<!-- 		<h2 class="text-5xl font-bold mb-4">Level the Playing Field of Tech</h2> -->
-<!-- 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div> -->
-<!-- 		<p class="text-2xl text-base-content"> -->
-<!-- 			Helping your business plan, build, and use the right technology the right way. So you can grow -->
-<!-- 			without the tech headaches. -->
-<!-- 		</p> -->
-<!-- 	</div> -->
-<!-- </header> -->
 <svelte:head>
-	<link rel="preload" as="video" href="/output-tiny.webm" type="video/mp4" />
+	<link rel="preload" as="video" href="/laser.webm" type="video/mp4" />
 </svelte:head>
 <header
 	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
-	style="background-image: url('/train_placeholder.webp');"
+	style="background-image: url('/poster.webp');"
 >
 	<!-- Background video (desktop only) -->
 	<video
@@ -56,12 +42,12 @@
 		preload="auto"
 		playsinline
 	>
-		<source src="/output-tiny.webm" type="video/mp4" />
+		<source src="/laser.webm" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
 	<!-- Overlay (optional for text readability) -->
-	<div class="absolute inset-0 bg-base-300/90 z-10"></div>
+	<div class="absolute inset-0 bg-base-300/95 z-10"></div>
 
 	<!-- Hero Content -->
 	<div class="relative z-10 container mx-auto px-4 text-center">
@@ -95,7 +81,10 @@
 		<div id="article-container" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#await data.posts then posts}
 				{#each posts as p}
-					<a href="/blog/{p.slug}" class="card bg-base-300 shadow-md hover:shadow-lg transition">
+					<a
+						href="/blog/{p.slug}"
+						class="card bg-base-300 shadow-md hover:shadow-xl hover:ring-2 hover:ring-secondary/60 hover:ring-offset-2 transition duration-200"
+					>
 						<article class="card-body prose prose-xl">
 							<h3>{p.title}</h3>
 							<h4 class="mt-1">{p.date}</h4>
@@ -196,37 +185,37 @@
 			Strategic Tech Solutions for Confident Business Growth
 		</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Work Smarter with AI</h3>
+		<ul class="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Work Smarter with AI</h3>
 				<p>Streamline operations and make smarter decisions—without the risk or complexity.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Achieve Goals with the Right Tech</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Achieve Goals with the Right Tech</h3>
 				<p>Uncover how tech directly supports growth—minus the jargon.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Free Up Time Through Automation</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Free Up Time Through Automation</h3>
 				<p>Reclaim hours weekly by turning tasks into automations.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Bring Your Ideas to Life</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Bring Your Ideas to Life</h3>
 				<p>See working prototypes that match your goals and budget.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Make Confident Tech Decisions</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Make Confident Tech Decisions</h3>
 				<p>Get expert guidance—no second-guessing or wasted time.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Turn Plans into Reality</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Turn Plans into Reality</h3>
 				<p>Launch with support from system builds to integrations.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Get More from Your Tools</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Get More from Your Tools</h3>
 				<p>Boost productivity by simplifying and streamlining workflows.</p>
 			</li>
-			<li class="card bg-base-200 shadow p-4">
-				<h3 class="card-title">Choose the Right Tools with Confidence</h3>
+			<li class="card bg-base-200 shadow p-8">
+				<h3 class="card-title mb-8">Choose the Right Tools with Confidence</h3>
 				<p>Clear, unbiased platform recommendations that fit your needs.</p>
 			</li>
 		</ul>
@@ -237,11 +226,11 @@
 	<div class="container mx-auto px-4">
 		<h2 class="text-3xl font-semibold mb-6">The Investment That Pays for Itself</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<p class="mb-6">
+		<p class="mb-6 text-xl">
 			My clients don’t measure success by tech features or complexity—they measure it by the impact
 			smart tech decisions have on their business:
 		</p>
-		<ul class="space-y-4 list-disc pl-6">
+		<ul class="space-y-4 list-disc pl-6 text-xl">
 			<li><span class="font-bold">Hours saved</span> by streamlining workflows</li>
 			<li><span class="font-bold">Eliminate costly mistakes</span> with future-proof tech</li>
 			<li><span class="font-bold">Effective collaboration</span> through expert guidance</li>
@@ -260,7 +249,7 @@
 			<h2 class="text-3xl font-semibold mb-4">Focused Attention for Every Client</h2>
 			<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 			<!-- Text on the right -->
-			<div class="text-lg">
+			<div class="text-xl">
 				<p class="mb-4">
 					To ensure each business receives the care it deserves, I work with a small number of
 					clients at a time.
