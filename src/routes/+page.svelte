@@ -8,9 +8,15 @@
 
 	onMount(() => {
 		if (videoEl) {
-			videoEl.playbackRate = 1.5;
-			videoEl.currentTime = 3.5;
+			videoEl.playbackRate = 2.5;
 			videoEl.play();
+
+			videoEl.addEventListener('ended', () => {
+				if (videoEl) {
+					videoEl.currentTime = 1.0;
+					videoEl.play();
+				}
+			});
 		}
 	});
 
@@ -42,7 +48,7 @@
 		autoplay
 		playsinline
 	>
-		<source src="/train_hero.mp4" type="video/mp4" />
+		<source src="/output_trimmed.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
@@ -51,7 +57,7 @@
 
 	<!-- Hero Content -->
 	<div class="relative z-10 container mx-auto px-4 text-center">
-		<h2 class="text-5xl font-bold mb-4 text-base-content">Level the Playing Field of Tech</h2>
+		<h2 class="text-5xl font-bold mb-4 text-base-content">Keep Your Business on the Right Track</h2>
 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
 		<p class="text-2xl text-base-content">
 			Helping your business plan, build, and use the right technology the right way. So you can grow
