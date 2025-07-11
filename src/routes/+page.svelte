@@ -47,7 +47,7 @@
 	</video>
 
 	<!-- Overlay (optional for text readability) -->
-	<div class="absolute inset-0 bg-base-300/95 z-10"></div>
+	<div class="absolute inset-0 bg-base-300/90 z-10"></div>
 
 	<!-- Hero Content -->
 	<div class="relative z-10 container mx-auto px-4 text-center">
@@ -63,10 +63,10 @@
 	</div>
 </header>
 <section class="py-16 bg-base-200">
-	<div class="container mx-auto px-4">
+	<div class="container mx-auto my-12 px-4">
 		<h2 class="text-3xl font-semibold mb-4">The High-Impact Alternative to Big Tech Firms</h2>
 		<div class="mt-1 mb-3 h-1 w-20 bg-primary rounded"></div>
-		<p class="text-xl">
+		<p class="text-xl mt-12">
 			WeBe Solutions is built for businesses that see technology as a growth engine and not just
 			another expense. It's for those ready to invest in <strong>strategic tech</strong> to eliminate
 			inefficiencies, make smarter decisions, and accelerate profits.
@@ -171,7 +171,7 @@
 <section class="relative py-16 bg-cover bg-center">
 	<!-- Overlay -->
 	<div class="absolute inset-0 z-0">
-		<div class="absolute inset-0 bg-black/90"></div>
+		<div class="absolute inset-0 bg-black/80"></div>
 		<img
 			src="/red-wall.webp"
 			alt=""
@@ -180,7 +180,7 @@
 			fetchpriority="high"
 		/>
 	</div>
-	<div class="container relative mx-auto px-4 z-30">
+	<div class="container relative mx-auto px-4 z-10">
 		<h2 class="text-3xl font-semibold mb-8">
 			Strategic Tech Solutions for Confident Business Growth
 		</h2>
@@ -226,19 +226,31 @@
 	<div class="container mx-auto px-4">
 		<h2 class="text-3xl font-semibold mb-6">The Investment That Pays for Itself</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<p class="mb-6 text-xl">
+		<p class="mb-6 mt-8 text-xl">
 			My clients don’t measure success by tech features or complexity—they measure it by the impact
 			smart tech decisions have on their business:
 		</p>
-		<ul class="space-y-4 list-disc pl-6 text-xl">
-			<li><span class="font-bold">Hours saved</span> by streamlining workflows</li>
-			<li><span class="font-bold">Eliminate costly mistakes</span> with future-proof tech</li>
-			<li><span class="font-bold">Effective collaboration</span> through expert guidance</li>
-			<li><span class="font-bold">Faster delivery</span> via clear plans and support</li>
-			<li><span class="font-bold">Less stress</span> from scattered tools</li>
-			<li><span class="font-bold">Stronger decision-making</span> with real-world insight</li>
-			<li><span class="font-bold">More confident teams</span> who understand systems</li>
-			<li><span class="font-bold">Real business results</span> from well-aligned tech</li>
+		<ul class="space-y-4 list-disc pl-6 text-xl mt-12">
+			<li class="mb-8"><span class="font-bold">Hours saved</span> by streamlining workflows</li>
+			<li class="mb-8">
+				<span class="font-bold">Eliminate costly mistakes</span> with future-proof tech
+			</li>
+			<li class="mb-8">
+				<span class="font-bold">Effective collaboration</span> through expert guidance
+			</li>
+			<li class="mb-8">
+				<span class="font-bold">Faster delivery</span> via clear plans and support
+			</li>
+			<li class="mb-8"><span class="font-bold">Less stress</span> from scattered tools</li>
+			<li class="mb-8">
+				<span class="font-bold">Stronger decision-making</span> with real-world insight
+			</li>
+			<li class="mb-8">
+				<span class="font-bold">More confident teams</span> who understand systems
+			</li>
+			<li class="mb-8">
+				<span class="font-bold">Real business results</span> from well-aligned tech
+			</li>
 		</ul>
 	</div>
 </section>
@@ -249,7 +261,7 @@
 			<h2 class="text-3xl font-semibold mb-4">Focused Attention for Every Client</h2>
 			<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 			<!-- Text on the right -->
-			<div class="text-xl">
+			<div class="text-xl mt-8">
 				<p class="mb-4">
 					To ensure each business receives the care it deserves, I work with a small number of
 					clients at a time.
