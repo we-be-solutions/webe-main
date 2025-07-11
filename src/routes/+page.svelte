@@ -35,6 +35,9 @@
 <!-- 		</p> -->
 <!-- 	</div> -->
 <!-- </header> -->
+<svelte:head>
+	<link rel="preload" as="video" href="/output_trimmed.mp4" type="video/mp4" />
+</svelte:head>
 <header
 	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
 	style="background-image: url('/train_placeholder.png');"
@@ -46,6 +49,7 @@
 		muted
 		loop
 		autoplay
+		preload="auto"
 		playsinline
 	>
 		<source src="/output_trimmed.mp4" type="video/mp4" />
