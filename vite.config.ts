@@ -2,9 +2,10 @@ import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-	plugins: [imagetools(), sveltekit()],
+	plugins: [tailwindcss(), imagetools(), sveltekit()],
 	test: {
 		workspace: [
 			{

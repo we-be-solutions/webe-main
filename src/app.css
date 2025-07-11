@@ -1,46 +1,52 @@
-/* Define CSS variable for teal color */
-:root {
-	--blue-teal: #00a4cc; /* Default Blue-leaning teal */
-	--blue-teal-dark: #007b99; /* Darker teal for hover effects */
-	--blue-teal-transparent: #00a4ccdd; /* Default Blue-leaning teal */
-	--cyberpunk-pink: #ff2ecb; /* Vivid neon magenta */
-	--cyberpunk-pink-dark: #c0219b; /* Deeper magenta for hover/dark variants */
-	--cyberpunk-pink-transparent: #ff2ecbdd; /* Same neon pink, with transparency */
-	--black: #1a1a1a;
-	--black-transparent: #1a1a1add;
-}
 
-/* GLOBAL */
-html, body {
-	height:100%;
-	margin: 0px;
-	padding: 0px;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
 
-}
 
-body {
-	font-family:
-		'Inter',
-		-apple-system,
-		BlinkMacSystemFont,
-		'Segoe UI',
-		Roboto,
-		sans-serif;
-	line-height: 1.6;
-	color: #333;
-	display: flex;
-	flex-direction: column;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.fill-remaining {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+/* /* Define CSS variable for teal color */ */
+/* :root { */
+/* 	--blue-teal: #00a4cc; /* Default Blue-leaning teal */ */
+/* 	--blue-teal-dark: #007b99; /* Darker teal for hover effects */ */
+/* 	--blue-teal-transparent: #00a4ccdd; /* Default Blue-leaning teal */ */
+/* 	--cyberpunk-pink: #ff2ecb; /* Vivid neon magenta */ */
+/* 	--cyberpunk-pink-dark: #c0219b; /* Deeper magenta for hover/dark variants */ */
+/* 	--cyberpunk-pink-transparent: #ff2ecbdd; /* Same neon pink, with transparency */ */
+/* 	--black: #1a1a1a; */
+/* 	--black-transparent: #1a1a1add; */
+/* } */
+/**/
+/* /* GLOBAL */ */
+/* html, body { */
+/* 	height:100%; */
+/* 	margin: 0px; */
+/* 	padding: 0px; */
+/**/
+/* } */
+/**/
+/* body { */
+/* 	font-family: */
+/* 		'Inter', */
+/* 		-apple-system, */
+/* 		BlinkMacSystemFont, */
+/* 		'Segoe UI', */
+/* 		Roboto, */
+/* 		sans-serif; */
+/* 	line-height: 1.6; */
+/* 	color: #333; */
+/* 	display: flex; */
+/* 	flex-direction: column; */
+/* } */
+/**/
+/* main { */
+/*   flex: 1; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/* } */
+/**/
+/* .fill-remaining { */
+/*   flex: 1; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/* } */
 
