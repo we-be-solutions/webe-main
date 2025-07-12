@@ -1,7 +1,7 @@
 
 ---
-title: Internal Tools Are the Real MVP: Why More Businesses Are Building for Ops, Not the App Store
-description: "More businesses are ditching bloated SaaS tools and building internal software tailored to how they actually work. Learn why internal tools—like job trackers, dashboards, and custom CRMs—are becoming the backbone of modern operations."
+title: "Internal Tools Are the Real MVP: Why More Businesses Are Building for Ops, Not the App Store"
+description: "More businesses are ditching bloated SaaS tools and building internal software tailored to how they actually work. Learn why internal tools like job trackers, dashboards, and custom CRMs are becoming the backbone of modern operations."
 date: '13-7-2025'
 categories:
   - Custom Software
