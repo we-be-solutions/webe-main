@@ -47,15 +47,17 @@
 	</video>
 
 	<!-- Overlay (optional for text readability) -->
-	<div class="absolute inset-0 bg-base-300/90 z-10"></div>
+	<div class="absolute inset-0 bg-base-300/80 z-10"></div>
 
 	<!-- Hero Content -->
 	<div class="relative z-10 container mx-auto px-4 text-center">
-		<h2 class="text-5xl font-bold mb-4 text-base-content">Keep Your Business on the Right Track</h2>
+		<h2 class="text-5xl font-bold mb-4 text-base-content">
+			Level the Playing Field with Better Tech
+		</h2>
 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
 		<p class="text-2xl text-base-content">
-			Helping your business plan, build, and use the right technology the right way. So you can grow
-			without the tech headaches.
+			We help growing businesses use tech like the big players - without big budgets, bloated teams,
+			or brutal delays.
 		</p>
 		<div class="mt-32">
 			<CtaBtn />

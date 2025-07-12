@@ -29,6 +29,8 @@
 
 	function toggleModal() {
 		showModal = !showModal;
+		document.querySelector('nav')?.classList.toggle('hidden', showModal);
+		document.querySelector('.cta-btn')?.classList.toggle('hidden', showModal);
 	}
 
 	const handleCFToken = (token: string): void => {
@@ -38,14 +40,14 @@
 
 <!-- Trigger Button -->
 <button
-	class="btn btn-warning btn-lg text-xl text-black hover:shadow-lg transition-shadow duration-300"
-	onclick={toggleModal}>Free Discovery Call</button
+	class="cta-btn btn btn-warning btn-md text-xl text-black hover:shadow-lg transition-shadow duration-300"
+	onclick={toggleModal}>Get a Free Tech Strategy Plan</button
 >
 
 <!-- Modal -->
 {#if showModal}
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+		class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-50"
 		role="dialog"
 		tabindex="0"
 		in:fade={{ duration: 150 }}
@@ -55,7 +57,7 @@
 	>
 		<div class="modal modal-open" role="dialog" tabindex="0">
 			<div
-				class="modal-box w-full max-w-2xl max-h-9/10 mt-16"
+				class="modal-box w-full max-w-2xl max-h-full"
 				in:scale={{ duration: 200, start: 0.9 }}
 				out:scale={{ duration: 200, start: 1 }}
 				onclick={(e) => e.stopPropagation()}
@@ -76,11 +78,13 @@
 					</button>
 				</form>
 
-				<h2 class="text-2xl font-bold mb-2">Start Your Tech Plan with WeBe</h2>
+				<h2 class="text-2xl font-bold mb-2">
+					Your Tech Decisions Today Shape Your Growth Tomorrow
+				</h2>
 				<p class="mb-4">
-					We’re here to help small and medium businesses use technology to grow—without the jargon
-					or overwhelm. If you’re ready to make smarter tech decisions, reach out with the form
-					below.
+					If you're serious about scaling without chaos, let's make sure your tech is helping not
+					hurting. Fill out the form and we’ll help you build a plan that actually works for your
+					business.
 				</p>
 
 				<form method="POST" use:enhance={options} class="space-y-4">
@@ -171,17 +175,15 @@
 
 				<div class="mt-6">
 					<p>
-						We work closely with a select number of clients to ensure each business gets the
-						attention it deserves. If you’re a fit, we’ll reach out within 48 hours to discuss your
-						next steps.
+						We only take on a few new clients at a time to make sure each gets serious attention. If
+						it’s a fit, we’ll reach out within 48 hours.
 					</p>
 
 					<div class="mt-4 p-4 bg-base-200 rounded">
-						<h3 class="text-lg font-semibold">Ready to make tech work for your business?</h3>
+						<h3 class="text-lg font-semibold">You’ve taken the first step.</h3>
 						<p>
-							If you want clear guidance and practical solutions for your tech challenges, <strong
-								>reach out now</strong
-							>. Let’s turn your biggest tech challenge into your next business breakthrough.
+							Now we’ll review your info and see how we can help. If there’s a strong fit, we’ll
+							book a time to talk strategy and next steps.
 						</p>
 					</div>
 				</div>
