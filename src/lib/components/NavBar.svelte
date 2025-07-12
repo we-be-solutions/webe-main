@@ -22,7 +22,7 @@
 	</div>
 
 	<!-- Desktop Menu -->
-	<div class="navbar-center hidden md:flex">
+	<div class="navbar-center hidden md:flex relative -translate-x-1/2">
 		<ul class="menu menu-horizontal px-1 text-lg">
 			<li><a href="/">Home</a></li>
 			<li><a href="/blog">Articles</a></li>
@@ -49,11 +49,6 @@
 		</button>
 	</div>
 
-	<!-- Desktop CTA -->
-	<div class="navbar-end hidden md:flex">
-		<CtaBtn />
-	</div>
-
 	<!-- Mobile Dropdown Menu -->
 	{#if menuOpen}
 		<div class="absolute top-full left-0 w-full bg-base-100 shadow-md md:hidden z-20">
@@ -64,3 +59,11 @@
 		</div>
 	{/if}
 </nav>
+
+<!-- CTA outside nav -->
+<div
+	class="fixed top-0 right-0 z-50 hidden md:flex items-center px-4 h-[var(--navbar-height,4rem)]"
+	style="--navbar-height:72px;"
+>
+	<CtaBtn />
+</div>
