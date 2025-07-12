@@ -37,7 +37,10 @@
 </script>
 
 <!-- Trigger Button -->
-<button class="btn btn-warning btn-lg text-xl" onclick={toggleModal}>Free Discovery Call</button>
+<button
+	class="btn btn-warning btn-lg text-xl text-black hover:shadow-lg transition-shadow duration-300"
+	onclick={toggleModal}>Free Discovery Call</button
+>
 
 <!-- Modal -->
 {#if showModal}
@@ -163,7 +166,7 @@
 					<CloudFlareTurnStile handleToken={handleCFToken} />
 					<input type="hidden" name="cf-turnstile-response" value={cfToken} />
 
-					<button type="submit" class="btn btn-warning w-full">Send</button>
+					<button type="submit" class="btn btn-warning w-full text-black">Send</button>
 				</form>
 
 				<div class="mt-6">
