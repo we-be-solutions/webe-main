@@ -13,7 +13,10 @@
 >
 	{#await data.posts then posts}
 		{#each posts as p}
-			<a href="/blog/{p.slug}" class="card bg-base-300 shadow-md hover:shadow-lg transition">
+			<a
+				href="/blog/{p.slug}"
+				class="card bg-base-300 shadow-md hover:shadow-xl hover:ring-2 hover:ring-secondary/60 hover:ring-offset-2 transition duration-200"
+			>
 				<article class="card-body">
 					<h2 class="card-title">{p.title}</h2>
 					<h3 class="text-sm text-base-content/60">{p.date}</h3>
