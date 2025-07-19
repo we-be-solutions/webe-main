@@ -91,6 +91,27 @@ export const actions = {
           <p><strong>Project:</strong> ${result.data.project}</p>
         `
 			});
+
+			await resend.emails.send({
+				from: sender, // Use a domain you own and have verified with Resend
+				to: result.data.email,
+				subject: `Thanks for contacting WeBe Solutions ${result.data.name}`,
+				html: `
+				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #222; padding: 20px;">
+				  <h2 style="color: #0e7490;">Thanks for reaching out!</h2>
+				  
+				  <p>We’ve received your enquiry and we’ll be in touch shortly.</p>
+				  
+				  <hr style="margin: 24px 0; border: none; border-top: 1px solid #ddd;" />
+				  
+				  <p style="margin-bottom: 0;">
+				    While you're here, check out how we help Aussie businesses automate the boring stuff —
+				    <a href="https://www.linkedin.com/company/webe-au" style="color: #0e7490; text-decoration: none;">follow us on LinkedIn</a> or visit
+				    <a href="https://webe.au" style="color: #0e7490; text-decoration: none;">webe.au</a>.
+				  </p>
+				</div>
+				`
+			});
 			return { success: true, message: `${result.data.name}` };
 		} catch (error) {
 			console.error('Failed to send email:', error);

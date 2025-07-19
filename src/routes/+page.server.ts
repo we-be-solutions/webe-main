@@ -75,19 +75,42 @@ export const actions = {
 		const receiver = env.RECEIVER_EMAIL || '';
 
 		try {
+			//Notify WEBE
 			await resend.emails.send({
 				from: sender, // Use a domain you own and have verified with Resend
 				to: receiver,
 				subject: `New Strategy Call Application: ${result.data.name}`,
 				html: `
-          <h2>New Strategy Call Application</h2>
-          <p><strong>Name:</strong> ${result.data.name}</p>
-          <p><strong>Email:</strong> ${result.data.email}</p>
-          <p><strong>Company:</strong> ${result.data.company}</p>
-          <p><strong>Timeline:</strong> ${result.data.timeline}</p>
-          <p><strong>Project:</strong> ${result.data.project}</p>
-        `
+				  <h2>New Strategy Call Application</h2>
+				  <p><strong>Name:</strong> ${result.data.name}</p>
+				  <p><strong>Email:</strong> ${result.data.email}</p>
+				  <p><strong>Company:</strong> ${result.data.company}</p>
+				  <p><strong>Timeline:</strong> ${result.data.timeline}</p>
+				  <p><strong>Project:</strong> ${result.data.project}</p>
+				`
 			});
+			//Customer Acknowledgement
+			await resend.emails.send({
+				from: sender, // Use a domain you own and have verified with Resend
+				to: result.data.email,
+				subject: `Thanks for contacting WeBe Solutions ${result.data.name}`,
+				html: `
+				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #222; padding: 20px;">
+				  <h2 style="color: #0e7490;">Thanks for reaching out!</h2>
+				  
+				  <p>We’ve received your enquiry and we’ll be in touch shortly.</p>
+				  
+				  <hr style="margin: 24px 0; border: none; border-top: 1px solid #ddd;" />
+				  
+				  <p style="margin-bottom: 0;">
+				    While you're here, check out how we help Aussie businesses automate the boring stuff —
+				    <a href="https://www.linkedin.com/company/webe-au" style="color: #0e7490; text-decoration: none;">follow us on LinkedIn</a> or visit
+				    <a href="https://webe.au" style="color: #0e7490; text-decoration: none;">webe.au</a>.
+				  </p>
+				</div>
+				`
+			});
+
 			return { success: true, message: `${result.data.name}` };
 		} catch (error) {
 			console.error('Failed to send email:', error);
