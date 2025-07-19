@@ -14,11 +14,6 @@
 			</div>
 			<p class="text-3xl font-bold">WeBe</p>
 		</a>
-		<div class="ml-10 inline-grid *:[grid-area:1/1]">
-			<div class="status status-error animate-ping"></div>
-			<div class="status status-error"></div>
-		</div>
-		<p class="ml-1">Beta</p>
 	</div>
 
 	<!-- Desktop Menu -->
