@@ -2,7 +2,7 @@
 ---
 title: "How to Start Automating Your Business—No Developer Needed"
 description: "Feeling stuck on where to begin with automation? This guide walks you through five practical steps to streamline your business without hiring expensive experts or writing a single line of code."
-date: "2025-07-22"
+date: "22-7-2025"
 categories:
   - Automation
   - Small Business
