@@ -154,8 +154,7 @@
 
 						<div>
 							<label class="label" for="project">
-								What’s your biggest tech challenge right now? What results would you like to
-								achieve?
+								What’s your biggest tech challenge right now?
 							</label>
 							<textarea
 								id="project"
