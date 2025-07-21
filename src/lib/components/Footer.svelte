@@ -8,6 +8,10 @@
 	<div class="max-w-6xl my-5 px-5">
 		<p class="text-sm">&copy; {new Date().getFullYear()} WeBe Solutions. All rights reserved.</p>
 		<p class="text-sm">ABN 33 620 124 892</p>
+		<div class="mt-2 flex gap-4 text-sm">
+			<a href="/privacy" class="link link-hover">Privacy Policy</a>
+			<a href="/terms" class="link link-hover">Terms of Service</a>
+		</div>
 	</div>
 	<div class="flex justify-center align-middle mb-4 mt-4 mr-6">
 		<CtaBtn />
