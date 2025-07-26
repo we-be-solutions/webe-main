@@ -33,6 +33,7 @@
 							d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2.2a4.8 4.8 0 0 1 4-2.2zM2 9h4v12H2zM4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
 						/>
 					</svg>
+					<p>LinkedIn</p>
 				</a>
 				<a
 					href="https://www.facebook.com/webesolutions.au/"
@@ -50,6 +51,7 @@
 							d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.2 3-3.2.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.8h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z"
 						/>
 					</svg>
+					<p>Facebook</p>
 				</a>
 			</div>
 		</div>

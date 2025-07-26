@@ -83,12 +83,12 @@
 
 				{#if !sending.sending}
 					<h2 class="text-2xl font-bold mb-2">
-						Your Tech Decisions Today Shape Your Growth Tomorrow
+						Build a More Efficient, Stress-Free Service With the Right Tech Choices
 					</h2>
 					<p class="mb-4">
-						If you're serious about scaling without chaos, let's make sure your tech is helping not
-						hurting. Fill out the form and we’ll help you build a plan that actually works for your
-						business.
+						The systems you put in place today will either support your team or slow you down. If
+						you're ready to grow without adding more chaos, fill out the form and we’ll help you
+						create a tech plan that fits your service, your team, and your budget.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}

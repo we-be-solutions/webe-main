@@ -2,7 +2,11 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" ;
 @plugin "daisyui/theme" {
-  name: "dark";
+  name: "light";
   default: true;
   --color-primary: #007a99;
+}
+
+.card-title {
+  font-size: 1.5rem;
 }
