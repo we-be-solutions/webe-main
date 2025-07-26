@@ -60,7 +60,7 @@
 	>
 		<div class="modal modal-open" role="dialog" tabindex="0">
 			<div
-				class="modal-box w-full max-w-2xl max-h-full"
+				class="modal-box w-full text-black max-w-2xl max-h-full"
 				in:scale={{ duration: 200, start: 0.9 }}
 				out:scale={{ duration: 200, start: 1 }}
 				onclick={(e) => e.stopPropagation()}
