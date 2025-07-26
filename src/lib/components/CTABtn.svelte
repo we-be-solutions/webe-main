@@ -44,7 +44,7 @@
 <!-- Trigger Button -->
 <button
 	class="cta-btn btn btn-warning btn-md text-xl text-black hover:shadow-lg transition-shadow duration-300"
-	onclick={toggleModal}>Book a Free Chat !</button
+	onclick={toggleModal}>Book a Chat!</button
 >
 
 <!-- Modal -->
