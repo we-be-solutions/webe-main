@@ -4,7 +4,7 @@
 	onMount(() => {
 		const checkMailerLite = () => {
 			if (window.ml) {
-				window.ml('account', '160748717287147201');
+				window.ml('show', 'd3FOT3', true);
 			} else {
 				// Wait and try again if the script hasn't loaded yet
 				setTimeout(checkMailerLite, 300);

@@ -7,7 +7,6 @@
 	let { children } = $props();
 
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 
 	let turnstileLoaded = false;
 
@@ -22,9 +21,7 @@
 			turnstileLoaded = true;
 		};
 		document.body.appendChild(script);
-	});
 
-	if (browser) {
 		(function (w, d, e, u, f, l, n) {
 			(w[f] =
 				w[f] ||
@@ -38,7 +35,7 @@
 				n.parentNode.insertBefore(l, n);
 		})(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
 		ml('account', '1687166');
-	}
+	});
 </script>
 
 <!-- MailerLite Universal -->
