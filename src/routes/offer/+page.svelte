@@ -1,17 +1,16 @@
-<svelte:head>
-	<script>
-		(function (w, d, e, u, f, l, n) {
-			(w[f] =
-				w[f] ||
-				function () {
-					(w[f].q = w[f].q || []).push(arguments);
-				}),
-				(l = d.createElement(e)),
-				(l.async = 1),
-				(l.src = u),
-				(n = d.getElementsByTagName(e)[0]),
-				n.parentNode.insertBefore(l, n);
-		})(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-		ml('account', '1687166');
-	</script>
-</svelte:head>
+<script>
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const checkMailerLite = () => {
+			if (window.ml) {
+				window.ml('account', '160748717287147201');
+			} else {
+				// Wait and try again if the script hasn't loaded yet
+				setTimeout(checkMailerLite, 300);
+			}
+		};
+
+		checkMailerLite();
+	});
+</script>
