@@ -11,7 +11,9 @@
 	id="article-container"
 	class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-12 my-12 mx-auto lg:max-w-4/5"
 >
-	{#await data.posts then posts}
+	{#await data.posts}
+		<div class="min-h-[90vh]"></div>
+	{:then posts}
 		{#each posts as p}
 			<a
 				href="/blog/{p.slug}"
