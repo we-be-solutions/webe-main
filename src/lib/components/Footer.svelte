@@ -1,5 +1,7 @@
 <script>
 	import CtaBtn from './CTABtn.svelte';
+
+	let { ctaVisible = true } = $props();
 </script>
 
 <footer class="bg-base-300 px-5 py-6">
@@ -56,9 +58,11 @@
 			</div>
 		</div>
 
-		<!-- Right: CTA Button -->
-		<div class="flex justify-center md:justify-end">
-			<CtaBtn />
-		</div>
+		{#if ctaVisible}
+			<!-- Right: CTA Button -->
+			<div class="flex justify-center md:justify-end">
+				<CtaBtn />
+			</div>
+		{/if}
 	</div>
 </footer>

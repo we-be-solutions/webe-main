@@ -2,8 +2,8 @@
 	import LogoNoWords from '../../components/svg/logoNoWords.svelte';
 	import CtaBtn from './CTABtn.svelte';
 	import { clickOutside } from '$lib/clickOutside';
-
-	let menuOpen = false;
+	let { ctaVisible = true } = $props();
+	let menuOpen = $state(false);
 </script>
 
 <nav class="navbar z-50 fixed bg-base-100 shadow-sm" use:clickOutside={() => (menuOpen = false)}>
@@ -26,7 +26,7 @@
 
 	<!-- Mobile Hamburger -->
 	<div class="navbar-end md:hidden">
-		<button class="btn btn-ghost" aria-label="Toggle menu" on:click={() => (menuOpen = !menuOpen)}>
+		<button class="btn btn-ghost" aria-label="Toggle menu" onclick={() => (menuOpen = !menuOpen)}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -48,17 +48,19 @@
 	{#if menuOpen}
 		<div class="absolute top-full left-0 w-full bg-base-100 shadow-md md:hidden z-20">
 			<ul class="menu px-4 py-2 space-y-2">
-				<li><a href="/" on:click={() => (menuOpen = false)}>Home</a></li>
-				<li><a href="/blog" on:click={() => (menuOpen = false)}>Articles</a></li>
+				<li><a href="/" onclick={() => (menuOpen = false)}>Home</a></li>
+				<li><a href="/blog" onclick={() => (menuOpen = false)}>Articles</a></li>
 			</ul>
 		</div>
 	{/if}
 </nav>
 
-<!-- CTA outside nav -->
-<div
-	class="fixed top-0 right-0 z-50 hidden md:flex items-center px-4 h-[var(--navbar-height,4rem)]"
-	style="--navbar-height:72px;"
->
-	<CtaBtn />
-</div>
+{#if ctaVisible}
+	<!-- CTA outside nav -->
+	<div
+		class="fixed top-0 right-0 z-50 hidden md:flex items-center px-4 h-[var(--navbar-height,4rem)]"
+		style="--navbar-height:72px;"
+	>
+		<CtaBtn />
+	</div>
+{/if}
