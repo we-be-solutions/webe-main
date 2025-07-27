@@ -2,7 +2,7 @@
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
 
 	import Footer from '$lib/components/Footer.svelte';
-	import '../app.css';
+	import '../../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
 	let { children } = $props();
 
@@ -21,20 +21,6 @@
 			turnstileLoaded = true;
 		};
 		document.body.appendChild(script);
-
-		(function (w, d, e, u, f, l, n) {
-			(w[f] =
-				w[f] ||
-				function () {
-					(w[f].q = w[f].q || []).push(arguments);
-				}),
-				(l = d.createElement(e)),
-				(l.async = 1),
-				(l.src = u),
-				(n = d.getElementsByTagName(e)[0]),
-				n.parentNode.insertBefore(l, n);
-		})(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-		ml('account', '1687166');
 	});
 </script>
 
