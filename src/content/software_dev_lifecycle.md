@@ -17,8 +17,6 @@ categories:
 published: true
 ---
 
-# **What Is the Software Development Lifecycle? (And Why It Matters to Your Business)**
-
 If you’ve ever had a software project go sideways. Missed deadlines, unclear costs, unexpected bugs, then you’re not alone.
 
 Most of the time, it’s not a bad developer or a broken idea. It’s a broken process.
