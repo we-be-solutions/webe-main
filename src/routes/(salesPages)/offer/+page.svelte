@@ -1,18 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		const checkMailerLite = () => {
-			if (window.ml) {
-				window.ml('show', 'd3FOT3', true);
-			} else {
-				// Wait and try again if the script hasn't loaded yet
-				setTimeout(checkMailerLite, 300);
-			}
-		};
-
-		checkMailerLite();
-	});
 </script>
 
 <section class="py-16 bg-base-200">
@@ -34,6 +20,14 @@
 					a sales pitch.
 				</li>
 				<li>
+					✅ <strong>Full System Report</strong> – A clear snapshot of your tools and workflows.
+				</li>
+				<li>
+					✅ <strong>Next Steps Roadmap</strong> – Know exactly what to do (and what not to waste money
+					on).
+				</li>
+				<li>✅ <strong>Monthly Q&A Invite</strong> – Get real-time advice with other providers.</li>
+				<li>
 					✅ <strong>Performance Audit</strong> – Is your website doing its job? We’ll show you.
 				</li>
 				<li>
@@ -42,14 +36,6 @@
 				<li>
 					✅ <strong>Technical SEO Audit</strong> – See how you’re ranking and what’s missing.
 				</li>
-				<li>
-					✅ <strong>Full System Report</strong> – A clear snapshot of your tools and workflows.
-				</li>
-				<li>
-					✅ <strong>Next Steps Roadmap</strong> – Know exactly what to do (and what not to waste money
-					on).
-				</li>
-				<li>✅ <strong>Monthly Q&A Invite</strong> – Get real-time advice with other providers.</li>
 				<li>✅ <strong>Tech Health Checklist</strong> – Built for NDIS and care-based services.</li>
 				<li>✅ <strong>Ultimate Tool List</strong> – What’s worth using and what isn’t.</li>
 			</ul>
