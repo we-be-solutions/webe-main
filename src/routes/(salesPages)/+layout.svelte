@@ -7,7 +7,11 @@
 
 	let { children } = $props();
 
-	onMount(() => {
+	onMount(() => {});
+</script>
+
+<svelte:head>
+	<script>
 		(function (w, d, e, u, f, l, n) {
 			(w[f] =
 				w[f] ||
@@ -21,10 +25,7 @@
 				n.parentNode.insertBefore(l, n);
 		})(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
 		ml('account', '1687166');
-	});
-</script>
-
-<svelte:head>
+	</script>
 	<!-- Meta Pixel Code -->
 	<script>
 		!(function (f, b, e, v, n, t, s) {

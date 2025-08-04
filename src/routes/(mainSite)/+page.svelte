@@ -42,12 +42,11 @@
 	<div class="absolute inset-0 bg-base-300/80 z-10"></div>
 	<div class="relative z-10 container mx-auto px-4 text-center">
 		<h2 class="text-5xl font-bold mb-4 text-base-content">
-			Smarter Tech for Disability Support Providers
+			Smarter Software for Growing Businesses
 		</h2>
 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
 		<p class="text-2xl text-base-content">
-			We help providers connect their systems, streamline compliance, and build accessible websites
-			that actually work.
+			We build internal tools, automate workflows, and create web experiences that scale with you.
 		</p>
 		<div class="mt-32">
 			<CtaBtn />
@@ -58,11 +57,10 @@
 <!-- New Section: Value Proposition -->
 <section class="py-16 bg-base-200">
 	<div class="container mx-auto my-12 px-4">
-		<h2 class="text-3xl font-semibold mb-4">Make Your Existing Tools Work Better</h2>
-		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
+		<h2 class="text-3xl font-semibold mb-4">Custom Tools That Fit How You Work</h2>
 		<p class="text-xl mt-12">
-			Your team shouldn't waste hours copying data between systems or struggling with clunky
-			processes. We optimise what you already use and only add new tools when they truly help.
+			Off-the-shelf software rarely fits perfectly. We build and integrate tools that match your
+			exact needs—no more workarounds or wasted time.
 		</p>
 	</div>
 </section>
@@ -70,30 +68,31 @@
 <!-- New Section: Accessibility & Web Focus -->
 <section class="py-16">
 	<div class="container mx-auto px-4">
-		<h2 class="text-3xl font-semibold mb-8">Websites That Work for Everyone</h2>
+		<h2 class="text-3xl font-semibold mb-8">Websites and Web Apps That Deliver</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<ul class="text-xl grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
 				<h3 class="card-title mb-4">Compliant & Accessible</h3>
 				<p>
-					We build with WCAG standards so participants, carers, and staff can easily navigate and
-					access support.
+					We build with standards so your tools and sites are inclusive, usable, and future-proof.
 				</p>
 			</li>
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
-				<h3 class="card-title mb-4">Client Intake & Referral Forms</h3>
+				<h3 class="card-title mb-4">Smarter Forms & Flows</h3>
 				<p>
-					Digital forms that route to the right place instantly, reducing admin time and friction.
+					Custom forms and logic that connect instantly to your backend or tools—no manual routing
+					required.
 				</p>
 			</li>
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
-				<h3 class="card-title mb-4">Simple Dashboards & Portals</h3>
-				<p>Let participants view support plans, documents, and updates all in one place.</p>
+				<h3 class="card-title mb-4">Dashboards & Portals</h3>
+				<p>
+					Give your team or clients instant visibility over what matters—without platform hopping.
+				</p>
 			</li>
 		</ul>
 	</div>
 </section>
-
 <!-- Benefits Section -->
 <section class="py-16 bg-base-100">
 	<div class="container mx-auto px-4">
@@ -102,37 +101,37 @@
 		<ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-xl">
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Connect Your Scheduling, Billing & Documentation</strong><br /> No more siloed systems
-					or triple-entry admin.
+					<strong>Custom Fit Software</strong><br /> Built around your operations—not the other way around.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Automated Compliance Reports</strong><br /> Reduce reporting stress with pre-filled
-					templates and instant exports.
+					<strong>Connect Your Tools & Systems</strong><br /> Eliminate silos and reduce manual entry
+					across platforms.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Participant Plan Tracking & Budget Alerts</strong><br /> See exactly where support
-					funds go and where they’re running low.
+					<strong>Automated Reporting & Admin</strong><br /> Cut down on repetitive tasks and compliance
+					bottlenecks.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>One-Entry Workflows</strong><br /> Enter it once, and it syncs across the tools you
-					already use.
+					<strong>Realtime Insights & Alerts</strong><br /> Stay on top of operations and issues as they
+					happen.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Streamlined Staff Training</strong><br /> Easy-to-follow tools and systems reduce onboarding
-					time.
+					<strong>One-Entry Workflows</strong><br /> Enter data once, and see it populate everywhere
+					it’s needed.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Real-Time Insights</strong><br /> See your service data in one place—from anywhere.
+					<strong>Effortless Staff Onboarding</strong><br /> Clean interfaces and workflows help your
+					team get productive faster.
 				</p>
 			</li>
 		</ul>
@@ -142,21 +141,17 @@
 <!-- Investment Impact Section -->
 <section class="py-16 bg-base-200">
 	<div class="container mx-auto px-4">
-		<h2 class="text-3xl font-semibold mb-6">The ROI of Smarter Tech</h2>
+		<h2 class="text-3xl font-semibold mb-6">Return on Better Systems</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<p class="mb-6 mt-8 text-xl">
-			Our clients save thousands in wasted time, stress, and duplication. Smart, affordable
-			solutions scale with your growth and don’t drain your budget.
+			Smart internal tools and web systems pay for themselves by reducing time waste, improving
+			accuracy, and growing with your needs.
 		</p>
 		<ul class="space-y-4 list-disc pl-6 text-xl mt-12">
-			<li><span class="font-bold">10+ hours saved/week</span> through automation</li>
-			<li>
-				<span class="font-bold">Up to 90% fewer billing errors</span> with streamlined systems
-			</li>
-			<li>
-				<span class="font-bold">More accessible websites</span> that meet compliance & connect with users
-			</li>
-			<li><span class="font-bold">Less time onboarding staff</span> thanks to smarter workflows</li>
+			<li><span class="font-bold">10+ hours saved/week</span> with better internal tooling</li>
+			<li><span class="font-bold">Fewer manual errors</span> through automation & integrations</li>
+			<li><span class="font-bold">Better web experiences</span> for users and staff</li>
+			<li><span class="font-bold">Faster team ramp-up</span> with intuitive tools</li>
 		</ul>
 	</div>
 </section>
@@ -177,10 +172,10 @@
 <!-- CTA Section -->
 <section class="py-16 bg-teal-800 text-primary-content text-center">
 	<div class="container mx-auto px-4">
-		<h2 class="text-3xl text-white font-semibold mb-4">Let’s Make Tech Work for You</h2>
+		<h2 class="text-3xl text-white font-semibold mb-4">Let’s Build What You Actually Need</h2>
 		<p class="text-xl text-white mb-8">
-			Book a free call to see where we can save you time, reduce admin stress, and help you better
-			serve your participants.
+			Book a free call to explore how better tools, systems, and web experiences can grow your
+			business.
 		</p>
 		<CtaBtn />
 	</div>
@@ -213,5 +208,3 @@
 		</div>
 	</div>
 </section>
-
-<!-- Keep existing sections for news, testimonials, guarantees, client limits, etc. but adjust language if needed later. -->

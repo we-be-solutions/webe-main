@@ -83,12 +83,12 @@
 
 				{#if !sending.sending}
 					<h2 class="text-2xl font-bold mb-2">
-						Build a More Efficient, Stress-Free Service With the Right Tech Choices
+						Streamline Your Business With Smarter, Purpose-Built Software
 					</h2>
 					<p class="mb-4">
-						The systems you put in place today will either support your team or slow you down. If
-						you're ready to grow without adding more chaos, fill out the form and we’ll help you
-						create a tech plan that fits your service, your team, and your budget.
+						The tools you use should make your work easier—not more complicated. If you're ready to
+						reduce friction and boost efficiency, fill out the form and we’ll help you build a tech
+						plan tailored to your workflow, team, and budget.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}
