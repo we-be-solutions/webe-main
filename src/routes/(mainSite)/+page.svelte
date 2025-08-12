@@ -82,21 +82,21 @@
 		<h2 class="text-3xl font-semibold mb-8">Website Management That Frees Your Time</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<ul class="text-xl grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
+			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Never Worry About Updates</h3>
 				<p>
 					We handle all website updates, security patches, and backups so your site stays safe and
 					running smoothly.
 				</p>
 			</li>
-			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
+			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Unlimited Edits Without Extra Fees</h3>
 				<p>
 					Need changes or tweaks? Just ask. We make unlimited edits to keep your website fresh and
 					aligned with your business.
 				</p>
 			</li>
-			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
+			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Fast, Secure, and Always Online</h3>
 				<p>
 					We monitor your site 24/7 to ensure it loads quickly, stays secure, and never goes
@@ -485,19 +485,144 @@
 			</div>
 			<p class="mt-10 text-2xl font-bold text-center">Total Value: $16,000+ per year</p>
 			<p class="text-xl text-center mt-2">Your Price: <strong>$597/month</strong></p>
+			<p class="text-xl text-center mt-10">Why Our Price Is So Low?</p>
+			<p class="text-xl text-center mt-3">
+				We keep costs small. We build smart websites just for you with new, fast tools. We don’t use
+				expensive templates or extra stuff you don’t need.
+			</p>
+			<p class="text-xl text-center mt-3">
+				We are a small team. Our bills are small. We don’t add big agency fees. That means you get a
+				great website for way less money.
+			</p>
 		</div>
 
 		<!-- Guarantee -->
 		<div class="bg-green-100 border border-green-400 rounded p-8 max-w-3xl mx-auto text-center">
-			<h3 class="text-3xl font-semibold mb-4">Our 100% Satisfaction Guarantee</h3>
+			<h3 class="text-3xl font-semibold mb-4">The WeBe Breakup Guarantee</h3>
 			<p class="text-lg max-w-xl mx-auto">
-				If at any time in the first 30 days you’re not completely happy with our service, just let
-				us know — we’ll refund your money with no questions asked. Plus, we’ll work with you to fix
-				any issues until you’re thrilled.
+				If within 30 days you’re not completely satisfied with our service, we’ll give you a full
+				refund. No questions asked.<br /><br />
+				Plus, we’ll keep your site running for an extra 60 days at no cost. This way you’re never left
+				high and dry while you figure out your next move.
 			</p>
 		</div>
 	</div>
 </section>
+
+<section class="max-w-3xl mx-auto py-12 px-4">
+	<h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+
+	<div class="space-y-4">
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">
+				What’s included in the $597/month package?
+			</div>
+			<div class="collapse-content">
+				<p>
+					You’ll get a fully managed, custom-designed 3-5 page website, unlimited edits, premium
+					hosting, 24/7 monitoring, security updates, performance optimisation, annual redesigns,
+					and priority support. All handled for you, so your site is always running at its best.
+				</p>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">Can I upgrade or add features later?</div>
+			<div class="collapse-content">
+				<p>
+					Absolutely. We can add pages, integrations, e-commerce, or automation tools whenever
+					you’re ready. Your monthly fee stays predictable. All extras are quoted upfront.
+				</p>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">Do I own my website?</div>
+			<div class="collapse-content">
+				<p>
+					After 12 months, yes the intellectual property (IP) becomes 100% yours. If you cancel
+					before 12 months, we retain the IP, but you can choose to buy it out at any time.
+				</p>
+				<p class="mt-2 mb-2">Buy Out Price to months in:</p>
+
+				<table
+					border="2"
+					cellpadding="8"
+					cellspacing="0"
+					style="border-collapse: collapse; max-width: 500px;"
+				>
+					<thead>
+						<tr>
+							<th>Month</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>1</td><td>$1500 + GST</td></tr>
+						<tr><td>2</td><td>$1400 + GST</td></tr>
+						<tr><td>3</td><td>$1300 + GST</td></tr>
+						<tr><td>4</td><td>$1200 + GST</td></tr>
+						<tr><td>5</td><td>$1100 + GST</td></tr>
+						<tr><td>6</td><td>$1000 + GST</td></tr>
+						<tr><td>7</td><td>$800 + GST</td></tr>
+						<tr><td>8</td><td>$600 + GST</td></tr>
+						<tr><td>9</td><td>$400 + GST</td></tr>
+						<tr><td>10</td><td>$300 + GST</td></tr>
+						<tr><td>11</td><td>$200 + GST</td></tr>
+						<tr><td>12</td><td>$0 + GST</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">Is hosting and security included?</div>
+			<div class="collapse-content">
+				<p>
+					Absolutely. Your plan includes premium hosting, SSL certificates, daily backups, uptime
+					monitoring, and proactive security updates — with no extra fees.
+				</p>
+			</div>
+		</div>
+
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">
+				Can you make changes whenever I need them?
+			</div>
+			<div class="collapse-content">
+				<p>
+					Yes — unlimited content edits and design tweaks are included, so your website is always
+					up-to-date without extra invoices or delays.
+				</p>
+			</div>
+		</div>
+
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">What happens if I cancel?</div>
+			<div class="collapse-content">
+				<p>
+					If you cancel before 12 months, we retain the website’s IP unless you buy it out. After 12
+					months, you own the site outright, no strings attached.
+				</p>
+			</div>
+		</div>
+		<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+			<input type="checkbox" />
+			<div class="collapse-title text-lg font-medium">What if I need urgent changes?</div>
+			<div class="collapse-content">
+				<p>
+					We offer 48 hour turn around on updates. Just send a request through and we’ll prioritise
+					it as soon as possible.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <!-- Testimonial Section -->
 <section class="py-16 bg-base-100 hidden">
 	<div class="container mx-auto px-4 text-center">
@@ -512,7 +637,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 bg-teal-800 text-primary-content text-center">
+<section class="py-16 bg-blue-900 text-primary-content text-center">
 	<div class="container mx-auto px-4 max-w-xl">
 		<h2 class="text-3xl text-white font-semibold mb-4">
 			Let’s Build What Your Business Really Needs
@@ -558,3 +683,10 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Smooth accordion animation */
+	.collapse-content {
+		transition: all 0.3s ease-in-out;
+	}
+</style>

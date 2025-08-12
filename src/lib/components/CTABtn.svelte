@@ -43,8 +43,8 @@
 
 <!-- Trigger Button -->
 <button
-	class="cta-btn btn btn-warning btn-md text-xl text-black hover:shadow-lg transition-shadow duration-300"
-	onclick={toggleModal}>Book a Chat!</button
+	class="cta-btn btn btn-warning btn-xl text-2xl text-black hover:shadow-lg transition-shadow duration-300"
+	onclick={toggleModal}>Let’s Get Started</button
 >
 
 <!-- Modal -->
