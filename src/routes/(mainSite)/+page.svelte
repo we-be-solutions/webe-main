@@ -42,25 +42,36 @@
 	<div class="absolute inset-0 bg-base-300/80 z-10"></div>
 	<div class="relative z-10 container mx-auto px-4 text-center">
 		<h2 class="text-5xl font-bold mb-4 text-base-content">
-			Smarter Software for Growing Businesses
+			We Run Your Website So You Can Run Your Business.
 		</h2>
 		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
-		<p class="text-2xl text-base-content">
-			We build internal tools, automate workflows, and create web experiences that scale with you.
+		<p class="text-2xl text-base-content"></p>
+		<p class="text-2xl text-base-content mt-2">You don’t have time to mess with web headaches.</p>
+
+		<p class="text-2xl text-base-content mt-2">
+			We handle it for you. A website service that keeps your site fast, secure, and up-to-date.
 		</p>
-		<div class="mt-32">
-			<CtaBtn />
-		</div>
+		<p class="text-2xl text-base-content mt-2">
+			WeBe takes care of it. So you can focus on getting the real work done!
+		</p>
+		<!-- <div class="mt-32"> -->
+		<!-- 	<CtaBtn /> -->
+		<!-- </div> -->
 	</div>
 </header>
 
 <!-- New Section: Value Proposition -->
 <section class="py-16 bg-base-200">
 	<div class="container mx-auto my-12 px-4">
-		<h2 class="text-3xl font-semibold mb-4">Custom Tools That Fit How You Work</h2>
-		<p class="text-xl mt-12">
-			Off-the-shelf software rarely fits perfectly. We build and integrate tools that match your
-			exact needs—no more workarounds or wasted time.
+		<h2 class="text-3xl font-semibold mb-4">Tired of Your Website Headaches?</h2>
+
+		<p class="text-xl mt-6 font-semibold">Is your slow site losing you money?</p>
+		<p class="text-xl mt-6 font-semibold">Is your site costing you hours you don’t have?</p>
+		<p class="text-xl mt-6 font-semibold">Are broken pages turning customers away?</p>
+		<p class="text-xl mt-6 font-semibold">Is managing your site more work than it should be?</p>
+
+		<p class="text-xl mt-6">
+			We make sites fast. We keep them working. We help you keep your customers.
 		</p>
 	</div>
 </section>
@@ -68,26 +79,28 @@
 <!-- New Section: Accessibility & Web Focus -->
 <section class="py-16">
 	<div class="container mx-auto px-4">
-		<h2 class="text-3xl font-semibold mb-8">Websites and Web Apps That Deliver</h2>
+		<h2 class="text-3xl font-semibold mb-8">Website Management That Frees Your Time</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<ul class="text-xl grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
-				<h3 class="card-title mb-4">Compliant & Accessible</h3>
+				<h3 class="card-title mb-4">Never Worry About Updates</h3>
 				<p>
-					We build with standards so your tools and sites are inclusive, usable, and future-proof.
+					We handle all website updates, security patches, and backups so your site stays safe and
+					running smoothly.
 				</p>
 			</li>
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
-				<h3 class="card-title mb-4">Smarter Forms & Flows</h3>
+				<h3 class="card-title mb-4">Unlimited Edits Without Extra Fees</h3>
 				<p>
-					Custom forms and logic that connect instantly to your backend or tools—no manual routing
-					required.
+					Need changes or tweaks? Just ask. We make unlimited edits to keep your website fresh and
+					aligned with your business.
 				</p>
 			</li>
 			<li class="card bg-teal-800 text-white shadow-teal-900 shadow-lg p-8">
-				<h3 class="card-title mb-4">Dashboards & Portals</h3>
+				<h3 class="card-title mb-4">Fast, Secure, and Always Online</h3>
 				<p>
-					Give your team or clients instant visibility over what matters—without platform hopping.
+					We monitor your site 24/7 to ensure it loads quickly, stays secure, and never goes
+					offline. Making your site into an asset not a liability.
 				</p>
 			</li>
 		</ul>
@@ -101,37 +114,59 @@
 		<ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-xl">
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Custom Fit Software</strong><br /> Built around your operations—not the other way around.
+					<strong>Fully Managed Websites</strong><br />
+					We handle hosting, updates, backups, and security — so you never have to worry about your site.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Connect Your Tools & Systems</strong><br /> Eliminate silos and reduce manual entry
-					across platforms.
+					<strong>Unlimited Edits Included</strong><br />
+					Make changes anytime, no extra fees — keep your site fresh as your business evolves.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Automated Reporting & Admin</strong><br /> Cut down on repetitive tasks and compliance
-					bottlenecks.
+					<strong>Fast, Reliable Performance</strong><br />
+					We optimise your site for speed and uptime to keep your customers happy and engaged.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Realtime Insights & Alerts</strong><br /> Stay on top of operations and issues as they
-					happen.
+					<strong>Proactive Security & Monitoring</strong><br />
+					Continuous monitoring and automatic fixes keep your site safe from threats and downtime.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>One-Entry Workflows</strong><br /> Enter data once, and see it populate everywhere
-					it’s needed.
+					<strong>SEO and Technical Best Practices</strong><br />
+					We build and maintain your site with search engines and accessibility in mind to boost your
+					visibility.
 				</p>
 			</li>
 			<li class="card bg-base-200 p-6">
 				<p>
-					<strong>Effortless Staff Onboarding</strong><br /> Clean interfaces and workflows help your
-					team get productive faster.
+					<strong>Annual Full Refresh</strong><br />
+					Once a year, we redesign your site to keep it modern and aligned with your brand — included
+					in your plan.
+				</p>
+			</li>
+			<li class="card bg-base-200 p-6">
+				<p>
+					<strong>Transparent, Predictable Pricing</strong><br />
+					One simple monthly fee covers everything — no surprise bills or hidden costs.
+				</p>
+			</li>
+			<li class="card bg-base-200 p-6">
+				<p>
+					<strong>Dedicated Support & Communication</strong><br />
+					Responsive email support with clear updates keeps you informed without the stress.
+				</p>
+			</li>
+			<li class="card bg-base-200 p-6">
+				<p>
+					<strong>Scalable & Future-Proof</strong><br />
+					Our solutions grow with your business — no vendor lock-in or outdated templates holding you
+					back.
 				</p>
 			</li>
 		</ul>
@@ -139,23 +174,330 @@
 </section>
 
 <!-- Investment Impact Section -->
+<!-- <section class="py-16 bg-base-200"> -->
+<!-- 	<div class="container mx-auto px-4"> -->
+<!-- 		<h2 class="text-3xl font-semibold mb-6">Return on a Hassle-Free Website</h2> -->
+<!-- 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div> -->
+<!-- 		<p class="mb-6 mt-8 text-xl"> -->
+<!-- 			A website that’s always working, secure, and updated isn’t just peace of mind. It is a -->
+<!-- 			business asset that drives growth, saves you time, and protects your reputation. -->
+<!-- 		</p> -->
+<!-- 		<ul class="space-y-6 list-disc pl-6 text-xl mt-12"> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Save 5+ hours a week</span> by never worrying about updates, fixes, or -->
+<!-- 				downtime. Spend more time focusing on your business while we keep your website running smoothly -->
+<!-- 				and error-free. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Convert more visitors</span> with fast, reliable performance and clear -->
+<!-- 				calls to action that turn browsers into customers. A smooth, professional site builds trust and -->
+<!-- 				encourages people to take action. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Protect your business</span> from costly security breaches and compliance -->
+<!-- 				issues. Our proactive monitoring and updates keep your site secure, giving you peace of mind -->
+<!-- 				and avoiding expensive problems. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Keep your brand fresh</span> with included annual redesigns that attract -->
+<!-- 				and engage your audience. Staying modern and relevant means more visitors stay longer and remember -->
+<!-- 				your business. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Get unlimited website edits</span> so your site always matches your latest -->
+<!-- 				offers and messaging — no extra costs or delays. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Enjoy predictable monthly pricing</span> with no surprise fees — making -->
+<!-- 				budgeting simple and stress-free. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Benefit from expert support</span> that responds quickly and keeps you -->
+<!-- 				informed without tech jargon. -->
+<!-- 			</li> -->
+<!-- 			<li> -->
+<!-- 				<span class="font-bold">Scale effortlessly</span> as your business grows — your website will -->
+<!-- 				grow with you, no vendor lock-in or costly rebuilds. -->
+<!-- 			</li> -->
+<!-- 		</ul> -->
+<!-- 	</div> -->
+<!-- 	<div class="container mt-10 p-6 bg-gray-100 rounded shadow mx-auto"> -->
+<!-- 		<h3 class="text-2xl font-semibold mb-6">Here’s What You Get with Your Managed Website</h3> -->
+<!-- 		<ul class="list-disc pl-6 space-y-4 text-lg"> -->
+<!-- 			<li><strong>Custom Managed Website Setup</strong> — $2,497 value, included free</li> -->
+<!-- 			<li><strong>Unlimited Website Edits & Content Updates</strong> — $700/month value</li> -->
+<!-- 			<li><strong>24/7 Hosting, Security, Monitoring & Backups</strong> — $350/month value</li> -->
+<!-- 			<li><strong>Annual Full Website Redesign & Refresh</strong> — $1,500 value</li> -->
+<!-- 			<li> -->
+<!-- 				<strong>Technical SEO & Accessibility Compliance</strong> — $400/month ongoing value -->
+<!-- 			</li> -->
+<!-- 			<li><strong>Performance Optimisation & Speed Tuning</strong> — $350/month ongoing value</li> -->
+<!-- 			<li><strong>Dedicated Account Manager & Priority Support</strong> — $300/month value</li> -->
+<!-- 			<li><strong>Advanced Analytics & Conversion Tracking Setup</strong> — $250 value</li> -->
+<!-- 			<li><strong>Staging Environment & Quality Assurance Testing</strong> — $200/month value</li> -->
+<!-- 			<p class="mt-6 text-xl font-semibold">Total Value: $16,000+ per year</p> -->
+<!-- 			<p class="mt-2 text-xl">Your Price: <strong>$597/month</strong></p> -->
+<!-- 		</ul> -->
+<!-- 	</div> -->
+<!-- 	<div class="mt-10 p-6 bg-green-100 border border-green-400 rounded mx-auto w-2xl"> -->
+<!-- 		<h3 class="text-2xl font-semibold mb-4">Our 100% Satisfaction Guarantee</h3> -->
+<!-- 		<p class="text-lg"> -->
+<!-- 			If at any time in the first 30 days you’re not completely happy with our service, just let us -->
+<!-- 			know — we’ll refund your money with no questions asked. Plus, we’ll work with you to fix any -->
+<!-- 			issues until you’re thrilled. -->
+<!-- 		</p> -->
+<!-- 	</div> -->
+<!-- </section> -->
+
 <section class="py-16 bg-base-200">
-	<div class="container mx-auto px-4">
-		<h2 class="text-3xl font-semibold mb-6">Return on Better Systems</h2>
-		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<p class="mb-6 mt-8 text-xl">
-			Smart internal tools and web systems pay for themselves by reducing time waste, improving
-			accuracy, and growing with your needs.
+	<div class="container mx-auto px-4 max-w-6xl">
+		<h2 class="text-4xl font-bold mb-6 text-center">Return on a Hassle-Free Website</h2>
+		<div class="mx-auto mb-12 h-1 w-24 bg-primary rounded"></div>
+
+		<p class="mb-12 text-center text-xl max-w-3xl mx-auto">
+			A website that’s always working, secure, and updated isn’t just peace of mind. It’s a business
+			asset that drives growth, saves you time, and protects your reputation.
 		</p>
-		<ul class="space-y-4 list-disc pl-6 text-xl mt-12">
-			<li><span class="font-bold">10+ hours saved/week</span> with better internal tooling</li>
-			<li><span class="font-bold">Fewer manual errors</span> through automation & integrations</li>
-			<li><span class="font-bold">Better web experiences</span> for users and staff</li>
-			<li><span class="font-bold">Faster team ramp-up</span> with intuitive tools</li>
-		</ul>
+
+		<!-- Benefits Grid -->
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Replace with an icon for “time saved” -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Save 5+ hours a week</h3>
+					<p>Focus on growing your business while we handle updates, fixes, and downtime.</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for conversion -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Convert more visitors</h3>
+					<p>Fast, reliable sites with clear calls to action turn visitors into customers.</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for security -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Protect your business</h3>
+					<p>
+						Proactive security and monitoring keep you safe from costly breaches and compliance
+						issues.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for refresh/design -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Keep your brand fresh</h3>
+					<p>
+						Annual redesigns keep your site modern and engaging to attract and retain customers.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for edits -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Unlimited website edits</h3>
+					<p>
+						Keep your site up to date with changes, content updates, and new offers — no extra fees.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for pricing -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v7.5m2.25-6.466a9.016 9.016 0 0 0-3.461-.203c-.536.072-.974.478-1.021 1.017a4.559 4.559 0 0 0-.018.402c0 .464.336.844.775.994l2.95 1.012c.44.15.775.53.775.994 0 .136-.006.27-.018.402-.047.539-.485.945-1.021 1.017a9.077 9.077 0 0 1-3.461-.203M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Predictable monthly pricing</h3>
+					<p>No surprise bills or hidden fees — easy budgeting that puts you in control.</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for support -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Expert support you can trust</h3>
+					<p>Fast, jargon-free help that keeps you informed and your site running smoothly.</p>
+				</div>
+			</div>
+
+			<div class="flex space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon for scalability -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+						/>
+					</svg>
+				</div>
+				<div>
+					<h3 class="font-semibold text-lg mb-1">Scale with ease</h3>
+					<p>Your website grows with your business — no vendor lock-ins or costly rebuilds.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Value Stack Box -->
+		<div class="bg-gray-100 p-8 rounded-lg shadow max-w-4xl mx-auto mb-12">
+			<h3 class="text-3xl font-semibold mb-8 text-center">
+				What You Get With Your Managed Website
+			</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+				<div>
+					<p><strong>Custom Managed Website Setup</strong> — $2,497 value, included free</p>
+					<p><strong>Unlimited Website Edits & Content Updates</strong> — $700/month value</p>
+					<p><strong>24/7 Hosting, Security, Monitoring & Backups</strong> — $350/month value</p>
+					<p><strong>Annual Full Website Redesign & Refresh</strong> — $1,500 value</p>
+					<p>
+						<strong>Technical SEO & Accessibility Compliance</strong> — $400/month ongoing value
+					</p>
+				</div>
+				<div>
+					<p><strong>Performance Optimisation & Speed Tuning</strong> — $350/month ongoing value</p>
+					<p><strong>Dedicated Account Manager & Priority Support</strong> — $300/month value</p>
+					<p><strong>Advanced Analytics & Conversion Tracking Setup</strong> — $250 value</p>
+					<p><strong>Staging Environment & Quality Assurance Testing</strong> — $200/month value</p>
+				</div>
+			</div>
+			<p class="mt-10 text-2xl font-bold text-center">Total Value: $16,000+ per year</p>
+			<p class="text-xl text-center mt-2">Your Price: <strong>$597/month</strong></p>
+		</div>
+
+		<!-- Guarantee -->
+		<div class="bg-green-100 border border-green-400 rounded p-8 max-w-3xl mx-auto text-center">
+			<h3 class="text-3xl font-semibold mb-4">Our 100% Satisfaction Guarantee</h3>
+			<p class="text-lg max-w-xl mx-auto">
+				If at any time in the first 30 days you’re not completely happy with our service, just let
+				us know — we’ll refund your money with no questions asked. Plus, we’ll work with you to fix
+				any issues until you’re thrilled.
+			</p>
+		</div>
 	</div>
 </section>
-
 <!-- Testimonial Section -->
 <section class="py-16 bg-base-100 hidden">
 	<div class="container mx-auto px-4 text-center">
@@ -171,12 +513,20 @@
 
 <!-- CTA Section -->
 <section class="py-16 bg-teal-800 text-primary-content text-center">
-	<div class="container mx-auto px-4">
-		<h2 class="text-3xl text-white font-semibold mb-4">Let’s Build What You Actually Need</h2>
+	<div class="container mx-auto px-4 max-w-xl">
+		<h2 class="text-3xl text-white font-semibold mb-4">
+			Let’s Build What Your Business Really Needs
+		</h2>
+
 		<p class="text-xl text-white mb-8">
-			Book a free call to explore how better tools, systems, and web experiences can grow your
-			business.
+			Ready to stop struggling with your website? Book a free, no-pressure call to discover how
+			managed web solutions can save you time, protect your brand, and help you grow.
 		</p>
+
+		<p class="text-white mb-8 font-semibold">
+			Limited spots available each month — don’t miss out.
+		</p>
+
 		<CtaBtn />
 	</div>
 </section>
