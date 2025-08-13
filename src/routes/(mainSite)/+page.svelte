@@ -468,7 +468,7 @@
 			</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
 				<div>
-					<p><strong>Custom Managed Website Setup</strong> — $2,497 value, included free</p>
+					<p><strong>Custom Coded Website</strong> — $2,497 value, included free</p>
 					<p><strong>Unlimited Website Edits & Content Updates</strong> — $700/month value</p>
 					<p><strong>24/7 Hosting, Security, Monitoring & Backups</strong> — $350/month value</p>
 					<p><strong>Annual Full Website Redesign & Refresh</strong> — $1,500 value</p>
@@ -520,7 +520,7 @@
 			</div>
 			<div class="collapse-content">
 				<p>
-					You’ll get a fully managed, custom-designed 3-5 page website, unlimited edits, premium
+					You’ll get a fully managed, custom-coded 3-5 page website, unlimited edits, premium
 					hosting, 24/7 monitoring, security updates, performance optimisation, annual redesigns,
 					and priority support. All handled for you, so your site is always running at its best.
 				</p>
@@ -651,6 +651,26 @@
 		<p class="text-white mb-8 font-semibold">
 			Limited spots available each month — don’t miss out.
 		</p>
+		<div
+			class="bg-blue-50 border border-blue-200 rounded p-8 max-w-3xl mx-auto text-center mt-12 text-black mb-10"
+		>
+			<h3 class="text-3xl font-semibold mb-6">Your Website Plan <br /> Risk-Free in 3 Steps</h3>
+			<ol class="text-lg max-w-xl mx-auto text-left space-y-4 list-decimal list-inside font-medium">
+				<li>
+					<strong>Click “Let’s Get Started” & Schedule</strong> - lock in your call today so we can get
+					moving now.
+				</li>
+				<li>
+					<strong>We Walk You Through It All</strong> - you see the plan, the process, and the price.
+					Love it? Sign up. Hate it? Walk away. No cost.
+				</li>
+				<li>
+					<strong>We Build & Deploy While You Relax</strong> - in days, your site is live and
+					working for you. Don’t love it in 30 days? Get every cent back <em>and</em> keep 60 days of
+					support.
+				</li>
+			</ol>
+		</div>
 
 		<CtaBtn />
 	</div>
