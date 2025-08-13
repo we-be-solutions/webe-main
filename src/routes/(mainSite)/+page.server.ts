@@ -29,11 +29,6 @@ const formSchema = z
 			.min(1, 'Company is required')
 			.max(100, 'Company name is too long')
 			.transform((val) => val.trim()),
-		timeline: z.enum(['now', '1-3', '4+']),
-		project: z
-			.string()
-			.max(2000, 'Project description is too long')
-			.transform((val) => val.trim()),
 		honeypot: z.string().max(0, 'honeypot'),
 		'cf-turnstile-response': z.string()
 	})
@@ -85,8 +80,6 @@ export const actions = {
 				  <p><strong>Name:</strong> ${result.data.name}</p>
 				  <p><strong>Email:</strong> ${result.data.email}</p>
 				  <p><strong>Company:</strong> ${result.data.company}</p>
-				  <p><strong>Timeline:</strong> ${result.data.timeline}</p>
-				  <p><strong>Project:</strong> ${result.data.project}</p>
 				`
 			});
 			//Customer Acknowledgement

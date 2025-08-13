@@ -43,8 +43,8 @@
 
 <!-- Trigger Button -->
 <button
-	class="cta-btn btn btn-warning btn-md text-xl text-black hover:shadow-lg transition-shadow duration-300"
-	onclick={toggleModal}>Book a Chat!</button
+	class="cta-btn btn btn-warning btn-xl text-2xl text-black hover:shadow-lg transition-shadow duration-300"
+	onclick={toggleModal}>Let’s Get Started</button
 >
 
 <!-- Modal -->
@@ -83,12 +83,12 @@
 
 				{#if !sending.sending}
 					<h2 class="text-2xl font-bold mb-2">
-						Streamline Your Business With Smarter, Purpose-Built Software
+						Get a Website That Works for Your Business Not the Other Way Around
 					</h2>
 					<p class="mb-4">
-						The tools you use should make your work easier—not more complicated. If you're ready to
-						reduce friction and boost efficiency, fill out the form and we’ll help you build a tech
-						plan tailored to your workflow, team, and budget.
+						If your current site wastes time, costs customers, or gives you headaches, it’s time for
+						a change. Fill out the form and we’ll help you build a website and tech plan that fits
+						your business perfectly saving you time, stress, and money.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}
@@ -135,34 +135,6 @@
 								value={form?.values?.company ?? ''}
 								class="input input-bordered w-full"
 							/>
-						</div>
-
-						<div>
-							<label class="label" for="timeline">When would you like to start?</label>
-							<select id="timeline" name="timeline" required class="select select-bordered w-full">
-								<option value="now" selected={form?.values?.timeline === 'now'}>
-									Ready to start now
-								</option>
-								<option value="1-3" selected={form?.values?.timeline === '1-3'}>
-									Within 1–3 months
-								</option>
-								<option value="3-6" selected={form?.values?.timeline === '3-6'}>
-									Within 3–6 months
-								</option>
-							</select>
-						</div>
-
-						<div>
-							<label class="label" for="project">
-								What’s your biggest tech challenge right now?
-							</label>
-							<textarea
-								id="project"
-								name="project"
-								rows="4"
-								placeholder="I am unsure. I am open to assistance."
-								class="textarea textarea-bordered w-full">{form?.values?.project ?? ''}</textarea
-							>
 						</div>
 
 						<div class="hidden">
