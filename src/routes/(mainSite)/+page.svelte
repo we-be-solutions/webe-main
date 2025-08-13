@@ -468,19 +468,27 @@
 			</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
 				<div>
-					<p><strong>Custom Coded Website</strong> — $2,497 value, included free</p>
-					<p><strong>Unlimited Website Edits & Content Updates</strong> — $700/month value</p>
-					<p><strong>24/7 Hosting, Security, Monitoring & Backups</strong> — $350/month value</p>
-					<p><strong>Annual Full Website Redesign & Refresh</strong> — $1,500 value</p>
+					<p><strong>Custom Coded Website</strong><br /> $2,497 value, included free</p>
+					<p><strong>Unlimited Website Edits & Content Updates</strong><br /> $700/month value</p>
 					<p>
-						<strong>Technical SEO & Accessibility Compliance</strong> — $400/month ongoing value
+						<strong>24/7 Hosting, Security, Monitoring & Backups</strong><br /> $350/month value
+					</p>
+					<p><strong>Annual Full Website Redesign & Refresh</strong><br /> $1,500 value</p>
+					<p>
+						<strong>Technical SEO & Accessibility Compliance</strong><br /> $400/month ongoing value
 					</p>
 				</div>
 				<div>
-					<p><strong>Performance Optimisation & Speed Tuning</strong> — $350/month ongoing value</p>
-					<p><strong>Dedicated Account Manager & Priority Support</strong> — $300/month value</p>
-					<p><strong>Advanced Analytics & Conversion Tracking Setup</strong> — $250 value</p>
-					<p><strong>Staging Environment & Quality Assurance Testing</strong> — $200/month value</p>
+					<p>
+						<strong>Performance Optimisation & Speed Tuning</strong><br /> $350/month ongoing value
+					</p>
+					<p>
+						<strong>Dedicated Account Manager & Priority Support</strong><br /> $300/month value
+					</p>
+					<p><strong>Advanced Analytics & Conversion Tracking Setup</strong><br /> $250 value</p>
+					<p>
+						<strong>Staging Environment & Quality Assurance Testing</strong><br /> $200/month value
+					</p>
 				</div>
 			</div>
 			<p class="mt-10 text-2xl font-bold text-center">Total Value: $16,000+ per year</p>
