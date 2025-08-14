@@ -1,36 +1,16 @@
 <script lang="ts">
 	import CtaBtn from '$lib/components/CTABtn.svelte';
-	import { onMount } from 'svelte';
 
 	let { data } = $props();
-
-	let videoEl: HTMLVideoElement | null = $state(null);
-
-	onMount(() => {
-		if (videoEl) {
-			videoEl.playbackRate = 0.8;
-			videoEl.play();
-
-			videoEl.addEventListener('ended', () => {
-				if (videoEl) {
-					videoEl.currentTime = 1.0;
-					videoEl.play();
-				}
-			});
-		}
-	});
 </script>
 
 <svelte:head>
 	<link rel="preload" as="video" href="/laser.webm" type="video/webm" />
 </svelte:head>
-<header
-	class="relative hero bg-base-100 h-screen overflow-hidden bg-cover bg-center"
-	style="background-image: url('/poster.webp');"
->
+<header class="relative h-screen flex items-center justify-center overflow-hidden bg-base-100">
+	<!-- Background Video -->
 	<video
-		bind:this={videoEl}
-		class="absolute top-0 left-0 w-full h-full object-cover z-10"
+		class="absolute inset-0 w-full h-full object-cover z-0"
 		muted
 		loop
 		autoplay
@@ -39,64 +19,164 @@
 	>
 		<source src="/laser.webm" type="video/webm" />
 	</video>
-	<div class="absolute inset-0 bg-base-300/80 z-10"></div>
-	<div class="relative z-10 container mx-auto px-4 text-center">
-		<h2 class="text-5xl font-bold mb-4 text-base-content">
-			We Run Your Website So You Can Run Your Business.
-		</h2>
-		<div class="mx-auto mt-1 mb-6 h-1 w-20 bg-primary rounded"></div>
-		<p class="text-2xl text-base-content"></p>
-		<p class="text-2xl text-base-content mt-2">You don’t have time to mess with web headaches.</p>
 
-		<p class="text-2xl text-base-content mt-2">
-			We handle it for you. A website service that keeps your site fast, secure, and up-to-date.
+	<!-- Dark Gradient Overlay -->
+	<div
+		class="absolute inset-0 bg-gradient-to-b from-base-300/90 via-base-300/80 to-base-100/95 z-10"
+	></div>
+
+	<!-- Content -->
+	<div class="card bg-white p-20 relative z-20 container mx-auto px-16 text-center max-w-4xl">
+		<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-base-content drop-shadow-lg">
+			We Run Your Website So You Can Run Your Business
+		</h1>
+		<div class="mx-auto mt-4 mb-8 h-1 w-48 bg-blue-600 rounded"></div>
+
+		<p class="text-xl md:text-2xl text-base-content/90 max-w-2xl mx-auto">
+			You don’t have time to mess with web headaches. We keep your site fast, secure, and
+			worry-free. So you can focus on the real work.
 		</p>
-		<p class="text-2xl text-base-content mt-2">
-			WeBe takes care of it. So you can focus on getting the real work done!
-		</p>
-		<!-- <div class="mt-32"> -->
-		<!-- 	<CtaBtn /> -->
-		<!-- </div> -->
+
+		<!-- CTA -->
+		<div class="mt-10 animate-fadeIn delay-400">
+			<a
+				href="#get-started"
+				class="inline-block px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg shadow-lg hover:bg-primary-focus transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+			>
+				Learn More
+			</a>
+		</div>
 	</div>
+
+	<!-- Bottom Fade -->
+	<div
+		class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-base-100 to-transparent z-10"
+	></div>
 </header>
 
 <!-- New Section: Value Proposition -->
-<section class="py-16 bg-base-200">
-	<div class="container mx-auto my-12 px-4">
-		<h2 class="text-3xl font-semibold mb-4">Tired of Your Website Headaches?</h2>
+<section id="get-started" class="py-20 bg-base-200">
+	<div class="container mx-auto px-4 max-w-5xl text-center">
+		<!-- Headline -->
+		<h2 class="text-4xl sm:text-5xl font-bold mb-4">
+			Tired of Your <span class="text-blue-500">Website Headaches?</span>
+		</h2>
+		<div class="mx-auto mb-10 h-1 w-24 bg-blue-500 rounded"></div>
 
-		<p class="text-xl mt-6 font-semibold">Is your slow site losing you money?</p>
-		<p class="text-xl mt-6 font-semibold">Is your site costing you hours you don’t have?</p>
-		<p class="text-xl mt-6 font-semibold">Are broken pages turning customers away?</p>
-		<p class="text-xl mt-6 font-semibold">Is managing your site more work than it should be?</p>
+		<!-- Pain Points List -->
+		<div class="grid gap-6 sm:gap-8 sm:grid-cols-2 text-left mt-12">
+			<div class="flex items-start space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<!-- Icon: warning -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-6 h-6 stroke-blue-500"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 9v2m0 4h.01M5.07 19h13.86a2 2 0 001.74-3l-6.93-12a2 2 0 00-3.48 0l-6.93 12a2 2 0 001.74 3z"
+						/>
+					</svg>
+				</div>
+				<p class="text-lg sm:text-xl font-medium">Your slow site is costing you sales</p>
+			</div>
 
-		<p class="text-xl mt-6">
-			We make sites fast. We keep them working. We help you keep your customers.
+			<div class="flex items-start space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-6 h-6 stroke-blue-500"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+						/>
+					</svg>
+				</div>
+				<p class="text-lg sm:text-xl font-medium">You’re wasting hours every week managing it</p>
+			</div>
+
+			<div class="flex items-start space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-6 h-6 stroke-blue-500"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
+					</svg>
+				</div>
+				<p class="text-lg sm:text-xl font-medium">Broken pages are driving customers away</p>
+			</div>
+
+			<div class="flex items-start space-x-4">
+				<div class="flex-shrink-0 text-primary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="w-6 h-6 stroke-blue-500"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
+					</svg>
+				</div>
+				<p class="text-lg sm:text-xl font-medium">Your site is more hassle than help</p>
+			</div>
+		</div>
+
+		<!-- Subline -->
+		<p class="mt-12 text-xl max-w-3xl mx-auto">
+			We make websites <span class="text-blue-500 font-semibold">fast</span>, keep them
+			<span class="text-blue-500 font-semibold">working</span>, and help you keep your
+			<span class="text-blue-500 font-semibold">customers</span>.
 		</p>
 	</div>
 </section>
 
 <!-- New Section: Accessibility & Web Focus -->
 <section class="py-16">
-	<div class="container mx-auto px-4">
+	<div class="container flex flex-col justify-center items-center mx-auto px-4">
 		<h2 class="text-3xl font-semibold mb-8">Website Management That Frees Your Time</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
 		<ul class="text-xl grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
+			<li class="card bg-slate-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Never Worry About Updates</h3>
 				<p>
 					We handle all website updates, security patches, and backups so your site stays safe and
 					running smoothly.
 				</p>
 			</li>
-			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
+			<li class="card bg-slate-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Unlimited Edits Without Extra Fees</h3>
 				<p>
 					Need changes or tweaks? Just ask. We make unlimited edits to keep your website fresh and
 					aligned with your business.
 				</p>
 			</li>
-			<li class="card bg-blue-900 text-white shadow-blue-600 shadow-sm p-8">
+			<li class="card bg-slate-900 text-white shadow-blue-600 shadow-sm p-8">
 				<h3 class="card-title mb-4">Fast, Secure, and Always Online</h3>
 				<p>
 					We monitor your site 24/7 to ensure it loads quickly, stays secure, and never goes
@@ -108,146 +188,70 @@
 </section>
 <!-- Benefits Section -->
 <section class="py-16 bg-base-100">
-	<div class="container mx-auto px-4">
+	<div class="container flex flex-col justify-center items-center mx-auto px-4">
 		<h2 class="text-3xl font-semibold mb-8">The WeBe Advantage</h2>
 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div>
-		<ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-xl">
-			<li class="card bg-base-200 p-6">
+		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-xl">
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Fully Managed Websites</strong><br />
 					We handle hosting, updates, backups, and security — so you never have to worry about your site.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Unlimited Edits Included</strong><br />
 					Make changes anytime, no extra fees — keep your site fresh as your business evolves.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Fast, Reliable Performance</strong><br />
 					We optimise your site for speed and uptime to keep your customers happy and engaged.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Proactive Security & Monitoring</strong><br />
 					Continuous monitoring and automatic fixes keep your site safe from threats and downtime.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>SEO and Technical Best Practices</strong><br />
 					We build and maintain your site with search engines and accessibility in mind to boost your
 					visibility.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Annual Full Refresh</strong><br />
 					Once a year, we redesign your site to keep it modern and aligned with your brand — included
 					in your plan.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Transparent, Predictable Pricing</strong><br />
 					One simple monthly fee covers everything — no surprise bills or hidden costs.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Dedicated Support & Communication</strong><br />
 					Responsive email support with clear updates keeps you informed without the stress.
 				</p>
-			</li>
-			<li class="card bg-base-200 p-6">
+			</div>
+			<div class="grid-card bg-base-200 p-6">
 				<p>
 					<strong>Scalable & Future-Proof</strong><br />
 					Our solutions grow with your business — no vendor lock-in or outdated templates holding you
 					back.
 				</p>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </section>
-
-<!-- Investment Impact Section -->
-<!-- <section class="py-16 bg-base-200"> -->
-<!-- 	<div class="container mx-auto px-4"> -->
-<!-- 		<h2 class="text-3xl font-semibold mb-6">Return on a Hassle-Free Website</h2> -->
-<!-- 		<div class="mb-6 h-1 w-20 bg-primary rounded"></div> -->
-<!-- 		<p class="mb-6 mt-8 text-xl"> -->
-<!-- 			A website that’s always working, secure, and updated isn’t just peace of mind. It is a -->
-<!-- 			business asset that drives growth, saves you time, and protects your reputation. -->
-<!-- 		</p> -->
-<!-- 		<ul class="space-y-6 list-disc pl-6 text-xl mt-12"> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Save 5+ hours a week</span> by never worrying about updates, fixes, or -->
-<!-- 				downtime. Spend more time focusing on your business while we keep your website running smoothly -->
-<!-- 				and error-free. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Convert more visitors</span> with fast, reliable performance and clear -->
-<!-- 				calls to action that turn browsers into customers. A smooth, professional site builds trust and -->
-<!-- 				encourages people to take action. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Protect your business</span> from costly security breaches and compliance -->
-<!-- 				issues. Our proactive monitoring and updates keep your site secure, giving you peace of mind -->
-<!-- 				and avoiding expensive problems. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Keep your brand fresh</span> with included annual redesigns that attract -->
-<!-- 				and engage your audience. Staying modern and relevant means more visitors stay longer and remember -->
-<!-- 				your business. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Get unlimited website edits</span> so your site always matches your latest -->
-<!-- 				offers and messaging — no extra costs or delays. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Enjoy predictable monthly pricing</span> with no surprise fees — making -->
-<!-- 				budgeting simple and stress-free. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Benefit from expert support</span> that responds quickly and keeps you -->
-<!-- 				informed without tech jargon. -->
-<!-- 			</li> -->
-<!-- 			<li> -->
-<!-- 				<span class="font-bold">Scale effortlessly</span> as your business grows — your website will -->
-<!-- 				grow with you, no vendor lock-in or costly rebuilds. -->
-<!-- 			</li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- 	<div class="container mt-10 p-6 bg-gray-100 rounded shadow mx-auto"> -->
-<!-- 		<h3 class="text-2xl font-semibold mb-6">Here’s What You Get with Your Managed Website</h3> -->
-<!-- 		<ul class="list-disc pl-6 space-y-4 text-lg"> -->
-<!-- 			<li><strong>Custom Managed Website Setup</strong> — $2,497 value, included free</li> -->
-<!-- 			<li><strong>Unlimited Website Edits & Content Updates</strong> — $700/month value</li> -->
-<!-- 			<li><strong>24/7 Hosting, Security, Monitoring & Backups</strong> — $350/month value</li> -->
-<!-- 			<li><strong>Annual Full Website Redesign & Refresh</strong> — $1,500 value</li> -->
-<!-- 			<li> -->
-<!-- 				<strong>Technical SEO & Accessibility Compliance</strong> — $400/month ongoing value -->
-<!-- 			</li> -->
-<!-- 			<li><strong>Performance Optimisation & Speed Tuning</strong> — $350/month ongoing value</li> -->
-<!-- 			<li><strong>Dedicated Account Manager & Priority Support</strong> — $300/month value</li> -->
-<!-- 			<li><strong>Advanced Analytics & Conversion Tracking Setup</strong> — $250 value</li> -->
-<!-- 			<li><strong>Staging Environment & Quality Assurance Testing</strong> — $200/month value</li> -->
-<!-- 			<p class="mt-6 text-xl font-semibold">Total Value: $16,000+ per year</p> -->
-<!-- 			<p class="mt-2 text-xl">Your Price: <strong>$597/month</strong></p> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-<!-- 	<div class="mt-10 p-6 bg-green-100 border border-green-400 rounded mx-auto w-2xl"> -->
-<!-- 		<h3 class="text-2xl font-semibold mb-4">Our 100% Satisfaction Guarantee</h3> -->
-<!-- 		<p class="text-lg"> -->
-<!-- 			If at any time in the first 30 days you’re not completely happy with our service, just let us -->
-<!-- 			know — we’ll refund your money with no questions asked. Plus, we’ll work with you to fix any -->
-<!-- 			issues until you’re thrilled. -->
-<!-- 		</p> -->
-<!-- 	</div> -->
-<!-- </section> -->
 
 <section class="py-16 bg-base-200">
 	<div class="container mx-auto px-4 max-w-6xl">
@@ -260,7 +264,7 @@
 		</p>
 
 		<!-- Benefits Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-24">
 			<div class="flex space-x-4">
 				<div class="flex-shrink-0 text-primary">
 					<!-- Replace with an icon for “time saved” -->
@@ -270,7 +274,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -294,7 +298,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -318,7 +322,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -345,7 +349,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -371,7 +375,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -397,7 +401,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -421,7 +425,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -445,7 +449,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="size-10"
+						class="size-12 stroke-blue-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -462,51 +466,99 @@
 		</div>
 
 		<!-- Value Stack Box -->
-		<div class="bg-gray-100 p-8 rounded-lg shadow max-w-4xl mx-auto mb-12">
-			<h3 class="text-3xl font-semibold mb-8 text-center">
+		<div class="bg-slate-900 rounded-lg shadow max-w-4xl mx-auto mb-12">
+			<h3 class="text-3xl text-white font-semibold mb-8 text-center pt-8">
 				What You Get With Your Managed Website
 			</h3>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
-				<div>
-					<p><strong>Custom Coded Website</strong><br /> $2,497 value, included free</p>
-					<p><strong>Unlimited Website Edits & Content Updates</strong><br /> $700/month value</p>
+			<section class="bg-gray-100 m-0 p-8 w-full">
+				<div class=" grid grid-cols-1 md:grid-cols-1 gap-6 text-lg">
 					<p>
-						<strong>24/7 Hosting, Security, Monitoring & Backups</strong><br /> $350/month value
+						<strong>Custom Coded Website</strong> $2,497 value, included free
 					</p>
-					<p><strong>Annual Full Website Redesign & Refresh</strong><br /> $1,500 value</p>
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p><strong>Unlimited Website Edits & Content Updates</strong> $700/month value</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
 					<p>
-						<strong>Technical SEO & Accessibility Compliance</strong><br /> $400/month ongoing value
+						<strong>24/7 Hosting, Security, Monitoring & Backups</strong> $350/month value
 					</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p><strong>Annual Full Website Redesign & Refresh</strong> $1,500 value</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p>
+						<strong>Technical SEO & Accessibility Compliance</strong> $400/month ongoing value
+					</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p>
+						<strong>Performance Optimisation & Speed Tuning</strong> $350/month ongoing value
+					</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p>
+						<strong>Dedicated Account Manager & Priority Support</strong> $300/month value
+					</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p><strong>Advanced Analytics & Conversion Tracking Setup</strong> $250 value</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
+					<p>
+						<strong>Staging Environment & Quality Assurance Testing</strong> $200/month value
+					</p>
+
+					<div class="border-b-2 border-blue-400 rounded-full w-full"></div>
 				</div>
-				<div>
-					<p>
-						<strong>Performance Optimisation & Speed Tuning</strong><br /> $350/month ongoing value
-					</p>
-					<p>
-						<strong>Dedicated Account Manager & Priority Support</strong><br /> $300/month value
-					</p>
-					<p><strong>Advanced Analytics & Conversion Tracking Setup</strong><br /> $250 value</p>
-					<p>
-						<strong>Staging Environment & Quality Assurance Testing</strong><br /> $200/month value
-					</p>
+				<div class="mt-12 text-center space-y-6">
+					<!-- Value -->
+					<div>
+						<p class="text-4xl font-extrabold text-blue-500">Total Value</p>
+						<p class="text-5xl font-extrabold text-gray-900 mt-2">
+							$16,000<span class="text-2xl text-gray-500">+/year</span>
+						</p>
+					</div>
+
+					<!-- Price -->
+					<div
+						class="bg-blue-50 border border-blue-200 rounded-2xl py-6 px-8 inline-block shadow-lg"
+					>
+						<p class="text-xl text-gray-700">Your Price</p>
+						<p class="text-4xl font-extrabold text-blue-600 mt-1">
+							$597<span class="text-lg font-semibold text-gray-600">/month</span>
+						</p>
+						<p>**Only 3 spots available at this price</p>
+					</div>
+
+					<!-- Why So Low -->
+					<div class="max-w-3xl mx-auto">
+						<p class="text-2xl font-bold text-gray-900 mt-10">Why Our Price Is So Low?</p>
+						<div class="mt-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+							<p>
+								We keep costs small. We build smart websites just for you with new, fast tools. We
+								don’t use expensive templates or extra stuff you don’t need.
+							</p>
+							<p>
+								We are a small team. Our bills are small. We don’t add big agency fees. That means
+								you get a great website for way less money.
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<p class="mt-10 text-2xl font-bold text-center">Total Value: $16,000+ per year</p>
-			<p class="text-xl text-center mt-2">Your Price: <strong>$597/month</strong></p>
-			<p class="text-xl text-center mt-10">Why Our Price Is So Low?</p>
-			<p class="text-xl text-center mt-3">
-				We keep costs small. We build smart websites just for you with new, fast tools. We don’t use
-				expensive templates or extra stuff you don’t need.
-			</p>
-			<p class="text-xl text-center mt-3">
-				We are a small team. Our bills are small. We don’t add big agency fees. That means you get a
-				great website for way less money.
-			</p>
+			</section>
 		</div>
 
 		<!-- Guarantee -->
-		<div class="bg-green-100 border border-green-400 rounded p-8 max-w-3xl mx-auto text-center">
-			<h3 class="text-3xl font-semibold mb-4">The WeBe Breakup Guarantee</h3>
+		<div class="bg-white border border-blue-400 rounded p-8 max-w-3xl mx-auto">
+			<div class="flex justify-center">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-15 mr-5"
+					><path
+						d="M598.1 139.4C608.8 131.6 611.2 116.6 603.4 105.9C595.6 95.2 580.6 92.8 569.9 100.6L495.4 154.8L485.5 148.2C465.8 135 442.6 128 418.9 128L359.7 128L359.3 128L215.7 128C189 128 163.2 136.9 142.3 153.1L70.1 100.6C59.4 92.8 44.4 95.2 36.6 105.9C28.8 116.6 31.2 131.6 41.9 139.4L129.9 203.4C139.5 210.3 152.6 209.3 161 201L164.9 197.1C178.4 183.6 196.7 176 215.8 176L262.1 176L170.4 267.7C154.8 283.3 154.8 308.6 170.4 324.3L171.2 325.1C218 372 294 372 340.9 325.1L368 298L465.8 395.8C481.4 411.4 481.4 436.7 465.8 452.4L456 462.2L425 431.2C415.6 421.8 400.4 421.8 391.1 431.2C381.8 440.6 381.7 455.8 391.1 465.1L419.1 493.1C401.6 503.5 381.9 509.8 361.5 511.6L313 463C303.6 453.6 288.4 453.6 279.1 463C269.8 472.4 269.7 487.6 279.1 496.9L294.1 511.9L290.3 511.9C254.2 511.9 219.6 497.6 194.1 472.1L65 343C55.6 333.6 40.4 333.6 31.1 343C21.8 352.4 21.7 367.6 31.1 376.9L160.2 506.1C194.7 540.6 241.5 560 290.3 560L342.1 560L343.1 561L344.1 560L349.8 560C398.6 560 445.4 540.6 479.9 506.1L499.8 486.2C501 485 502.1 483.9 503.2 482.7C503.9 482.2 504.5 481.6 505.1 481L609 377C618.4 367.6 618.4 352.4 609 343.1C599.6 333.8 584.4 333.7 575.1 343.1L521.3 396.9C517.1 384.1 510 372 499.8 361.8L385 247C375.6 237.6 360.4 237.6 351.1 247L307 291.1C280.5 317.6 238.5 319.1 210.3 295.7L309 197C322.4 183.6 340.6 176 359.6 175.9L368.1 175.9L368.3 175.9L419.1 175.9C433.3 175.9 447.2 180.1 459 188L482.7 204C491.1 209.6 502 209.3 510.1 203.4L598.1 139.4z"
+					/>
+				</svg>
+				<h3 class="text-3xl font-semibold mb-4 mt-3">The WeBe Breakup Guarantee</h3>
+			</div>
 			<p class="text-lg max-w-xl mx-auto">
 				If within 30 days you’re not completely satisfied with our service, we’ll give you a full
 				refund. No questions asked.<br /><br />
@@ -632,55 +684,80 @@
 </section>
 
 <!-- Testimonial Section -->
-<section class="py-16 bg-base-100 hidden">
-	<div class="container mx-auto px-4 text-center">
-		<h2 class="text-3xl font-semibold mb-6">What Our Clients Say</h2>
-		<div class="mb-6 h-1 w-20 bg-primary rounded mx-auto"></div>
-		<blockquote class="text-xl italic max-w-3xl mx-auto">
-			“Finally, someone who works with our budget and delivers results in weeks, not months. Our
-			compliance is smoother, and the team is less stressed.”
-		</blockquote>
-		<p class="mt-4 text-base-content/70">– Nat Noir, Disability Support Coordinator</p>
-	</div>
-</section>
+<!-- <section class="py-16 bg-base-100 hidden"> -->
+<!-- 	<div class="container mx-auto px-4 text-center"> -->
+<!-- 		<h2 class="text-3xl font-semibold mb-6">What Our Clients Say</h2> -->
+<!-- 		<div class="mb-6 h-1 w-20 bg-primary rounded mx-auto"></div> -->
+<!-- 		<blockquote class="text-xl italic max-w-3xl mx-auto"> -->
+<!-- 			“Finally, someone who works with our budget and delivers results in weeks, not months. Our -->
+<!-- 			compliance is smoother, and the team is less stressed.” -->
+<!-- 		</blockquote> -->
+<!-- 		<p class="mt-4 text-base-content/70">– Nat Noir, Disability Support Coordinator</p> -->
+<!-- 	</div> -->
+<!-- </section> -->
 
 <!-- CTA Section -->
-<section class="py-16 bg-blue-900 text-primary-content text-center">
-	<div class="container mx-auto px-4 max-w-xl">
-		<h2 class="text-3xl text-white font-semibold mb-4">
+<section id="contact" class="py-20 bg-slate-900 text-white text-center">
+	<div class="container mx-auto px-6 max-w-3xl">
+		<!-- Heading -->
+		<h2 class="text-4xl font-extrabold mb-4 tracking-tight">
 			Let’s Build What Your Business Really Needs
 		</h2>
 
-		<p class="text-xl text-white mb-8">
+		<!-- Subtitle -->
+		<p class="text-xl mb-8 opacity-90 leading-relaxed">
 			Ready to stop struggling with your website? Book a free, no-pressure call to discover how
 			managed web solutions can save you time, protect your brand, and help you grow.
 		</p>
 
-		<p class="text-white mb-8 font-semibold">
-			Limited spots available each month — don’t miss out.
+		<!-- Limited spots note -->
+		<p class="text-lg font-semibold mb-12">
+			⚡ Limited spots available each month — don’t miss out.
 		</p>
+
 		<div
-			class="bg-blue-50 border border-blue-200 rounded p-8 max-w-3xl mx-auto text-center mt-12 text-black mb-10"
+			class="bg-white text-gray-900 border border-blue-100 rounded-2xl shadow-lg p-10 max-w-2xl mx-auto text-center relative"
 		>
-			<h3 class="text-3xl font-semibold mb-6">Your Website Plan <br /> Risk-Free in 3 Steps</h3>
-			<ol class="text-lg max-w-xl mx-auto text-left space-y-4 list-decimal list-inside font-medium">
+			<h3 class="text-3xl font-bold mb-6 text-blue-500">
+				Your Website Plan
+				<span class="block text-gray-800">Risk-Free in 3 Steps</span>
+			</h3>
+
+			<ol class="text-lg space-y-5 list-decimal list-inside font-medium text-left max-w-lg mx-auto">
 				<li>
-					<strong>Click “Let’s Get Started” & Schedule</strong> - lock in your call today so we can get
+					<strong>Click “Let’s Get Started” & Schedule</strong> — lock in your call today so we can get
 					moving now.
 				</li>
 				<li>
-					<strong>We Walk You Through It All</strong> - you see the plan, the process, and the price.
+					<strong>We Walk You Through It All</strong> — you see the plan, the process, and the price.
 					Love it? Sign up. Hate it? Walk away. No cost.
 				</li>
 				<li>
-					<strong>We Build & Deploy While You Relax</strong> - in days, your site is live and
+					<strong>We Build & Deploy While You Relax</strong> — in days, your site is live and
 					working for you. Don’t love it in 30 days? Get every cent back <em>and</em> keep 60 days of
 					support.
 				</li>
 			</ol>
+
+			<!-- Decorative arrow to CTA -->
+			<div class="absolute left-1/2 -bottom-12 transform -translate-x-1/2">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="w-10 h-10 text-blue-600 animate-bounce"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+				</svg>
+			</div>
 		</div>
 
-		<CtaBtn />
+		<!-- CTA directly below -->
+		<div class="mt-16 text-center">
+			<CtaBtn />
+		</div>
 	</div>
 </section>
 <section class="py-16">
@@ -692,12 +769,12 @@
 				{#each posts as p}
 					<a
 						href="/blog/{p.slug}"
-						class="card bg-base-300 shadow-md hover:shadow-xl hover:ring-2 hover:ring-secondary/60 hover:ring-offset-2 transition duration-200"
+						class="card bg-base-300 shadow-md hover:shadow-xl hover:ring-2 hover:ring-blue-500/60 hover:ring-offset-2 transition duration-200"
 					>
 						<article class="card-body prose prose-xl">
 							<h3>{p.title}</h3>
 							<h4 class="mt-1">{p.date}</h4>
-							<div class="mx-auto mt-1 h-1 w-20 bg-secondary rounded"></div>
+							<div class="mx-auto mt-1 h-1 w-20 bg-slate-900 rounded"></div>
 							<p>{p.description}</p>
 							<div class="flex flex-wrap gap-2 mt-2">
 								{#each p.categories as tag}
@@ -716,5 +793,42 @@
 	/* Smooth accordion animation */
 	.collapse-content {
 		transition: all 0.3s ease-in-out;
+	}
+
+	.grid-card {
+		position: relative;
+		background: #f3f4f6; /* Tailwind bg-base-200 */
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+
+	.grid-card::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 12px;
+		height: 100%;
+		background: radial-gradient(
+			circle,
+			rgba(59, 130, 246, 0.8) 0%,
+			rgba(59, 130, 246, 0) 70%
+		); /* blue-500 */
+		border-radius: 50%;
+		pointer-events: none;
+		animation: glowPulse 1s infinite alternate;
+		z-index: 1;
+	}
+
+	@keyframes glowPulse {
+		0% {
+			transform: scale(1);
+			opacity: 0.6;
+		}
+		100% {
+			transform: scale(1.5);
+			opacity: 0.3;
+		}
 	}
 </style>
