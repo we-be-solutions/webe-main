@@ -42,11 +42,10 @@
 </script>
 
 <!-- Trigger Button -->
-<button
-	class="cta-btn btn btn-warning btn-xl text-2xl text-black hover:shadow-lg transition-shadow duration-300"
-	onclick={toggleModal}>Let’s Get Started</button
->
 
+<button class="cta-btn btn bg-blue-500 btn-lg text-xl text-white" onclick={toggleModal}>
+	<span>Let’s Get Started</span>
+</button>
 <!-- Modal -->
 {#if showModal}
 	<div
@@ -175,3 +174,60 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	.cta-btn {
+		position: relative;
+		overflow: hidden;
+		border-radius: 0.75rem;
+		font-weight: 700;
+		padding: 1rem 2rem;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.3s ease;
+	}
+
+	/* Glow / pulse effect */
+	.cta-btn::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(
+			circle,
+			rgba(103, 232, 249, 0.5) 0%,
+			/* Tailwind cyan-300 */ rgba(59, 130, 246, 0.4) 40%,
+			/* Tailwind blue-500 */ rgba(37, 99, 235, 0) 70%
+		);
+		border-radius: 50%;
+		opacity: 0;
+		transition:
+			opacity 0.2s ease,
+			transform 0.2s ease;
+		z-index: 0;
+	}
+
+	/* Hover / active states */
+	.cta-btn:hover::before {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	.cta-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 5px 12px rgba(59, 130, 246, 0.4); /* Tailwind's blue-500 */
+	}
+
+	.cta-btn:active {
+		transform: translateY(1px);
+		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3); /* Tailwind's blue-500 */
+	}
+
+	/* Ensure text is above glow */
+	.cta-btn span {
+		position: relative;
+		z-index: 1;
+	}
+</style>
