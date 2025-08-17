@@ -177,10 +177,10 @@
 				</p>
 			</li>
 			<li class="card bg-slate-900 text-white shadow-blue-600 shadow-sm p-8">
-				<h3 class="card-title mb-4">Fast, Secure, and Always Online</h3>
+				<h3 class="card-title mb-4">Fast, Secure, and Online</h3>
 				<p>
-					We monitor your site 24/7 to ensure it loads quickly, stays secure, and never goes
-					offline. Making your site into an asset not a liability.
+					We monitor your site 24/7 to ensure it loads quickly, stays secure, and never goes offline
+					noticeably. Making your site into an asset not a liability.
 				</p>
 			</li>
 		</ul>
