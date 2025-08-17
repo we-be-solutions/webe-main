@@ -11,7 +11,7 @@
 		values?: Record<string, string>;
 	};
 
-	let form: FormFailure & { success?: boolean; message?: string } = $props();
+	let form: FormFailure & { success?: boolean; message?: string; btnText?: string } = $props();
 	let issues = $state(form.issues);
 	let showModal = $state(false);
 	let cfToken = $state('');
@@ -44,7 +44,7 @@
 <!-- Trigger Button -->
 
 <button class="cta-btn btn bg-blue-500 btn-lg text-xl text-white" onclick={toggleModal}>
-	<span>Let’s Get Started</span>
+	<span>{form.btnText ? form.btnText : 'Let’s Get Started'}</span>
 </button>
 <!-- Modal -->
 {#if showModal}
@@ -87,7 +87,7 @@
 					<p class="mb-4">
 						If your current site wastes time, costs customers, or gives you headaches, it’s time for
 						a change. Fill out the form and we’ll help you build a website and tech plan that fits
-						your business perfectly saving you time, stress, and money.
+						your business perfectly. Saving you time, stress, and money.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}

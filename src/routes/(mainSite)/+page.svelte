@@ -7,7 +7,7 @@
 <svelte:head>
 	<link rel="preload" as="video" href="/laser.webm" type="video/webm" />
 </svelte:head>
-<header class="relative h-screen flex items-center justify-center overflow-hidden bg-base-100">
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-base-100">
 	<!-- Background Video -->
 	<video
 		class="absolute inset-0 w-full h-full object-cover z-0"
@@ -37,13 +37,56 @@
 			worry-free. So you can focus on the real work.
 		</p>
 
+		<h3 class="text-3xl mt-5 font-bold mb-6 text-blue-500">
+			Your Website Plan
+			<span class="block text-gray-800">Risk-Free in 3 Steps</span>
+		</h3>
+
+		<ol class="text-lg space-y-5 list-decimal list-inside font-medium text-left max-w-lg mx-auto">
+			<li>
+				<strong>Click “Book Now” & Schedule</strong> — lock in your call today so we can get moving now.
+			</li>
+			<li>
+				<strong>We Walk You Through It All</strong> — you see the plan, the process, and the price. Love
+				it? Sign up. Hate it? Walk away. No cost.
+			</li>
+			<li>
+				<strong>We Build & Deploy While You Relax</strong> — in days, your site is live and working
+				for you. Don’t love it in 30 days? Get every cent back <em>and</em> keep 60 days of support.
+			</li>
+		</ol>
+
+		<!-- Decorative arrow to CTA -->
+		<div class="absolute left-1/2 bottom-30 transform -translate-x-1/2">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="w-10 h-10 text-blue-600 animate-bounce"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				stroke-width="2"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+			</svg>
+		</div>
 		<!-- CTA -->
 		<div class="mt-10 animate-fadeIn delay-400">
-			<a
-				href="#get-started"
-				class="inline-block px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl text-lg shadow-lg hover:bg-primary-focus transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
-			>
-				Learn More
+			<CtaBtn btnText="Book Now" />
+		</div>
+
+		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+			<a href="#get-started" class="group flex items-center">
+				<span class="text-base-content mr-2 text-sm">Learn More</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					class="w-6 h-6 text-blue-500 group-hover:text-blue-400 transition-colors"
+				>
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+				</svg>
 			</a>
 		</div>
 	</div>
