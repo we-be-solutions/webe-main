@@ -43,13 +43,14 @@
 
 <!-- Trigger Button -->
 
-<button class="cta-btn btn bg-blue-500 btn-lg text-xl text-white" onclick={toggleModal}>
+<button class="cta-btn btn bg-blue-500 btn-md text-lg text-white p-10 h-15" onclick={toggleModal}>
 	<span>{form.btnText ? form.btnText : 'Let’s Get Started'}</span>
 </button>
 <!-- Modal -->
 {#if showModal}
 	<div
-		class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-50"
+		class="fixed inset-0 z-[9999] flex items-center justify-center
+         bg-base-200/70 backdrop-blur-sm"
 		role="dialog"
 		tabindex="0"
 		in:fade={{ duration: 150 }}
@@ -59,7 +60,7 @@
 	>
 		<div class="modal modal-open" role="dialog" tabindex="0">
 			<div
-				class="modal-box w-full text-black max-w-2xl max-h-full"
+				class="modal-box z-[9999] w-full text-black max-w-2xl max-h-full"
 				in:scale={{ duration: 200, start: 0.9 }}
 				out:scale={{ duration: 200, start: 1 }}
 				onclick={(e) => e.stopPropagation()}
@@ -81,13 +82,13 @@
 				</form>
 
 				{#if !sending.sending}
-					<h2 class="text-2xl font-bold mb-2">
-						Get a Website That Works for Your Business Not the Other Way Around
-					</h2>
+					<h2 class="text-2xl font-bold mb-2">Make Your Business Systems Click</h2>
 					<p class="mb-4">
-						If your current site wastes time, costs customers, or gives you headaches, it’s time for
-						a change. Fill out the form and we’ll help you build a website and tech plan that fits
-						your business perfectly. Saving you time, stress, and money.
+						Start with a free <strong>Diagnose</strong> session. In 30–45 minutes we’ll uncover where
+						your website, tools, or processes are costing you time and money. You’ll walk away with a
+						clear, practical plan — whether that’s a sharper website, an automation to cut busywork,
+						integrations to connect your tools, or a cloud setup that scales. Add your details and we’ll
+						lock in a time.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}
@@ -165,7 +166,7 @@
 							<h3 class="text-xl font-bold">You’ve taken the first step.</h3>
 							<p>
 								Now we’ll review your info and see how we can help. If there’s a strong fit, we’ll
-								book a time to talk strategy and next steps.
+								book a time to talk diagnosis and next steps.
 							</p>
 						</div>
 					{/if}
@@ -181,7 +182,7 @@
 		overflow: hidden;
 		border-radius: 0.75rem;
 		font-weight: 700;
-		padding: 1rem 2rem;
+		padding: 0.5rem 1.5rem;
 		transition:
 			transform 0.2s ease,
 			box-shadow 0.3s ease;
