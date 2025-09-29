@@ -36,7 +36,7 @@
 
 	<!-- Content Grid -->
 	<div
-		class="relative z-20 container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+		class="relative z-20 container mt-25 mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
 	>
 		<!-- Left: Text -->
 		<div class="text-left">
