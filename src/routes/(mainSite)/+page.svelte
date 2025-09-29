@@ -45,26 +45,20 @@
 			>
 				Business Systems Made Easy
 			</h1>
+			<p class="mt-3 text-lg md:text-xl text-blue-600 font-semibold">
+				We bring web, software, and business systems together — so your team runs smoother every
+				day.
+			</p>
 			<p class="mt-6 text-xl md:text-2xl text-base-content/90 max-w-xl">
-				We help SMEs cut busywork, connect tools, and grow with confidence. Our 4 pillars keep it
-				simple:
+				Whether it’s a better website, time-saving automations, connected tools, or a scalable cloud
+				setup — we make tech simple, practical, and built around how your business actually works.
 			</p>
 
-			<div class="mt-8 grid gap-4 text-lg text-base-content/90">
-				<div>
-					✅ <strong>Websites & Apps</strong> — modern, practical tools that bring in leads and support
-					your team.
-				</div>
-				<div>
-					✅ <strong>Automations</strong> — kill double entry and free staff from repetitive tasks.
-				</div>
-				<div>
-					✅ <strong>Integrations</strong> — make your systems talk so reports and workflows just work.
-				</div>
-				<div>
-					✅ <strong>Cloud Consulting</strong> — design clear, scalable platforms that give you visibility
-					and control.
-				</div>
+			<div class="mt-8 grid gap-3 text-lg text-base-content/90">
+				<p><strong>Websites & Apps</strong> that win customers and support staff</p>
+				<p><strong>Automations</strong> that cut busywork and errors</p>
+				<p><strong>Integrations</strong> that make your tools talk</p>
+				<p><strong>Cloud systems</strong> that scale with your growth</p>
 			</div>
 
 			<div class="mt-10 flex flex-wrap gap-4">
@@ -73,50 +67,14 @@
 			</div>
 
 			<p class="mt-6 text-lg font-semibold text-blue-600">
-				Start with a <span class="text-black">free Diagnose call</span>. We’ll map your biggest
-				bottleneck and show you your first quick win.
+				Start with a free Diagnose call — we’ll spot your biggest bottleneck and give you a clear
+				first step.
 			</p>
 			<p class="mt-6 text-lg font-semibold text-black-600">
-				100% risk-free: If the software doesn’t deliver, you don’t pay. Ever.
+				100% risk-free: If it doesn’t deliver, you don’t pay.
 			</p>
-
-			<!-- Trust Badges -->
-			<div class="mt-8 flex flex-wrap items-center gap-4 text-sm text-base-content/70">
-				<div class="badge badge-outline">Money-Back Guarantee</div>
-				<div class="badge badge-outline">Fair, Flat Pricing</div>
-				<div class="badge badge-outline">Fast Turnaround</div>
-				<div class="badge badge-outline">Simple Tech Stack</div>
-			</div>
-		</div>
-
-		<!-- Right: Pains -->
-		<div class="bg-white/90 p-8 rounded-xl shadow-xl">
-			<h3 class="text-2xl font-bold mb-4 text-blue-600">
-				If this sounds familiar, we should talk:
-			</h3>
-			<ul class="space-y-3 text-base-content/90 leading-relaxed">
-				<!-- Websites & Apps -->
-				<li>✔ Your website looks like it’s from 2008 and scares off customers</li>
-				<li>✔ You’ve got “apps from the before times” that nobody wants to use</li>
-
-				<!-- Automations -->
-				<li>✔ Staff waste hours copying data between spreadsheets</li>
-				<li>✔ Key steps get missed because everything relies on memory</li>
-
-				<!-- Integrations -->
-				<li>✔ Tools don’t talk: invoices in one system, jobs in another, nothing matches</li>
-				<li>✔ Reports take half a day to cobble together (and still feel wrong)</li>
-
-				<!-- Cloud Consulting -->
-				<li>✔ Growth feels messy: too many systems, no clear plan</li>
-				<li>✔ You’ve outgrown “starter” tools but don’t know the next step</li>
-			</ul>
-			<div class="mt-6">
-				<CtaBtn btnText="Kill the Busywork" />
-			</div>
 		</div>
 	</div>
-
 	<!-- Bottom Fade -->
 	<div
 		class="absolute bottom-0 w-full h-28 bg-gradient-to-t from-base-100 to-transparent z-10"

@@ -97,7 +97,6 @@ export const actions = {
 				  
 				  <p style="margin-bottom: 0;">
 				    While you're here, check out how we help Aussie businesses automate the boring stuff —
-				    <a href="https://www.linkedin.com/company/webe-au" style="color: #0e7490; text-decoration: none;">follow us on LinkedIn</a> or visit
 				    <a href="https://webe.au" style="color: #0e7490; text-decoration: none;">webe.au</a>.
 				  </p>
 				</div>
