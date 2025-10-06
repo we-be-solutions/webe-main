@@ -9,7 +9,7 @@
 	<title>Custom Software & Automations That Just Work | WeBe</title>
 	<meta
 		name="description"
-		content="Scripts, APIs, and integrations that kill busywork and connect your tools. $0 risk: only pay when it works as promised."
+		content="Websites, tools, and automations that save hours. $800/day flat rate. Risk free: only pay when it works."
 	/>
 </svelte:head>
 
@@ -36,304 +36,69 @@
 
 	<!-- Content Grid -->
 	<div
-		class="relative z-20 container mt-25 mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+		class="relative z-20 container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
 	>
-		<!-- Left: Text -->
 		<div class="text-left">
 			<h1
 				class="text-5xl md:text-6xl font-extrabold tracking-tight text-base-content drop-shadow-lg"
 			>
 				Business Systems Made Easy
 			</h1>
-			<p class="mt-3 text-lg md:text-xl text-blue-600 font-semibold">
-				We bring web, software, and business systems together — so your team runs smoother every
-				day.
+			<p class="mt-4 text-xl md:text-2xl text-blue-600 font-semibold">
+				Websites. Automations. Internal tools. All built simple and fast.
 			</p>
-			<p class="mt-6 text-xl md:text-2xl text-base-content/90 max-w-xl">
-				Whether it’s a better website, time-saving automations, connected tools, or a scalable cloud
-				setup — we make tech simple, practical, and built around how your business actually works.
+			<p class="mt-6 text-lg md:text-xl text-base-content/90 max-w-xl">
+				Flat rate: <strong>$800 per day</strong>. No surprises. If it doesn’t work, you don’t pay.
 			</p>
-
-			<div class="mt-8 grid gap-3 text-lg text-base-content/90">
-				<p><strong>Websites & Apps</strong> that win customers and support staff</p>
-				<p><strong>Automations</strong> that cut busywork and errors</p>
-				<p><strong>Integrations</strong> that make your tools talk</p>
-				<p><strong>Cloud systems</strong> that scale with your growth</p>
-			</div>
 
 			<div class="mt-10 flex flex-wrap gap-4">
-				<CtaBtn btnText="Book your free Diagnosis call" />
-				<a href="#offer" class="btn btn-ghost">See the $0 Risk Offer</a>
+				<CtaBtn btnText="Book your free Diagnose Call" />
+				<a href="#offer" class="btn btn-ghost">See Pricing</a>
 			</div>
-
-			<p class="mt-6 text-lg font-semibold text-blue-600">
-				Start with a free Diagnose call — we’ll spot your biggest bottleneck and give you a clear
-				first step.
-			</p>
-			<p class="mt-6 text-lg font-semibold text-black-600">
-				100% risk-free: If it doesn’t deliver, you don’t pay.
-			</p>
 		</div>
 	</div>
-	<!-- Bottom Fade -->
-	<div
-		class="absolute bottom-0 w-full h-28 bg-gradient-to-t from-base-100 to-transparent z-10"
-	></div>
 </header>
 
 <!-- =========================
-  PLAIN ENGLISH SERVICES
+	OFFER / PRICING
 ========================= -->
-<section id="services" class="py-16 bg-white">
-	<div class="container mx-auto px-6 max-w-4xl text-center">
-		<h2 class="text-4xl sm:text-5xl font-bold text-base-content">Business Systems Made Easy</h2>
+<section id="offer" class="py-20 bg-white text-center">
+	<div class="container mx-auto px-6 max-w-5xl">
+		<h2 class="text-4xl sm:text-5xl font-bold">Simple Flat Day Rate</h2>
 		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
 
-		<p class="text-lg md:text-xl text-base-content/80 mb-10">
-			If your team is wasting hours on clunky systems, chasing spreadsheets, or double-handling
-			data, we fix that. We build simple, connected software that saves time, cuts stress, and keeps
-			your business moving.
+		<p class="text-xl text-base-content/80 max-w-3xl mx-auto mb-12">
+			<strong>$800/day.</strong> That’s it. You know the cost, the timeline, and the result — before
+			we start.
 		</p>
 
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-left">
 			<div class="p-6 bg-base-100 rounded-xl shadow">
-				<h3 class="text-xl font-bold mb-2">Websites & Apps</h3>
-				<p class="text-base-content/80">
-					Sick of a site that looks dated or doesn’t deliver? We build websites and apps that bring
-					in leads, support your staff, and actually make business easier.
-				</p>
+				<h3 class="text-xl font-bold mb-2">Basic Website</h3>
+				<p class="text-base-content/80">1–3 days. A clean site that works on all devices.</p>
 			</div>
-
+			<div class="p-6 bg-base-100 rounded-xl shadow">
+				<h3 class="text-xl font-bold mb-2">Bigger Website</h3>
+				<p class="text-base-content/80">4–6 days. A 5+ page site for growing businesses.</p>
+			</div>
+			<div class="p-6 bg-base-100 rounded-xl shadow">
+				<h3 class="text-xl font-bold mb-2">Internal Tools</h3>
+				<p class="text-base-content/80">1+ days. Dashboards and apps that make work easier.</p>
+			</div>
 			<div class="p-6 bg-base-100 rounded-xl shadow">
 				<h3 class="text-xl font-bold mb-2">Automations</h3>
-				<p class="text-base-content/80">
-					Still copying the same info between systems? We create automations that take care of
-					repetitive work so your team can focus on what matters.
-				</p>
-			</div>
-
-			<div class="p-6 bg-base-100 rounded-xl shadow">
-				<h3 class="text-xl font-bold mb-2">System Integrations</h3>
-				<p class="text-base-content/80">
-					Tired of tools that don’t talk to each other? We connect your accounting, CRM, and job
-					systems so everything flows without spreadsheets or guesswork.
-				</p>
-			</div>
-
-			<div class="p-6 bg-base-100 rounded-xl shadow">
-				<h3 class="text-xl font-bold mb-2">Cloud Consulting</h3>
-				<p class="text-base-content/80">
-					Growth feels messy without clear systems. We design and set up cloud-based business
-					platforms that give you visibility, control, and confidence.
-				</p>
+				<p class="text-base-content/80">1+ days. Save hours by cutting repetitive tasks.</p>
 			</div>
 		</div>
 
-		<div class="mt-10">
-			<CtaBtn btnText="Book your free Diagnosis call" />
-		</div>
-	</div>
-</section>
-
-<!-- =========================
-	OUR 4 PILLARS
-========================= -->
-<section id="solutions" class="py-20 bg-base-200">
-	<div class="container mx-auto px-6 max-w-6xl">
-		<h2 class="text-4xl sm:text-5xl font-bold text-center">
-			Our 4 Pillars of Simple Business Systems
-		</h2>
-		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
-
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-			<!-- Websites & Apps -->
-			<div class="card bg-base-100 p-6 shadow">
-				<h3 class="text-2xl font-bold mb-4 text-blue-600">Websites & Apps</h3>
-				<div class="mb-4">
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Common Problems
-					</h4>
-					<ul class="list-disc list-inside text-base-content/80 space-y-1">
-						<li>Outdated site that drives customers away</li>
-						<li>Old, clunky apps staff avoid using</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Our Solution
-					</h4>
-					<p class="text-base-content/90">
-						Modern, practical tools that look sharp, work smoothly, and win business.
-					</p>
-				</div>
-			</div>
-
-			<!-- Automations -->
-			<div class="card bg-base-100 p-6 shadow">
-				<h3 class="text-2xl font-bold mb-4 text-blue-600">Automations</h3>
-				<div class="mb-4">
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Common Problems
-					</h4>
-					<ul class="list-disc list-inside text-base-content/80 space-y-1">
-						<li>Staff wasting hours copying data</li>
-						<li>Missed steps causing costly errors</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Our Solution
-					</h4>
-					<p class="text-base-content/90">
-						Automations that remove busywork so your team can focus on what matters.
-					</p>
-				</div>
-			</div>
-
-			<!-- Integrations -->
-			<div class="card bg-base-100 p-6 shadow">
-				<h3 class="text-2xl font-bold mb-4 text-blue-600">Integrations</h3>
-				<div class="mb-4">
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Common Problems
-					</h4>
-					<ul class="list-disc list-inside text-base-content/80 space-y-1">
-						<li>Tools that don’t talk to each other</li>
-						<li>Reports that take hours and don’t match</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Our Solution
-					</h4>
-					<p class="text-base-content/90">
-						Connected systems where information flows and reports are instant.
-					</p>
-				</div>
-			</div>
-
-			<!-- Cloud Consulting -->
-			<div class="card bg-base-100 p-6 shadow">
-				<h3 class="text-2xl font-bold mb-4 text-blue-600">Cloud Consulting</h3>
-				<div class="mb-4">
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Common Problems
-					</h4>
-					<ul class="list-disc list-inside text-base-content/80 space-y-1">
-						<li>Growth feels messy with too many tools</li>
-						<li>Outgrown starter software with no clear next step</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-sm font-semibold uppercase tracking-wide text-base-content/70 mb-2">
-						Our Solution
-					</h4>
-					<p class="text-base-content/90">
-						Clear, scalable cloud systems that give you visibility and control as you grow.
-					</p>
-				</div>
-			</div>
+		<div class="mt-12">
+			<CtaBtn btnText="Book your free Diagnose Call" />
 		</div>
 
-		<div class="mt-12 text-center">
-			<CtaBtn btnText="Book your free Diagnosis call" />
-		</div>
-	</div>
-</section>
-<!-- =========================
-	HORMOZI OFFER - VALUE LADDER
-========================= -->
-<section id="offer" class="py-20 bg-base-100">
-	<div class="container mx-auto px-6 max-w-6xl text-center">
-		<h2 class="text-4xl sm:text-5xl font-bold">
-			The <span class="text-blue-600">$0 Risk</span> Growth Ladder
-		</h2>
-		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
-
-		<p class="text-xl max-w-3xl mx-auto leading-relaxed">
-			Start free, grow step by step. Each rung adds more leverage — from a quick website fix to a
-			full business system redesign. <strong
-				>Get your money back and keep the work done if we don't deliver results.</strong
-			>
-		</p>
-
-		<!-- Ladder Stack -->
-		<div class="mt-16 relative">
-			<div class="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 -translate-x-1/2"></div>
-
-			<!-- Free Call -->
-			<div class="relative z-10 mb-12">
-				<div
-					class="card bg-green-50 border border-green-300 p-8 rounded-xl shadow-lg max-w-xl mx-auto"
-				>
-					<h3 class="text-2xl font-bold mb-2 text-green-600">
-						Free Diagnose Call – Only 3 available monthly
-					</h3>
-					<p class="mb-4 text-base-content/80">
-						30–45 minutes to map your operations, spot the biggest bottleneck, and identify your
-						first quick win — whether it’s a site update, automation, or integration.
-					</p>
-					<p class="mb-4 text-base-content/80">
-						You’ll walk away with a process map, a clear problem defined, and a written
-						recommendation for the first improvement.
-					</p>
-					<p class="text-4xl font-extrabold text-green-600">FREE</p>
-					<CtaBtn btnText="Book your free Diagnosis call" />
-				</div>
-			</div>
-
-			<!-- Starter -->
-			<div class="relative mb-12">
-				<div class="card bg-base-200 p-8 rounded-xl shadow-lg max-w-xl mx-auto">
-					<h3 class="text-2xl font-bold mb-2 text-blue-600">Starter</h3>
-					<p class="mb-4 text-base-content/80">
-						A focused quick win: a landing page refresh, a small automation, or a simple system link
-						that saves hours each week.
-					</p>
-					<p class="text-4xl font-extrabold text-base-content">$500–$1k</p>
-					<p class="text-sm text-base-content/60 mb-6">Flat, outcome-based</p>
-					<CtaBtn btnText="Start Small" />
-				</div>
-			</div>
-
-			<!-- Growth -->
-			<div class="relative mb-12">
-				<div
-					class="card bg-white p-8 rounded-xl shadow-lg border-2 border-blue-600 max-w-xl mx-auto"
-				>
-					<h3 class="text-2xl font-bold mb-2 text-blue-600">Growth</h3>
-					<p class="mb-4 text-base-content/80">
-						Custom websites, integrations, or internal tools that connect multiple systems and scale
-						with your business. Build once, use forever.
-					</p>
-					<p class="text-4xl font-extrabold text-base-content">from $2.5k</p>
-					<p class="text-sm text-base-content/60 mb-6">Project-based</p>
-					<CtaBtn btnText="Build Systems That Talk" />
-				</div>
-			</div>
-
-			<!-- Scale -->
-			<div class="relative">
-				<div class="card bg-base-200 p-8 rounded-xl shadow-lg max-w-xl mx-auto">
-					<h3 class="text-2xl font-bold mb-2 text-blue-600">Scale</h3>
-					<p class="mb-4 text-base-content/80">
-						Full business system design across your 4 pillars: a modern site and apps, smart
-						automations, integrated tools, and a scalable cloud platform for real visibility and
-						control.
-					</p>
-					<p class="text-4xl font-extrabold text-base-content">Custom</p>
-					<p class="text-sm text-base-content/60 mb-6">Quoted after scope</p>
-					<CtaBtn btnText="Discuss a Big Build" />
-				</div>
-			</div>
-		</div>
-
-		<!-- Risk Reversal Card -->
-		<div class="mt-16 bg-white border border-blue-200 rounded-2xl p-8 max-w-3xl mx-auto">
-			<h3 class="text-2xl font-semibold">Simple, Strong Guarantee</h3>
+		<div class="mt-16 bg-base-100 border border-blue-200 rounded-2xl p-8 max-w-3xl mx-auto">
+			<h3 class="text-2xl font-semibold">Our Simple Guarantee</h3>
 			<p class="mt-3 text-base-content/80">
-				If you’re not thrilled, I refund you. If it fails to deliver the promised outcome, you keep
-				it free. No risk. No excuses.
+				If it doesn’t deliver the promised result, you don’t pay. No risk. No excuses.
 			</p>
 		</div>
 	</div>
@@ -344,125 +109,30 @@
 ========================= -->
 <section id="process" class="py-20 bg-base-200">
 	<div class="container mx-auto px-6 max-w-5xl text-center">
-		<h2 class="text-4xl font-bold">Our 4D Process</h2>
+		<h2 class="text-4xl font-bold">How It Works</h2>
 		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
+
 		<ol class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-left">
 			<li class="card bg-base-100 p-6 shadow">
 				<h3 class="font-bold text-lg mb-1">1) Diagnose</h3>
-				<p class="text-base-content/80">
-					We start with a free call to uncover where your systems are holding you back — whether
-					it’s an outdated website, clunky apps, manual processes, tools that don’t connect, or
-					confusing data. You’ll leave with clarity and a plan.
-				</p>
+				<p class="text-base-content/80">Free call to find your biggest bottleneck.</p>
 			</li>
 			<li class="card bg-base-100 p-6 shadow">
 				<h3 class="font-bold text-lg mb-1">2) Design</h3>
-				<p class="text-base-content/80">
-					We sketch the simplest, smartest way forward. That might mean a modern website, automation
-					to cut busywork, integrations to make tools talk, or a cloud setup that scales. Always
-					practical, always business-first.
-				</p>
+				<p class="text-base-content/80">We map the fastest, simplest solution.</p>
 			</li>
 			<li class="card bg-base-100 p-6 shadow">
 				<h3 class="font-bold text-lg mb-1">3) Deploy</h3>
-				<p class="text-base-content/80">
-					We build and launch quickly. Whether it’s a new site, a key automation, connected systems,
-					or a full cloud platform — we implement, test with real data, and make sure it works from
-					day one.
-				</p>
+				<p class="text-base-content/80">We build, test, and deliver in days — not months.</p>
 			</li>
 			<li class="card bg-base-100 p-6 shadow">
-				<h3 class="font-bold text-lg mb-1">4) Drive</h3>
-				<p class="text-base-content/80">
-					Once live, we measure results and fine-tune. From website conversions to time saved by
-					automation, from clean reports to cloud visibility — small tweaks compound into big
-					long-term gains.
-				</p>
+				<h3 class="font-bold text-lg mb-1">4) Done</h3>
+				<p class="text-base-content/80">You get a working system. If it fails, it’s free.</p>
 			</li>
 		</ol>
-		<div class="mt-10">
-			<CtaBtn btnText="Book your free Diagnosis call" />
-		</div>
-	</div>
-</section>
-
-<!-- =========================
-	RESULTS / SOCIAL PROOF PLACEHOLDERS
-========================= -->
-<section id="proof" class="py-20 bg-base-100 hidden">
-	<div class="container mx-auto px-6 max-w-6xl">
-		<h2 class="text-4xl font-bold text-center">Recent Wins & Case Studies</h2>
-		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
-
-		<!-- Replace placeholders with real cases as they come in -->
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			<article class="card bg-base-200 p-6 shadow">
-				<h3 class="font-bold text-lg">[Placeholder] Ops Automation</h3>
-				<p class="text-base-content/80">
-					Cut manual admin by 8 hours/week via CRM ↔ invoicing sync.
-				</p>
-			</article>
-			<article class="card bg-base-200 p-6 shadow">
-				<h3 class="font-bold text-lg">[Placeholder] API Integration</h3>
-				<p class="text-base-content/80">
-					Eliminated duplicate data entry across ERP and warehouse app.
-				</p>
-			</article>
-			<article class="card bg-base-200 p-6 shadow">
-				<h3 class="font-bold text-lg">[Placeholder] Dashboards</h3>
-				<p class="text-base-content/80">Live KPIs improved on-time delivery by 14% in 6 weeks.</p>
-			</article>
-		</div>
-
-		<!-- Logos / badges row (optional) -->
-		<div class="mt-10 flex flex-wrap items-center justify-center gap-4 opacity-70">
-			<div class="badge">Go</div>
-			<div class="badge">TypeScript</div>
-			<div class="badge">Svelte</div>
-			<div class="badge">Postgres</div>
-			<div class="badge">Azure</div>
-			<div class="badge">Stripe</div>
-			<div class="badge">Notion</div>
-			<div class="badge">Zapier</div>
-		</div>
-
-		<div class="mt-10 text-center">
-			<CtaBtn btnText="Book your free Diagnosis call" />
-		</div>
-	</div>
-</section>
-
-<!-- =========================
-	REVIEWS / TESTIMONIALS PLACEHOLDER
-========================= -->
-<section id="reviews" class="py-20 bg-base-200 hidden">
-	<div class="container mx-auto px-6 max-w-5xl text-center">
-		<h2 class="text-4xl font-bold">What Clients Say</h2>
-		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
-
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			<div class="card bg-base-100 p-6 shadow">
-				<p class="italic text-base-content/80">
-					“[Add review] Delivered exactly what we needed, no fluff.”
-				</p>
-				<p class="mt-3 font-semibold">— Client Name, Role</p>
-			</div>
-			<div class="card bg-base-100 p-6 shadow">
-				<p class="italic text-base-content/80">
-					“[Add review] Saved our ops team hours every week.”
-				</p>
-				<p class="mt-3 font-semibold">— Client Name, Role</p>
-			</div>
-			<div class="card bg-base-100 p-6 shadow">
-				<p class="italic text-base-content/80">
-					“[Add review] Clear plan, fast delivery, rock-solid.”
-				</p>
-				<p class="mt-3 font-semibold">— Client Name, Role</p>
-			</div>
-		</div>
 
 		<div class="mt-10">
-			<CtaBtn btnText="Book your free Diagnosis call" />
+			<CtaBtn btnText="Book your free Diagnose Call" />
 		</div>
 	</div>
 </section>
@@ -470,112 +140,69 @@
 <!-- =========================
 	FAQ
 ========================= -->
-<section id="faq" class="py-20 bg-base-100">
+<section id="faq" class="py-20 bg-white">
 	<div class="container mx-auto px-6 max-w-3xl">
-		<h2 class="text-4xl font-bold text-center">Frequently Asked Questions</h2>
+		<h2 class="text-4xl font-bold text-center">FAQ</h2>
 		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
 
 		<div class="space-y-4">
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
-				<div class="collapse-title text-lg font-medium">
-					Why is this more affordable than a big agency?
-				</div>
+				<div class="collapse-title text-lg font-medium">What’s included in $800/day?</div>
 				<div class="collapse-content">
 					<p class="text-base-content/80">
-						We keep things lean: no bloated teams or fancy offices. You get direct access to a
-						senior consultant and a small delivery team focused on outcomes. That means you pay for
-						working solutions, not overhead.
+						Full focus on your project. Design, build, test, and delivery. One price covers it all.
 					</p>
 				</div>
 			</div>
-
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
-				<div class="collapse-title text-lg font-medium">
-					Do you just advise, or do you build as well?
-				</div>
+				<div class="collapse-title text-lg font-medium">How do I know how many days I’ll need?</div>
 				<div class="collapse-content">
 					<p class="text-base-content/80">
-						Both. We don’t just hand you a strategy and walk away. We design and build what’s needed
-						— that could be a new website, an automation, integrations to connect your tools, or a
-						scalable cloud setup. Always practical, always delivered.
+						We give you a clear estimate on the free call before you commit. No surprises.
 					</p>
 				</div>
 			</div>
-
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
-				<div class="collapse-title text-lg font-medium">How do we know if it’s working?</div>
+				<div class="collapse-title text-lg font-medium">What if it doesn’t work?</div>
 				<div class="collapse-content">
-					<p class="text-base-content/80">
-						We agree upfront on what success looks like — more leads from your website, hours saved
-						by automation, cleaner reports from integrations, or better visibility in the cloud. If
-						the result isn’t delivered, you don’t pay. Simple.
-					</p>
+					<p class="text-base-content/80">You don’t pay. That’s our risk, not yours.</p>
 				</div>
 			</div>
-
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
-				<div class="collapse-title text-lg font-medium">
-					What happens if something breaks later?
-				</div>
+				<div class="collapse-title text-lg font-medium">Do you keep helping after delivery?</div>
 				<div class="collapse-content">
 					<p class="text-base-content/80">
-						Every project comes with a handover pack and built-in hardening. We also offer optional
-						ongoing support so we can tweak, update, and scale your systems as your business grows.
-					</p>
-				</div>
-			</div>
-
-			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-				<input type="checkbox" />
-				<div class="collapse-title text-lg font-medium">Do you only work with certain tech?</div>
-				<div class="collapse-content">
-					<p class="text-base-content/80">
-						No — we use what’s best for your business. Sometimes that’s a custom build, sometimes a
-						no-code tool, sometimes connecting what you already have. The goal is always the same:
-						websites, apps, automations, integrations, and cloud platforms that just work.
+						Yes, we offer ongoing support if you want us to maintain and grow your systems.
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="mt-10 text-center">
-			<CtaBtn btnText="Ask a Specific Question" />
+			<CtaBtn btnText="Book your free Diagnose Call" />
 		</div>
 	</div>
 </section>
 
 <!-- =========================
-	SECONDARY CTA
+	CONTACT
 ========================= -->
 <section id="contact" class="py-20 bg-slate-900 text-white text-center">
 	<div class="container mx-auto px-6 max-w-3xl">
-		<h2 class="text-4xl font-extrabold mb-4 tracking-tight">Let’s Make Your Systems Click</h2>
+		<h2 class="text-4xl font-extrabold mb-4 tracking-tight">Let’s Get Started</h2>
 		<p class="text-xl mb-8 opacity-90 leading-relaxed">
-			Book a quick call. We’ll find your biggest bottleneck and map the fastest path forward —
-			whether that’s a sharper website, time-saving automation, connected tools, or a scalable cloud
-			setup.
+			One flat rate. $800/day. Risk-free. Your first win is only days away.
 		</p>
-
 		<div
 			class="bg-white text-gray-900 border border-blue-100 rounded-2xl shadow-lg p-10 max-w-2xl mx-auto text-center"
 		>
-			<h3 class="text-3xl font-bold mb-4 text-blue-600">Your First Win, This Month</h3>
-			<ol class="text-left text-lg space-y-4 list-decimal list-inside">
-				<li><strong>Diagnose:</strong> Find where your website, tools, or systems hold you back</li>
-				<li>
-					<strong>Design:</strong> Sketch the simplest solution — site, automation, integration, or cloud
-				</li>
-				<li><strong>Deploy:</strong> Build it fast, test with real data, and hand it over</li>
-				<li><strong>Drive:</strong> Track results and fine-tune so improvements stick</li>
-			</ol>
-			<p class="mt-6 text-sm opacity-80">⚡ Limited onboarding to keep quality high.</p>
-			<div class="mt-8">
-				<CtaBtn btnText="Book your free Diagnosis call" />
-			</div>
+			<h3 class="text-3xl font-bold mb-4 text-blue-600">Book Your Free Call</h3>
+			<p class="mb-6">We’ll scope your project, give you a day estimate, and lock in your price.</p>
+			<CtaBtn btnText="Book your free Diagnose Call" />
 		</div>
 	</div>
 </section>
