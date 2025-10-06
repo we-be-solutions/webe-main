@@ -82,13 +82,11 @@
 				</form>
 
 				{#if !sending.sending}
-					<h2 class="text-2xl font-bold mb-2">Make Your Business Systems Click</h2>
+					<h2 class="text-2xl font-bold mb-2">Your First Win in Just One Day</h2>
 					<p class="mb-4">
-						Start with a free <strong>Diagnose</strong> session. In 30–45 minutes we’ll uncover where
-						your website, tools, or processes are costing you time and money. You’ll walk away with a
-						clear, practical plan — whether that’s a sharper website, an automation to cut busywork,
-						integrations to connect your tools, or a cloud setup that scales. Add your details and we’ll
-						lock in a time.
+						Start with a free <strong>check-up call</strong>. In 30 minutes we’ll spot where your
+						website or tools slow you down. Then we’ll show how many <strong>$800 days</strong> it takes
+						to fix. Simple plan, no risk.
 					</p>
 					<form method="POST" use:enhance={options} class="space-y-4">
 						{#if form?.error}
@@ -150,7 +148,10 @@
 						<CloudFlareTurnStile handleToken={handleCFToken} />
 						<input type="hidden" name="cf-turnstile-response" value={cfToken} />
 
-						<button type="submit" class="btn btn-warning w-full text-black">Send</button>
+						<button
+							type="submit"
+							class="cta-btn btn bg-blue-500 btn-xl text-lg w-4/5 text-white p-10 h-15">Send</button
+						>
 					</form>
 				{/if}
 
