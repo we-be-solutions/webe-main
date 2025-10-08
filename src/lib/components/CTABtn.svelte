@@ -44,7 +44,7 @@
 <!-- Trigger Button -->
 
 <button class="cta-btn btn bg-blue-500 btn-md text-lg text-white p-10 h-15" onclick={toggleModal}>
-	<span>{form.btnText ? form.btnText : 'Let’s Get Started'}</span>
+	<span>{form.btnText ? form.btnText : 'See Your Next Step (Free)'}</span>
 </button>
 <!-- Modal -->
 {#if showModal}
@@ -148,10 +148,13 @@
 						<CloudFlareTurnStile handleToken={handleCFToken} />
 						<input type="hidden" name="cf-turnstile-response" value={cfToken} />
 
-						<button
-							type="submit"
-							class="cta-btn btn bg-blue-500 btn-xl text-lg w-4/5 text-white p-10 h-15">Send</button
-						>
+						<div class="w-full flex justify-center">
+							<button
+								type="submit"
+								class="cta-btn btn w-4/5 bg-blue-500 btn-xl text-lg text-white p-10 h-15"
+								>Send</button
+							>
+						</div>
 					</form>
 				{/if}
 

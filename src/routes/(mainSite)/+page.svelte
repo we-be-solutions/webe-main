@@ -52,7 +52,7 @@
 			</p>
 
 			<div class="mt-10 flex flex-wrap gap-4">
-				<CtaBtn btnText="Book your free Diagnose Call" />
+				<CtaBtn btnText="See Your Next Step (Free)" />
 				<a href="#offer" class="btn btn-ghost">See Pricing</a>
 			</div>
 		</div>
@@ -92,7 +92,7 @@
 		</div>
 
 		<div class="mt-12">
-			<CtaBtn btnText="Book your free Diagnose Call" />
+			<CtaBtn btnText="See Your Next Step (Free)" />
 		</div>
 
 		<div class="mt-16 bg-base-100 border border-blue-200 rounded-2xl p-8 max-w-3xl mx-auto">
@@ -132,7 +132,7 @@
 		</ol>
 
 		<div class="mt-10">
-			<CtaBtn btnText="Book your free Diagnose Call" />
+			<CtaBtn btnText="See Your Next Step (Free)" />
 		</div>
 	</div>
 </section>
@@ -251,7 +251,7 @@
 		</div>
 
 		<div class="mt-10 text-center">
-			<CtaBtn btnText="Book your free Diagnose Call" />
+			<CtaBtn btnText="See Your Next Step (Free)" />
 		</div>
 	</div>
 </section>
@@ -270,7 +270,7 @@
 		>
 			<h3 class="text-3xl font-bold mb-4 text-blue-600">Book Your Free Call</h3>
 			<p class="mb-6">We’ll scope your project, give you a day estimate, and lock in your price.</p>
-			<CtaBtn btnText="Book your free Diagnose Call" />
+			<CtaBtn btnText="See Your Next Step (Free)" />
 		</div>
 	</div>
 </section>
