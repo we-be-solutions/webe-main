@@ -146,6 +146,7 @@
 		<div class="mx-auto mb-10 mt-4 h-1 w-24 bg-blue-600 rounded"></div>
 
 		<div class="space-y-4">
+			<!-- Pricing -->
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
 				<div class="collapse-title text-lg font-medium">What’s included in $800/day?</div>
@@ -155,6 +156,8 @@
 					</p>
 				</div>
 			</div>
+
+			<!-- Scope -->
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
 				<div class="collapse-title text-lg font-medium">How do I know how many days I’ll need?</div>
@@ -164,6 +167,8 @@
 					</p>
 				</div>
 			</div>
+
+			<!-- Guarantee -->
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
 				<div class="collapse-title text-lg font-medium">What if it doesn’t work?</div>
@@ -171,12 +176,75 @@
 					<p class="text-base-content/80">You don’t pay. That’s our risk, not yours.</p>
 				</div>
 			</div>
+
+			<!-- Ongoing -->
 			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
 				<input type="checkbox" />
 				<div class="collapse-title text-lg font-medium">Do you keep helping after delivery?</div>
 				<div class="collapse-content">
 					<p class="text-base-content/80">
 						Yes, we offer ongoing support if you want us to maintain and grow your systems.
+					</p>
+				</div>
+			</div>
+
+			<!-- NEW SEO-friendly questions -->
+
+			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+				<input type="checkbox" />
+				<div class="collapse-title text-lg font-medium">Can you build a full website in a day?</div>
+				<div class="collapse-content">
+					<p class="text-base-content/80">
+						Yes, simple sites can be done in 1–3 days. Bigger sites take longer, but we tell you
+						upfront how many days you’ll need.
+					</p>
+				</div>
+			</div>
+
+			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+				<input type="checkbox" />
+				<div class="collapse-title text-lg font-medium">
+					Do you set up automations between my tools?
+				</div>
+				<div class="collapse-content">
+					<p class="text-base-content/80">
+						Yes. We connect your tools so data flows without double entry — saving you hours each
+						week.
+					</p>
+				</div>
+			</div>
+
+			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+				<input type="checkbox" />
+				<div class="collapse-title text-lg font-medium">Do you work with AI tools?</div>
+				<div class="collapse-content">
+					<p class="text-base-content/80">
+						Yes. We can set up or tune AI features like chat, search, or reporting to fit your
+						business. Always within the $800/day model.
+					</p>
+				</div>
+			</div>
+
+			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+				<input type="checkbox" />
+				<div class="collapse-title text-lg font-medium">How fast can I see results?</div>
+				<div class="collapse-content">
+					<p class="text-base-content/80">
+						Many clients see wins in the first day — like a working automation or a sharper website.
+						Bigger builds take a few days more.
+					</p>
+				</div>
+			</div>
+
+			<div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+				<input type="checkbox" />
+				<div class="collapse-title text-lg font-medium">
+					Do you only work with certain industries?
+				</div>
+				<div class="collapse-content">
+					<p class="text-base-content/80">
+						No. We help any business that needs a better website, faster systems, or fewer manual
+						tasks. From trades to services, the model works the same.
 					</p>
 				</div>
 			</div>
