@@ -297,8 +297,8 @@
 	<div class="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
 		<div class="max-w-2xl space-y-5 text-lg leading-relaxed">
 			<p>
-				I’m a senior software engineer with experience in technical leadership and solution
-				architecture, and the person behind WeBe Solutions.
+				I work as a fractional engineering lead and solution architect, helping software teams make
+				better technical decisions and deliver more reliably. WeBe Solutions is how I do that.
 			</p>
 			<p>
 				My background is hands-on. I’ve delivered software, led technical decisions, worked with
