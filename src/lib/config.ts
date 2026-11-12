@@ -8,7 +8,8 @@ export const site = {
 	url: 'https://webe.au',
 	email: 'brett@webe.au',
 	abn: '33 620 124 892',
-	linkedin: 'https://www.linkedin.com/company/webe-au',
+	/** Hidden for now. Set to 'https://www.linkedin.com/company/webe-au' to show it again. */
+	linkedin: null as string | null,
 	ogImage: 'https://webe.au/og-image.png',
 	description:
 		'Fractional engineering leadership, solution architecture and delivery improvement for Australian businesses that want to get more from the software teams they already have.'

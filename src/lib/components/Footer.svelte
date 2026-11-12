@@ -23,11 +23,13 @@
 					<li>
 						<a class="hover:text-base-content" href="mailto:{site.email}">{site.email}</a>
 					</li>
-					<li>
-						<a class="hover:text-base-content" href={site.linkedin} rel="noopener" target="_blank"
-							>LinkedIn</a
-						>
-					</li>
+					{#if site.linkedin}
+						<li>
+							<a class="hover:text-base-content" href={site.linkedin} rel="noopener" target="_blank"
+								>LinkedIn</a
+							>
+						</li>
+					{/if}
 				</ul>
 			</div>
 
