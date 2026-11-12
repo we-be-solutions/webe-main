@@ -17,7 +17,7 @@
 			<p class="text-sm text-base-content/60">Published: {data.meta.date}</p>
 
 			<div class="flex flex-wrap gap-2">
-				{#each data.meta.categories as tag}
+				{#each data.meta.categories as tag (tag)}
 					<span class="badge badge-outline">{tag}</span>
 				{/each}
 			</div>

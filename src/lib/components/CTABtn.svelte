@@ -1,238 +1,224 @@
 <script lang="ts">
-	import { applyAction, enhance } from '$app/forms';
+	import { tick } from 'svelte';
+	import { enhance } from '$app/forms';
 	import type { SubmitFunction } from '@sveltejs/kit';
-	import { fade, scale } from 'svelte/transition';
 	import CloudFlareTurnStile from './CloudFlareTurnStile.svelte';
-	import { sending, updateSending } from '../../store.svelte';
+	import { site } from '$lib/config';
 
-	type FormFailure = {
-		error?: string;
-		issues?: Array<{ message: string; path: string[] }>;
-		values?: Record<string, string>;
+	type Props = {
+		btnText?: string;
+		variant?: 'primary' | 'light' | 'outline';
+		size?: 'md' | 'lg';
+		class?: string;
 	};
 
-	let form: FormFailure & { success?: boolean; message?: string; btnText?: string } = $props();
-	let issues = $state(form.issues);
-	let showModal = $state(false);
+	let {
+		btnText = 'Let’s talk about your team',
+		variant = 'primary',
+		size = 'md',
+		class: className = ''
+	}: Props = $props();
+
+	type Issue = { message: string; path: string[] };
+
+	let dialog: HTMLDialogElement | undefined = $state();
+	let open = $state(false);
+	let status: 'idle' | 'sending' | 'sent' = $state('idle');
+	let error = $state('');
+	let issues: Issue[] = $state([]);
 	let cfToken = $state('');
 
-	const options: SubmitFunction = ({}) => {
-		updateSending();
+	const uid = $props.id();
+	const fieldId = (name: string) => `${uid}-${name}`;
+	const fieldError = (name: string) => issues.find((issue) => issue.path[0] === name)?.message;
+
+	const fields = [
+		{ name: 'name', label: 'Full name', type: 'text', autocomplete: 'name' },
+		{ name: 'email', label: 'Work email', type: 'email', autocomplete: 'email' },
+		{ name: 'company', label: 'Company', type: 'text', autocomplete: 'organization' }
+	] as const;
+
+	const variants = {
+		primary: 'btn-primary',
+		light: 'bg-white text-neutral border-white hover:bg-base-200 hover:border-base-200',
+		outline: 'btn-outline border-base-content/25 hover:bg-base-content hover:text-base-100'
+	};
+
+	async function openDialog() {
+		open = true;
+		// Wait for the dialog contents to mount so focus lands inside it
+		await tick();
+		dialog?.showModal();
+	}
+
+	function closeDialog() {
+		dialog?.close();
+	}
+
+	function handleClose() {
+		open = false;
+		if (status === 'sent') status = 'idle';
+		error = '';
+		issues = [];
+		cfToken = '';
+	}
+
+	const submit: SubmitFunction = () => {
+		status = 'sending';
+		error = '';
+		issues = [];
 		return async ({ result }) => {
-			if (result.type === 'failure') {
-				issues = result.data?.issues;
-				updateSending();
-				await applyAction(result);
+			if (result.type === 'success') {
+				status = 'sent';
+			} else if (result.type === 'failure') {
+				status = 'idle';
+				error = (result.data?.error as string) ?? 'Something went wrong. Please try again.';
+				issues = (result.data?.issues as Issue[]) ?? [];
 			} else {
-				toggleModal();
-				await applyAction(result);
+				status = 'idle';
+				error = `Something went wrong. Please try again or email ${site.email}.`;
 			}
 		};
 	};
-
-	function toggleModal() {
-		showModal = !showModal;
-		document.querySelector('nav')?.classList.toggle('hidden', showModal);
-		document.querySelector('.cta-btn')?.classList.toggle('hidden', showModal);
-	}
-
-	const handleCFToken = (token: string): void => {
-		cfToken = token;
-	};
 </script>
 
-<!-- Trigger Button -->
-
-<button class="cta-btn btn bg-blue-500 btn-md text-lg text-white p-10 h-15" onclick={toggleModal}>
-	<span>{form.btnText ? form.btnText : 'See Your Next Step (Free)'}</span>
+<button
+	type="button"
+	class="btn {variants[variant]} {size === 'lg'
+		? 'h-13 px-7 text-base'
+		: 'px-5'} rounded-lg font-semibold shadow-none {className}"
+	aria-haspopup="dialog"
+	onclick={openDialog}
+>
+	{btnText}
 </button>
-<!-- Modal -->
-{#if showModal}
-	<div
-		class="fixed inset-0 z-[9999] flex items-center justify-center
-         bg-base-200/70 backdrop-blur-sm"
-		role="dialog"
-		tabindex="0"
-		in:fade={{ duration: 150 }}
-		out:fade={{ duration: 150 }}
-		onclick={toggleModal}
-		onkeydown={(event) => event.key === 'Escape' && toggleModal()}
-	>
-		<div class="modal modal-open" role="dialog" tabindex="0">
-			<div
-				class="modal-box z-[9999] w-full text-black max-w-2xl max-h-full"
-				in:scale={{ duration: 200, start: 0.9 }}
-				out:scale={{ duration: 200, start: 1 }}
-				onclick={(e) => e.stopPropagation()}
-				onkeydown={(event) => event.key === 'Escape' && toggleModal()}
-				role="dialog"
-				aria-modal="true"
-				aria-labelledby="modal-title"
-				aria-describedby="modal-description"
-				tabindex="0"
+
+<dialog
+	bind:this={dialog}
+	class="modal modal-bottom sm:modal-middle"
+	aria-labelledby="{uid}-title"
+	onclose={handleClose}
+>
+	{#if open}
+		<div class="modal-box max-w-xl p-6 text-base-content sm:p-8">
+			<button
+				type="button"
+				class="btn btn-sm btn-circle btn-ghost absolute top-3 right-3"
+				aria-label="Close"
+				onclick={closeDialog}
 			>
-				<!-- Close Button -->
-				<form method="dialog">
-					<button
-						class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-						onclick={toggleModal}
-					>
-						✕
-					</button>
-				</form>
+				<svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+					<path
+						d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"
+					/>
+				</svg>
+			</button>
 
-				{#if !sending.sending}
-					<h2 class="text-2xl font-bold mb-2">Your First Win in Just One Day</h2>
-					<p class="mb-4">
-						Start with a free <strong>check-up call</strong>. In 30 minutes we’ll spot where your
-						website or tools slow you down. Then we’ll show how many <strong>$800 days</strong> it takes
-						to fix. Simple plan, no risk.
+			{#if status === 'sent'}
+				<div role="status">
+					<h2 id="{uid}-title" class="text-2xl font-semibold tracking-tight">
+						Thanks, message sent
+					</h2>
+					<p class="mt-3 leading-relaxed text-muted">
+						I’ll read through what you’ve shared and get back to you personally to arrange a time to
+						talk. A confirmation is on its way to your inbox.
 					</p>
-					<form method="POST" use:enhance={options} class="space-y-4">
-						{#if form?.error}
-							<div class="alert alert-error text-sm">{form.error}</div>
-						{/if}
-
-						{#if issues}
-							{#each issues as issue}
-								<p class="text-error text-sm">{issue.path[0]}: {issue.message}</p>
-							{/each}
-						{/if}
-
-						<div>
-							<label class="label" for="name">Full Name</label>
-							<input
-								type="text"
-								id="name"
-								name="name"
-								required
-								value={form?.values?.name ?? ''}
-								class="input input-bordered w-full"
-							/>
-						</div>
-
-						<div>
-							<label class="label" for="email">Email</label>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								required
-								value={form?.values?.email ?? ''}
-								class="input input-bordered w-full"
-							/>
-						</div>
-
-						<div>
-							<label class="label" for="company">Company</label>
-							<input
-								type="text"
-								id="company"
-								name="company"
-								required
-								value={form?.values?.company ?? ''}
-								class="input input-bordered w-full"
-							/>
-						</div>
-
-						<div class="hidden">
-							<label for="honeypot">Honey pot</label>
-							<input
-								type="text"
-								name="honeypot"
-								id="honeypot"
-								value={form?.values?.honeypot ?? ''}
-							/>
-						</div>
-
-						<CloudFlareTurnStile handleToken={handleCFToken} />
-						<input type="hidden" name="cf-turnstile-response" value={cfToken} />
-
-						<div class="w-full flex justify-center">
-							<button
-								type="submit"
-								class="cta-btn btn w-4/5 bg-blue-500 btn-xl text-lg text-white p-10 h-15"
-								>Send</button
-							>
-						</div>
-					</form>
-				{/if}
-
-				<div class="mt-6">
-					{#if !sending.sending}
-						<p>
-							We only take on a few new clients at a time to make sure each gets serious attention.
-							If it’s a fit, we’ll reach out within 48 hours.
-						</p>
-					{/if}
-					{#if sending.sending}
-						<div class="mt-4 p-4 bg-base-200 rounded">
-							<h3 class="text-xl font-bold">You’ve taken the first step.</h3>
-							<p>
-								Now we’ll review your info and see how we can help. If there’s a strong fit, we’ll
-								book a time to talk diagnosis and next steps.
-							</p>
-						</div>
-					{/if}
+					<button type="button" class="btn btn-primary mt-6" onclick={closeDialog}>Close</button>
 				</div>
-			</div>
+			{:else}
+				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">
+					Let’s talk about your team
+				</h2>
+				<p class="mt-3 leading-relaxed text-muted">
+					Start with a no-obligation conversation about your engineering team, what’s working and
+					what’s getting in the way. Leave a few details and I’ll be in touch.
+				</p>
+
+				<form method="POST" action="/" use:enhance={submit} class="mt-6 space-y-4" novalidate>
+					{#if error}
+						<div class="alert alert-error alert-soft text-sm" role="alert">{error}</div>
+					{/if}
+
+					{#each fields as field (field.name)}
+						<div>
+							<label class="mb-1.5 block text-sm font-medium" for={fieldId(field.name)}>
+								{field.label}
+							</label>
+							<input
+								id={fieldId(field.name)}
+								name={field.name}
+								type={field.type}
+								autocomplete={field.autocomplete}
+								required
+								class="input w-full {fieldError(field.name) ? 'input-error' : ''}"
+								aria-invalid={fieldError(field.name) ? 'true' : undefined}
+								aria-describedby={fieldError(field.name)
+									? `${fieldId(field.name)}-error`
+									: undefined}
+							/>
+							{#if fieldError(field.name)}
+								<p id="{fieldId(field.name)}-error" class="mt-1 text-sm text-error">
+									{fieldError(field.name)}
+								</p>
+							{/if}
+						</div>
+					{/each}
+
+					<div>
+						<label class="mb-1.5 block text-sm font-medium" for={fieldId('message')}>
+							What’s happening with your team? <span class="font-normal text-muted">(optional)</span
+							>
+						</label>
+						<textarea
+							id={fieldId('message')}
+							name="message"
+							rows="4"
+							maxlength="2000"
+							class="textarea w-full {fieldError('message') ? 'textarea-error' : ''}"
+							placeholder="Team size, what you’re building, what’s on your mind…"
+						></textarea>
+						{#if fieldError('message')}
+							<p class="mt-1 text-sm text-error">{fieldError('message')}</p>
+						{/if}
+					</div>
+
+					<div class="hidden" aria-hidden="true">
+						<label for={fieldId('honeypot')}>Leave this field empty</label>
+						<input
+							type="text"
+							name="honeypot"
+							id={fieldId('honeypot')}
+							tabindex="-1"
+							autocomplete="off"
+						/>
+					</div>
+
+					<CloudFlareTurnStile handleToken={(token: string) => (cfToken = token)} />
+					<input type="hidden" name="cf-turnstile-response" value={cfToken} />
+
+					<button
+						type="submit"
+						class="btn btn-primary h-12 w-full text-base"
+						disabled={status === 'sending'}
+					>
+						{#if status === 'sending'}
+							<span class="loading loading-spinner loading-sm" aria-hidden="true"></span>
+							Sending…
+						{:else}
+							Send
+						{/if}
+					</button>
+
+					<p class="text-sm text-muted">
+						Prefer email? Write to <a class="link link-primary" href="mailto:{site.email}"
+							>{site.email}</a
+						>. See our <a class="link" href="/privacy">privacy policy</a> for how your details are handled.
+					</p>
+				</form>
+			{/if}
 		</div>
-	</div>
-{/if}
-
-<style>
-	.cta-btn {
-		position: relative;
-		overflow: hidden;
-		border-radius: 0.75rem;
-		font-weight: 700;
-		padding: 0.5rem 1.5rem;
-		transition:
-			transform 0.2s ease,
-			box-shadow 0.3s ease;
-	}
-
-	/* Glow / pulse effect */
-	.cta-btn::before {
-		content: '';
-		position: absolute;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		background: radial-gradient(
-			circle,
-			rgba(103, 232, 249, 0.5) 0%,
-			/* Tailwind cyan-300 */ rgba(59, 130, 246, 0.4) 40%,
-			/* Tailwind blue-500 */ rgba(37, 99, 235, 0) 70%
-		);
-		border-radius: 50%;
-		opacity: 0;
-		transition:
-			opacity 0.2s ease,
-			transform 0.2s ease;
-		z-index: 0;
-	}
-
-	/* Hover / active states */
-	.cta-btn:hover::before {
-		opacity: 1;
-		transform: scale(1.2);
-	}
-
-	.cta-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 5px 12px rgba(59, 130, 246, 0.4); /* Tailwind's blue-500 */
-	}
-
-	.cta-btn:active {
-		transform: translateY(1px);
-		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3); /* Tailwind's blue-500 */
-	}
-
-	/* Ensure text is above glow */
-	.cta-btn span {
-		position: relative;
-		z-index: 1;
-	}
-</style>
+		<form method="dialog" class="modal-backdrop">
+			<button aria-label="Close dialog">close</button>
+		</form>
+	{/if}
+</dialog>

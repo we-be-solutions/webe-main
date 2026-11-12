@@ -1,4 +1,3 @@
-
 ---
 title: What is automation?
 description: Automation is not just hype, it is a key piece of growth.
@@ -21,9 +20,9 @@ Think of automation as a digital assistant. Once it's set up, it never forgets, 
 
 For example:
 
-* A new lead fills out a form on your website. A tool detects the submission, adds them to your CRM(Customer relations manager), sends them a welcome email, and notifies your sales rep without the need to lift a finger.
-* You receive invoices in your inbox. A tool extracts the data, enters it into your accounting system, and files the document.
-* Your project manager marks a task as "Done" and a email is instantly sent to the client with a summary of what’s been completed.
+- A new lead fills out a form on your website. A tool detects the submission, adds them to your CRM(Customer relations manager), sends them a welcome email, and notifies your sales rep without the need to lift a finger.
+- You receive invoices in your inbox. A tool extracts the data, enters it into your accounting system, and files the document.
+- Your project manager marks a task as "Done" and a email is instantly sent to the client with a summary of what’s been completed.
 
 These may seem small, but over time, they reduce the cognitive load on your team, remove bottlenecks, and build momentum.
 
@@ -31,10 +30,10 @@ These may seem small, but over time, they reduce the cognitive load on your team
 
 There are a range of tools that help businesses automate. Some of the most popular include:
 
-* **Zapier**: A no-code automation platform that connects your favorite apps (like Gmail, Google Sheets, Slack, and thousands more) so they can talk to each other.
-* **Make**: A more flexible automation platform for those who need advanced logic or data manipulation.
-* **Custom Software**: When your workflow is unique or core to your business, investing in a bespoke tool can unlock game-changing efficiency.
-* **RPA (Robotic Process Automation)** tools: Software like UiPath and Power Automate are used by enterprise teams to simulate human interactions with desktop applications or legacy systems.
+- **Zapier**: A no-code automation platform that connects your favorite apps (like Gmail, Google Sheets, Slack, and thousands more) so they can talk to each other.
+- **Make**: A more flexible automation platform for those who need advanced logic or data manipulation.
+- **Custom Software**: When your workflow is unique or core to your business, investing in a bespoke tool can unlock game-changing efficiency.
+- **RPA (Robotic Process Automation)** tools: Software like UiPath and Power Automate are used by enterprise teams to simulate human interactions with desktop applications or legacy systems.
 
 But tools are only useful if you start small and build with purpose.
 
@@ -48,9 +47,9 @@ Here’s a simple 4-step system to help you take action:
 
 Pick something that happens regularly and takes up time—preferably something boring or prone to human error. Examples:
 
-* Manually sending welcome emails
-* Updating a spreadsheet every Friday
-* Moving files to the correct folders
+- Manually sending welcome emails
+- Updating a spreadsheet every Friday
+- Moving files to the correct folders
 
 #### 2. **Find an Off-the-Shelf Tool or Consider Building One**
 
@@ -69,4 +68,3 @@ Track how much time you're saving. If a task used to take 30 minutes every day a
 Automation is not about replacing people, it’s about empowering them. It lets your team focus on strategy, creativity, and connection, rather than busywork.
 
 So don’t let it feel daunting. Start with one task, one tool, one improvement. Let that success build your confidence—and before long, automation will be woven into how your business runs every day.
-

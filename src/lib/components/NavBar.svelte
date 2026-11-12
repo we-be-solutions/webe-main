@@ -2,65 +2,92 @@
 	import LogoNoWords from '../../components/svg/logoNoWords.svelte';
 	import CtaBtn from './CTABtn.svelte';
 	import { clickOutside } from '$lib/clickOutside';
-	let { ctaVisible = true } = $props();
+
 	let menuOpen = $state(false);
+
+	const links = [
+		{ href: '/#services', label: 'Services' },
+		{ href: '/#engagements', label: 'Ways to work together' },
+		{ href: '/#approach', label: 'How I work' },
+		{ href: '/#about', label: 'About' },
+		{ href: '/#faq', label: 'FAQ' }
+	];
 </script>
 
-<nav class="navbar z-50 fixed bg-base-100 shadow-sm" use:clickOutside={() => (menuOpen = false)}>
-	<div class="navbar-start">
-		<a href="/" class="flex items-center gap-2">
-			<div class="w-15">
-				<LogoNoWords />
-			</div>
-			<p class="text-3xl font-bold">WeBe</p>
+<header
+	class="fixed inset-x-0 top-0 z-50 border-b border-base-300/70 bg-base-100/90 backdrop-blur"
+	use:clickOutside={() => (menuOpen = false)}
+>
+	<nav
+		class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8"
+		aria-label="Main"
+	>
+		<a href="/" class="flex items-center gap-2.5" aria-label="WeBe Solutions home">
+			<span class="w-8"><LogoNoWords /></span>
+			<span class="text-xl font-bold tracking-tight">WeBe</span>
+			<span class="hidden text-sm font-medium text-muted sm:inline">Solutions</span>
 		</a>
-	</div>
 
-	<!-- Desktop Menu -->
-	<div class="navbar-center hidden md:flex relative -translate-x-1/2">
-		<ul class="menu menu-horizontal px-1 text-lg">
-			<li><a href="/">Home</a></li>
-			<li><a href="/blog">Articles</a></li>
+		<ul class="hidden items-center gap-1 lg:flex">
+			{#each links as link (link.href)}
+				<li>
+					<a
+						href={link.href}
+						class="rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:text-base-content"
+						>{link.label}</a
+					>
+				</li>
+			{/each}
 		</ul>
-	</div>
 
-	<!-- Mobile Hamburger -->
-	<div class="navbar-end md:hidden">
-		<button class="btn btn-ghost" aria-label="Toggle menu" onclick={() => (menuOpen = !menuOpen)}>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="w-6 h-6"
+		<div class="flex items-center gap-2">
+			<CtaBtn btnText="Let’s talk" class="btn-sm hidden sm:inline-flex" />
+			<button
+				class="btn btn-ghost btn-square lg:hidden"
+				aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+				aria-expanded={menuOpen}
+				aria-controls="mobile-menu"
+				onclick={() => (menuOpen = !menuOpen)}
 			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M4.5 6.75h15M4.5 12h15M4.5 17.25h15"
-				/>
-			</svg>
-		</button>
-	</div>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="h-6 w-6"
+					aria-hidden="true"
+				>
+					{#if menuOpen}
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					{:else}
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+						/>
+					{/if}
+				</svg>
+			</button>
+		</div>
+	</nav>
 
-	<!-- Mobile Dropdown Menu -->
 	{#if menuOpen}
-		<div class="absolute top-full left-0 w-full bg-base-100 shadow-md md:hidden z-20">
-			<ul class="menu px-4 py-2 space-y-2">
-				<li><a href="/" onclick={() => (menuOpen = false)}>Home</a></li>
-				<li><a href="/blog" onclick={() => (menuOpen = false)}>Articles</a></li>
+		<div id="mobile-menu" class="border-t border-base-300 bg-base-100 lg:hidden">
+			<ul class="mx-auto max-w-6xl space-y-1 px-4 py-4 sm:px-6">
+				{#each links as link (link.href)}
+					<li>
+						<a
+							href={link.href}
+							class="block rounded-md px-3 py-2.5 font-medium hover:bg-base-200"
+							onclick={() => (menuOpen = false)}>{link.label}</a
+						>
+					</li>
+				{/each}
+				<li class="pt-2 sm:hidden">
+					<CtaBtn btnText="Let’s talk about your team" class="w-full" />
+				</li>
 			</ul>
 		</div>
 	{/if}
-</nav>
-
-{#if ctaVisible}
-	<!-- CTA outside nav -->
-	<div
-		class="fixed top-0 right-0 z-50 hidden md:flex items-center px-4 h-[var(--navbar-height,4rem)]"
-		style="--navbar-height:72px;"
-	>
-		<CtaBtn />
-	</div>
-{/if}
+</header>

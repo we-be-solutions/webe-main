@@ -1,15 +1,14 @@
-
 ---
-title: "Is Custom Built Software the Answer?"
-description: "Weighing custom-built vs off-the-shelf software to see what’s right for your business."
-date: "5-7-2025"
+title: 'Is Custom Built Software the Answer?'
+description: 'Weighing custom-built vs off-the-shelf software to see what’s right for your business.'
+date: '5-7-2025'
 categories:
   - Custom Software
   - Business Operations
 published: true
 ---
 
-In a world of fast-moving SaaS tools and thousands of platforms at your fingertips, it's tempting to assume there’s an app for everything. But is that app *your* answer?
+In a world of fast-moving SaaS tools and thousands of platforms at your fingertips, it's tempting to assume there’s an app for everything. But is that app _your_ answer?
 
 Custom-built software isn't always the right path, but when it is, it can transform a business.
 
@@ -82,4 +81,4 @@ Choosing the right tool is about more than checklists. It’s about values, visi
 
 If you're exploring automation or considering whether custom software is the next step, we’d love to talk. Not to sell you on something, but to help you get clarity.
 
-Because the best tools don’t just work, they work *for you*.
+Because the best tools don’t just work, they work _for you_.
