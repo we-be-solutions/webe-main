@@ -1,78 +1,108 @@
-<script>
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+	import { site } from '$lib/config';
 </script>
 
-<svelte:head>
-	<title>Privacy Policy | WeBe</title>
-	<meta
-		name="description"
-		content="Our commitment to protecting your privacy and personal data at WeBe."
-	/>
-</svelte:head>
+<Seo
+	title="Privacy Policy | WeBe Solutions"
+	description="How WeBe Solutions collects, uses and stores your personal information."
+	path="/privacy"
+/>
 
-<section class="prose lg:prose-xl mx-auto mt-24 px-4 py-12">
+<section class="prose prose-slate mx-auto px-4 py-16 sm:px-6 md:py-24 lg:prose-lg">
 	<h1>Privacy Policy</h1>
 
 	<p>
-		WeBe is committed to protecting your privacy. This policy explains how we collect, use, and
-		store your personal information.
+		This policy explains how {site.name} (ABN {site.abn}) (“WeBe”, “I”, “we”) handles personal
+		information collected through this website and in the course of providing consulting services.
+		WeBe handles personal information in line with the Australian Privacy Principles in the
+		<em>Privacy Act 1988</em> (Cth).
 	</p>
 
-	<h2>What We Collect</h2>
-	<p>When you fill out a form on our site, we may collect:</p>
+	<h2>What we collect</h2>
+	<p>When you use the contact form, we collect:</p>
 	<ul>
-		<li>Your name</li>
-		<li>Your email address</li>
-		<li>Your company name (if provided)</li>
-		<li>Any other information you choose to share</li>
+		<li>your name</li>
+		<li>your email address</li>
+		<li>your company name</li>
+		<li>anything you choose to tell us about your team in the optional message field.</li>
 	</ul>
 	<p>
-		We also use <strong>Google Analytics</strong> to collect anonymous data on how people use our site.
-		This helps us improve the experience.
+		If you email us directly or become a client, we also hold the correspondence and business
+		contact details you share with us.
+	</p>
+	<p>
+		When you visit the site, Google Analytics collects information about how the site is used, such
+		as pages viewed, approximate location, device and browser type. We use this in aggregate and
+		don’t use it to identify you.
 	</p>
 
-	<h2>How We Use Your Data</h2>
-	<p>We collect your data only to:</p>
+	<h2>How we use it</h2>
+	<p>We use your information to:</p>
 	<ul>
-		<li>Respond to your enquiries</li>
-		<li>Book discovery calls</li>
-		<li>Improve our services and website</li>
+		<li>respond to your enquiry and arrange a conversation</li>
+		<li>provide, manage and invoice for services you engage us for</li>
+		<li>understand how the site is used so we can improve it.</li>
 	</ul>
 	<p>
-		If you submit a form, the message is sent via <strong>Resend</strong>, and delivered to our
-		team’s email inbox.
+		We don’t sell or rent your personal information, and we don’t add you to marketing lists. If we
+		ever want to send you something you didn’t ask for, you can opt out at any time.
 	</p>
-	<p>We do <strong>not</strong> sell or rent your information to anyone.</p>
 
-	<h2>Third-Party Services</h2>
-	<p>We use the following tools that may process your data:</p>
+	<h2>Client information</h2>
+	<p>
+		During an engagement we may see information about your systems, code, people and business. We
+		treat this as confidential, use it only to deliver the agreed work, and handle it in line with
+		the engagement agreement.
+	</p>
+
+	<h2>Service providers</h2>
+	<p>We use the following providers to run this website:</p>
 	<ul>
-		<li><strong>Google Analytics</strong> (for website analytics)</li>
-		<li><strong>Resend</strong> (for form delivery)</li>
-		<li><strong>Email</strong> (to follow up on your request)</li>
+		<li><strong>Vercel</strong>, which hosts the website</li>
+		<li><strong>Google Analytics</strong>, for website usage statistics</li>
+		<li><strong>Resend</strong>, which delivers contact form messages by email</li>
+		<li>
+			<strong>Cloudflare Turnstile</strong>, which checks that contact form submissions come from a
+			person rather than a bot
+		</li>
+		<li>our email provider, which stores correspondence with you.</li>
 	</ul>
-	<p>These services have their own privacy policies and follow standard security practices.</p>
+	<p>
+		Some of these providers store or process data outside Australia, including in the United States.
+		Each has its own privacy policy and security practices. We only share what they need to provide
+		their service.
+	</p>
 
 	<h2>Cookies</h2>
 	<p>
-		We use cookies to track site usage via Google Analytics. You can disable cookies in your browser
-		settings.
+		Google Analytics uses cookies to measure site usage, and Cloudflare Turnstile may use cookies or
+		similar technology to detect bots. You can block or delete cookies in your browser settings. The
+		site will still work, though the contact form needs Turnstile to run.
 	</p>
 
-	<h2>Your Rights</h2>
-	<p>You can:</p>
-	<ul>
-		<li>Ask what data we have about you</li>
-		<li>Request we update or delete your data</li>
-		<li>Opt out of future communication at any time</li>
-	</ul>
-	<p>Just contact us at <a href="mailto:brett@webe.au">brett@webe.au</a>.</p>
-
-	<h2>Questions?</h2>
+	<h2>Storage and security</h2>
 	<p>
-		If you have any questions about this policy or your data, email us at <a
-			href="mailto:brett@webe.au">brett@webe.au</a
-		>.
+		We take reasonable steps to protect personal information from misuse, loss and unauthorised
+		access. We keep it only as long as we need it for the purposes above or to meet legal and tax
+		obligations, then delete it.
 	</p>
 
-	<p class="text-sm text-gray-500 mt-12">Last updated: 21 July 2025</p>
+	<h2>Access, correction and complaints</h2>
+	<p>
+		You can ask what personal information we hold about you, ask us to correct it, or ask us to
+		delete it. Email <a href="mailto:{site.email}">{site.email}</a> and we’ll respond within a reasonable
+		time.
+	</p>
+	<p>
+		If you have a concern about how we’ve handled your information, please contact us first so we
+		can try to resolve it. If you’re not satisfied, you can contact the Office of the Australian
+		Information Commissioner at
+		<a href="https://www.oaic.gov.au" rel="noopener" target="_blank">oaic.gov.au</a>.
+	</p>
+
+	<h2>Changes to this policy</h2>
+	<p>We may update this policy from time to time. The current version is always on this page.</p>
+
+	<p class="text-sm text-muted">Last updated: 12 November 2026</p>
 </section>

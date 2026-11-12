@@ -13,5 +13,6 @@
 </script>
 
 <svelte:head>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- static script tag with a constant ID -->
 	{@html `<script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>`}
 </svelte:head>

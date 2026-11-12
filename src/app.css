@@ -1,12 +1,62 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
 @plugin "@tailwindcss/typography";
-@plugin "daisyui" ;
+@plugin "daisyui";
 @plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  --color-primary: #007a99;
+	name: 'light';
+	default: true;
+	color-scheme: light;
+	--color-base-100: #ffffff;
+	--color-base-200: #f5f7f8;
+	--color-base-300: #e4e8eb;
+	--color-base-content: #16212b;
+	/* WeBe teal: primary is the accessible shade for text and buttons on white */
+	--color-primary: #007a99;
+	--color-primary-content: #ffffff;
+	--color-secondary: #00a4cc;
+	--color-secondary-content: #0b1720;
+	--color-neutral: #0f1c26;
+	--color-neutral-content: #e9eff2;
+	--radius-box: 0.75rem;
+	--radius-field: 0.5rem;
 }
 
-.card-title {
-  font-size: 1.5rem;
+@theme {
+	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--color-brand: #00a4cc;
+	--color-ink: #16212b;
+	--color-muted: #51606b;
+}
+
+html {
+	scroll-behavior: smooth;
+	/* Leave room for the fixed navbar when jumping to sections */
+	scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	font-feature-settings: 'cv11', 'ss01';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 3px;
 }

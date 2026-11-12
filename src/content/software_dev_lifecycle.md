@@ -1,8 +1,7 @@
-
 ---
-title: "What Is the Software Development Lifecycle? A Business-Friendly Guide"
-description: "Curious how software actually gets built? This guide breaks down the Software Development Lifecycle into clear, jargon-free steps so business leaders can make smarter, more confident tech decisions."
-date: "5-8-2025"
+title: 'What Is the Software Development Lifecycle? A Business-Friendly Guide'
+description: 'Curious how software actually gets built? This guide breaks down the Software Development Lifecycle into clear, jargon-free steps so business leaders can make smarter, more confident tech decisions.'
+date: '5-8-2025'
 categories:
   - Software Development
   - Software Development Lifecycle
@@ -47,9 +46,9 @@ Here’s what the typical SDLC looks like from start to finish:
 
 Before any code is written, we define:
 
-* What is the business goal?
-* Who will use the software?
-* What’s the budget, timeline, and success criteria?
+- What is the business goal?
+- Who will use the software?
+- What’s the budget, timeline, and success criteria?
 
 This is where a general idea becomes a clear project direction.
 
@@ -59,9 +58,9 @@ This is where a general idea becomes a clear project direction.
 
 Next, we map out exactly what the software needs to do:
 
-* What are the must-have features?
-* Are there security, data, or compliance needs?
-* Does it need to connect to existing systems?
+- What are the must-have features?
+- Are there security, data, or compliance needs?
+- Does it need to connect to existing systems?
 
 This step ensures no critical details are missed before design begins.
 
@@ -71,8 +70,8 @@ This step ensures no critical details are missed before design begins.
 
 We create a detailed plan for how the software will look and function:
 
-* User interface mockups
-* System architecture and data flow diagrams
+- User interface mockups
+- System architecture and data flow diagrams
 
 This phase helps visualise the experience and lay out the technical structure.
 
@@ -90,9 +89,9 @@ This step is where the blueprint becomes a working system.
 
 Once key features are in place, the software goes through rigorous testing:
 
-* Does everything work as expected?
-* Are there bugs or usability issues?
-* Does it work on different devices and browsers?
+- Does everything work as expected?
+- Are there bugs or usability issues?
+- Does it work on different devices and browsers?
 
 Testing helps catch issues before they impact users.
 
@@ -110,9 +109,9 @@ Deployment is planned and deliberate to avoid disruption.
 
 Software needs ongoing care:
 
-* Security updates
-* Performance improvements
-* Enhancements based on real user feedback
+- Security updates
+- Performance improvements
+- Enhancements based on real user feedback
 
 Ongoing maintenance keeps your software useful and reliable long-term.
 
@@ -122,10 +121,10 @@ Ongoing maintenance keeps your software useful and reliable long-term.
 
 You don’t need to know how to code. But understanding how software is developed helps you:
 
-* Make smarter decisions about investment and scope
-* Stay in control of your project and timelines
-* Know what to expect at each phase
-* Communicate more effectively with your tech team or agency
+- Make smarter decisions about investment and scope
+- Stay in control of your project and timelines
+- Know what to expect at each phase
+- Communicate more effectively with your tech team or agency
 
 The SDLC gives you visibility, accountability, and a much better chance of success.
 
@@ -146,5 +145,3 @@ And if you’re not sure where to start, we offer **free tech and strategy audit
 You don’t need to be technical to lead a successful software project.
 
 You just need the right process and the right team to guide you through it.
-
-

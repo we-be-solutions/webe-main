@@ -1,17 +1,16 @@
-
 ---
 title: The Hidden Cost of Manual Work (and Why It Adds Up Fast)
 description: How small, repetitive manual tasks quietly eat into business time. This is how automation helps win it back.
 date: '18-7-2025'
 categories:
-- Business Efficiency
-- Automation
-- Purpose built software
-- Time Management
-- Small Business Tips
-- Productivity
-- Digital Transformation
-- Operations
+  - Business Efficiency
+  - Automation
+  - Purpose built software
+  - Time Management
+  - Small Business Tips
+  - Productivity
+  - Digital Transformation
+  - Operations
 published: true
 ---
 
@@ -47,10 +46,10 @@ Shaving five minutes off a repetitive task done dozens of times a week isn’t j
 
 Here’s a good rule of thumb:
 
-* The task happens the same way every time
-* It ends up in a digital system
-* It doesn’t directly drive profit
-* It’s boring, repetitive, or a morale-killer
+- The task happens the same way every time
+- It ends up in a digital system
+- It doesn’t directly drive profit
+- It’s boring, repetitive, or a morale-killer
 
 If a task checks these boxes, it’s a strong automation candidate.
 
@@ -58,9 +57,9 @@ If a task checks these boxes, it’s a strong automation candidate.
 
 The barriers to automation are common:
 
-* Too many tools, not enough time to master them
-* Not enough technical knowledge to build integrations
-* Uncertainty about where to begin
+- Too many tools, not enough time to master them
+- Not enough technical knowledge to build integrations
+- Uncertainty about where to begin
 
 That’s why our approach always starts small. Build trust in the system with a fast win, show the impact, and expand from there.
 
@@ -71,5 +70,3 @@ The easiest first step is simply writing it all down. Track your workday. Highli
 ---
 
 **WeBe Solutions helps Australian businesses reclaim their time through smart automation and software systems.**
-
-

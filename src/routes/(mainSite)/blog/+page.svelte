@@ -14,7 +14,7 @@
 	{#await data.posts}
 		<div class="min-h-[90vh]"></div>
 	{:then posts}
-		{#each posts as p}
+		{#each posts as p (p.slug)}
 			<a
 				href="/blog/{p.slug}"
 				class="card bg-base-300 shadow-md hover:shadow-xl hover:ring-2 hover:ring-secondary/60 hover:ring-offset-2 transition duration-200"
@@ -24,7 +24,7 @@
 					<h3 class="text-sm text-base-content/60">{p.date}</h3>
 					<p>{p.description}</p>
 					<div class="mt-2 flex flex-wrap gap-2">
-						{#each p.categories as tag}
+						{#each p.categories as tag (tag)}
 							<span class="badge badge-outline">{tag}</span>
 						{/each}
 					</div>

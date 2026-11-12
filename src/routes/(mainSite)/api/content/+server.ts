@@ -1,4 +1,5 @@
-import { json } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
+import { ARTICLES_ENABLED } from '$lib/config';
 
 export type Categories = 'Automation' | 'Business Operations' | 'AI' | 'Tools';
 
@@ -23,7 +24,7 @@ function getContent(latest: string) {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
 			const post = { ...metadata, slug } satisfies Post;
-			post.published && posts.push(post);
+			if (post.published) posts.push(post);
 		}
 	}
 
@@ -43,6 +44,8 @@ function getContent(latest: string) {
 }
 
 export async function GET({ url }: { url: URL }) {
+	if (!ARTICLES_ENABLED) error(404, 'Not found');
+
 	const latest = url.searchParams.get('latest') ?? 'all';
 	const res = getContent(latest);
 	return json(res);
