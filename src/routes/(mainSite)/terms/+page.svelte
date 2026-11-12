@@ -19,9 +19,9 @@
 
 	<h2>1. About our services</h2>
 	<p>
-		WeBe provides engineering leadership, solution architecture, engineering risk and software
-		delivery consulting. The website describes these services in general terms. It isn’t an offer
-		and doesn’t create an engagement.
+		WeBe provides technology leadership and advisory services, including engineering enablement for
+		existing technical teams and independent technology advice for business leaders. The website
+		describes these services in general terms. It isn’t an offer and doesn’t create an engagement.
 	</p>
 	<p>
 		Any paid work is governed by a separate written agreement or proposal, which sets out the scope,
@@ -32,8 +32,9 @@
 	<h2>2. Advice and decisions</h2>
 	<p>
 		Our role is to advise, guide and support your team. Decisions about your systems, people and
-		business remain yours, as does responsibility for implementing them. Our engineering risk work
-		isn’t a formal cybersecurity audit, certification or regulatory assurance.
+		business remain yours, as does responsibility for implementing them. WeBe doesn’t provide
+		managed IT support, certified security audits, or legal or compliance assurance, and our risk
+		assessments aren’t a substitute for them.
 	</p>
 
 	<h2>3. Website content</h2>

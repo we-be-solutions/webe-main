@@ -2,7 +2,15 @@ import { expect, test } from '@playwright/test';
 
 test('home page has expected h1', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.locator('h1')).toHaveText('Build a stronger engineering team.');
+	await expect(page.locator('h1')).toHaveText('Better technology decisions. Stronger teams.');
+});
+
+test('service pages load', async ({ page }) => {
+	for (const path of ['/engineering-enablement', '/technology-advisory']) {
+		const response = await page.goto(path);
+		expect(response?.status(), path).toBe(200);
+		await expect(page.locator('h1')).toBeVisible();
+	}
 });
 
 test('articles are hidden', async ({ page }) => {
@@ -12,9 +20,9 @@ test('articles are hidden', async ({ page }) => {
 	}
 });
 
-test('contact dialog opens from the hero', async ({ page }) => {
-	await page.goto('/');
-	await page.getByRole('button', { name: 'Discuss your engineering challenges' }).first().click();
+test('contact dialog pre-selects the topic on a service page', async ({ page }) => {
+	await page.goto('/technology-advisory');
+	await page.getByRole('button', { name: 'Get technical guidance' }).first().click();
 	await expect(page.getByRole('dialog')).toBeVisible();
-	await expect(page.getByLabel('Work email')).toBeVisible();
+	await expect(page.getByLabel('A technology decision or challenge')).toBeChecked();
 });

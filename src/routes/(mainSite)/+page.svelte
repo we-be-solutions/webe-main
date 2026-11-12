@@ -3,24 +3,15 @@
 	import Section from '$lib/components/Section.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import { site } from '$lib/config';
-	import { engagements, faqs, pillars, principles, problems, steps } from '$lib/content/site';
-
-	const outcomes = [
-		'Better technical decisions',
-		'Stronger, more autonomous teams',
-		'More predictable delivery',
-		'A clearer understanding of risk',
-		'Sustainable engineering practices',
-		'Capability that stays after the engagement'
-	];
+	import { engagements, faqs, outcomes, principles, services, steps } from '$lib/content/site';
 
 	const strengths = [
-		'Hands-on software delivery',
-		'Technical leadership and decision-making',
+		'Hands-on software engineering and delivery',
 		'Solution architecture and system design',
-		'Working with business stakeholders',
-		'Improving engineering practices',
-		'Mentoring developers and technical leads'
+		'Technical leadership and decision-making',
+		'Working with business stakeholders and suppliers',
+		'Improving engineering and delivery practices',
+		'Mentoring and enabling teams'
 	];
 
 	const jsonLd = [
@@ -35,13 +26,15 @@
 			description: site.description,
 			areaServed: { '@type': 'Country', name: 'Australia' },
 			...(site.linkedin ? { sameAs: [site.linkedin] } : {}),
-			knowsAbout: [
-				'Fractional engineering leadership',
-				'Solution architecture',
-				'Software delivery improvement',
-				'Engineering risk and quality',
-				'Software development lifecycle'
-			]
+			makesOffer: services.map((service) => ({
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: service.name,
+					description: service.metaDescription,
+					url: `${site.url}/${service.slug}`
+				}
+			}))
 		},
 		{
 			'@context': 'https://schema.org',
@@ -56,205 +49,103 @@
 </script>
 
 <Seo
-	title="Fractional Engineering Leadership for Software Teams | WeBe Solutions"
+	title="Technology Leadership & Independent Advice | WeBe Solutions"
 	description={site.description}
 	path="/"
 	{jsonLd}
 />
 
-<!-- Hero -->
+<!-- Hero + find the right support -->
 <section class="relative overflow-hidden border-b border-base-300 bg-base-100">
 	<div
-		class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--color-base-300)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-base-300)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_at_top_right,black_10%,transparent_65%)] bg-[size:48px_48px] opacity-60"
+		class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--color-base-300)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-base-300)_1px,transparent_1px)] mask-[radial-gradient(ellipse_at_top_right,black_10%,transparent_65%)] bg-size-[48px_48px] opacity-60"
 		aria-hidden="true"
 	></div>
 
-	<div
-		class="relative mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-16 lg:px-8 lg:py-32"
-	>
-		<div>
+	<div class="relative mx-auto max-w-6xl px-4 pt-16 pb-20 sm:px-6 md:pt-24 md:pb-24 lg:px-8">
+		<div class="max-w-3xl">
 			<p class="text-sm font-semibold tracking-wider text-primary uppercase">
-				Fractional engineering leadership
+				Technology leadership and advisory
 			</p>
 			<h1 class="mt-4 text-4xl leading-[1.08] font-semibold tracking-tight sm:text-5xl md:text-6xl">
-				Build a stronger engineering team.
+				Better technology decisions. Stronger teams.
 			</h1>
-			<p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				Practical engineering leadership, solution architecture and delivery improvement for
-				businesses that want to get more from the teams they already have.
+			<p class="mt-6 text-lg leading-relaxed text-muted md:text-xl">
+				Practical technology leadership and independent advice for businesses that want to get more
+				from their technology.
 			</p>
-			<p class="mt-4 max-w-2xl leading-relaxed text-muted">
-				For Australian businesses with an in-house development team that needs experienced technical
-				leadership, without hiring a full-time engineering executive.
+			<p class="mt-4 leading-relaxed text-muted">
+				Whether you have an engineering team or need someone in your corner, WeBe provides the
+				technical expertise to help you move forward with confidence.
 			</p>
-			<div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-				<CtaBtn btnText="Discuss your engineering challenges" size="lg" />
-				<a
-					href="#services"
-					class="btn btn-ghost h-13 px-5 text-base font-medium text-base-content/80"
-				>
-					See how I can help
-					<span aria-hidden="true">→</span>
-				</a>
+			<div class="mt-8">
+				<CtaBtn btnText="Let’s talk" size="lg" />
 			</div>
 		</div>
 
-		<aside
-			class="rounded-box border border-base-300 bg-base-100/80 p-6 backdrop-blur-sm sm:p-8"
-			aria-labelledby="outcomes-heading"
-		>
-			<h2 id="outcomes-heading" class="text-sm font-semibold tracking-wider text-muted uppercase">
-				What changes
+		<div id="services" class="mt-16 md:mt-20">
+			<h2 class="text-sm font-semibold tracking-wider text-muted uppercase">
+				Find the right support
 			</h2>
-			<ul class="mt-5 space-y-3.5">
-				{#each outcomes as outcome (outcome)}
-					<li class="flex gap-3">
-						<svg
-							class="mt-1 h-4 w-4 flex-none text-primary"
-							viewBox="0 0 16 16"
-							fill="none"
+			<div class="mt-5 grid gap-6 md:grid-cols-2">
+				{#each services as service (service.slug)}
+					<a
+						href="/{service.slug}"
+						class="group flex flex-col rounded-box border border-base-300 bg-base-100 p-6 transition-colors hover:border-primary sm:p-8"
+					>
+						<p class="font-medium text-muted">{service.question}</p>
+						<h3 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">{service.name}</h3>
+						<p class="mt-3 text-lg leading-relaxed">{service.proposition}</p>
+						<p class="mt-3 flex-grow leading-relaxed text-muted">{service.audience}</p>
+						<span
+							class="mt-6 inline-flex items-center gap-2 font-semibold text-primary"
 							aria-hidden="true"
 						>
-							<path
-								d="M3 8.5l3 3 7-7"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-						<span class="font-medium">{outcome}</span>
-					</li>
+							{service.cta}
+							<span class="transition-transform group-hover:translate-x-1">→</span>
+						</span>
+					</a>
 				{/each}
-			</ul>
-		</aside>
+			</div>
+		</div>
 	</div>
 </section>
 
-<!-- The problem -->
+<!-- Outcomes -->
 <Section
-	id="challenges"
-	eyebrow="The challenge"
-	title="As the software grows, the team needs more than more code"
-	intro="Most growing businesses reach a point where the engineering team is capable, but the way it’s led and organised hasn’t kept pace. It rarely shows up as one big failure. It shows up like this:"
+	id="outcomes"
+	eyebrow="What I help you achieve"
+	title="Technology that serves the business"
+	intro="Whichever way we work together, the aim is the same: better decisions, more capable people and fewer surprises."
 >
 	<ul
 		class="grid gap-px overflow-hidden rounded-box border border-base-300 bg-base-300 md:grid-cols-2 lg:grid-cols-3"
 	>
-		{#each problems as problem (problem.title)}
+		{#each outcomes as outcome (outcome.title)}
 			<li class="bg-base-100 p-6 sm:p-8">
-				<h3 class="text-lg font-semibold tracking-tight">{problem.title}</h3>
-				<p class="mt-2 leading-relaxed text-muted">{problem.body}</p>
+				<h3 class="text-lg font-semibold tracking-tight">{outcome.title}</h3>
+				<p class="mt-2 leading-relaxed text-muted">{outcome.body}</p>
 			</li>
 		{/each}
 	</ul>
-	<p class="mt-10 max-w-3xl text-lg leading-relaxed">
-		None of this means the team is doing a poor job. It usually means they need experienced
-		leadership and room to step up, without the business committing to a full-time executive before
-		it’s ready.
-	</p>
 </Section>
 
-<!-- Differentiator -->
+<!-- Principles -->
 <Section
-	id="philosophy"
+	id="principles"
 	tone="dark"
-	eyebrow="The approach"
-	title="Strengthen the team you have"
-	intro="This isn’t outsourcing, staff augmentation or a consultant who becomes a permanent dependency. The aim is to improve how your team thinks, decides, designs and delivers, so the capability stays when the engagement ends."
+	eyebrow="Principles"
+	title="Capability that stays with your business"
+	intro="Both services are built on the same principles. The goal is for you to need outside help less over time, not more."
 >
-	<ul class="grid gap-10 md:grid-cols-3">
-		{#each principles as principle, i (principle.title)}
-			<li class="border-t border-neutral-content/20 pt-6">
-				<span class="font-mono text-sm text-secondary">0{i + 1}</span>
-				<h3 class="mt-2 text-xl font-semibold tracking-tight">{principle.title}</h3>
-				<p class="mt-3 leading-relaxed text-neutral-content/75">{principle.body}</p>
+	<ol class="grid gap-x-10 gap-y-6 md:grid-cols-2">
+		{#each principles as principle, i (principle)}
+			<li class="flex gap-5 border-t border-neutral-content/20 pt-5">
+				<span class="font-mono text-sm leading-7 text-secondary">0{i + 1}</span>
+				<span class="text-lg leading-relaxed">{principle}</span>
 			</li>
 		{/each}
-	</ul>
-</Section>
-
-<!-- Services -->
-<Section
-	id="services"
-	eyebrow="Services"
-	title="Where I can help"
-	intro="Four areas of focus, usually combined to suit the team. Each one starts with the outcome your business needs."
->
-	<div class="grid gap-6 md:grid-cols-2">
-		{#each pillars as pillar (pillar.id)}
-			<article
-				id="service-{pillar.id}"
-				class="flex flex-col rounded-box border border-base-300 bg-base-100 p-6 transition-colors hover:border-primary/40 sm:p-8"
-			>
-				<h3 class="text-sm font-semibold tracking-wide text-primary">{pillar.title}</h3>
-				<p class="mt-3 text-2xl leading-snug font-semibold tracking-tight">{pillar.outcome}</p>
-				<p class="mt-3 leading-relaxed text-muted">{pillar.body}</p>
-				<ul class="mt-6 space-y-2 border-t border-base-300 pt-6 text-[0.95rem]">
-					{#each pillar.points as point (point)}
-						<li class="flex gap-3">
-							<span class="mt-2.5 h-1 w-3 flex-none rounded-full bg-secondary" aria-hidden="true"
-							></span>
-							<span>{point}</span>
-						</li>
-					{/each}
-				</ul>
-			</article>
-		{/each}
-	</div>
-	<p class="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
-		Engineering risk work focuses on architecture, operations and delivery. It isn’t a formal
-		cybersecurity audit, certification or regulatory assurance.
-	</p>
-</Section>
-
-<!-- Engagements -->
-<Section
-	id="engagements"
-	tone="muted"
-	eyebrow="Ways to work together"
-	title="Start where it’s most useful"
-	intro="Every engagement is scoped with you, based on your team and what you need. These are the three most common starting points."
->
-	<div class="grid gap-6 lg:grid-cols-3">
-		{#each engagements as engagement (engagement.title)}
-			<article class="flex flex-col rounded-box border border-base-300 bg-base-100 p-6 sm:p-8">
-				<h3 class="text-xl font-semibold tracking-tight">{engagement.title}</h3>
-				<p class="mt-3 leading-relaxed">{engagement.summary}</p>
-				<p class="mt-3 text-sm leading-relaxed text-muted">{engagement.suits}</p>
-				<h4 class="mt-6 text-xs font-semibold tracking-wider text-muted uppercase">
-					What it involves
-				</h4>
-				<ul class="mt-3 space-y-2.5 text-[0.95rem]">
-					{#each engagement.includes as item (item)}
-						<li class="flex gap-3">
-							<svg
-								class="mt-1 h-4 w-4 flex-none text-primary"
-								viewBox="0 0 16 16"
-								fill="none"
-								aria-hidden="true"
-							>
-								<path
-									d="M3 8.5l3 3 7-7"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							<span>{item}</span>
-						</li>
-					{/each}
-				</ul>
-			</article>
-		{/each}
-	</div>
-	<div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-		<CtaBtn btnText="Discuss your engineering challenges" />
-		<p class="text-sm text-muted">
-			Not sure which fits? That’s what the first conversation is for.
-		</p>
-	</div>
+	</ol>
 </Section>
 
 <!-- How I work -->
@@ -262,7 +153,7 @@
 	id="approach"
 	eyebrow="How I work"
 	title="A simple, repeatable approach"
-	intro="The same four steps apply whether we’re looking at the whole engineering function or one specific problem."
+	intro="The same four steps apply whether we’re strengthening a team or working through a single decision."
 >
 	<div class="relative">
 		<div
@@ -280,40 +171,62 @@
 						<h3 class="text-lg font-semibold tracking-tight md:mt-5">
 							<span class="sr-only">Step {i + 1}: </span>{step.title}
 						</h3>
-						<p class="mt-2 leading-relaxed text-muted md:mx-auto md:max-w-[15rem]">{step.body}</p>
+						<p class="mt-2 leading-relaxed text-muted md:mx-auto md:max-w-60">{step.body}</p>
 					</div>
 				</li>
 			{/each}
 		</ol>
 	</div>
-	<p class="mx-auto mt-12 max-w-2xl text-center leading-relaxed text-muted">
-		Over time, the cycle repeats with your team leading more of each step. That’s how you know the
-		capability is staying.
-	</p>
+</Section>
+
+<!-- Ways to engage -->
+<Section
+	id="engage"
+	tone="muted"
+	eyebrow="Ways to engage"
+	title="A focused problem or ongoing support"
+	intro="Every engagement is scoped with you, based on what you need. These are the most common ways to work together."
+>
+	<div class="grid gap-6 lg:grid-cols-3">
+		{#each engagements as engagement (engagement.title)}
+			<article class="flex flex-col rounded-box border border-base-300 bg-base-100 p-6 sm:p-8">
+				<h3 class="text-xl font-semibold tracking-tight">{engagement.title}</h3>
+				<p class="mt-3 flex-grow leading-relaxed">{engagement.summary}</p>
+				<p class="mt-4 border-t border-base-300 pt-4 text-sm leading-relaxed text-muted">
+					{engagement.suits}
+				</p>
+			</article>
+		{/each}
+	</div>
+	<div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+		<CtaBtn btnText="Let’s talk" />
+		<p class="text-sm text-muted">
+			Not sure which fits? That’s what the first conversation is for.
+		</p>
+	</div>
 </Section>
 
 <!-- About -->
-<Section id="about" tone="muted" eyebrow="About" title="Hi, I’m Brett">
+<Section id="about" eyebrow="About WeBe" title="Hi, I’m Brett">
 	<div class="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
 		<div class="max-w-2xl space-y-5 text-lg leading-relaxed">
 			<p>
-				I work as a fractional engineering lead and solution architect, helping software teams make
-				better technical decisions and deliver more reliably. WeBe Solutions is how I do that.
+				I’m the Principal Technology Consultant at WeBe Solutions, and an experienced software
+				engineer with a background in technical leadership and solution architecture.
 			</p>
 			<p>
-				My background is hands-on. I’ve delivered software, led technical decisions, worked with
-				stakeholders to turn business needs into workable systems, improved how teams build and
-				ship, and mentored developers along the way.
+				My experience is hands-on. I’ve designed and delivered software, led technical decisions,
+				worked with stakeholders to turn business needs into workable systems, improved how teams
+				build and ship, and helped developers grow along the way.
 			</p>
 			<p>
-				That shapes how I work with clients. I’m not there to take over or to tell your team they’ve
-				been doing it wrong. Most teams already have capable people. What they often lack is time,
-				perspective and someone who has worked through similar problems before.
+				WeBe is deliberately small. When you work with WeBe, you work with me. I’m not there to take
+				over or to sell you a project. I’m there to help you see your options clearly, make sound
+				decisions, and leave your people better equipped than when I arrived.
 			</p>
-			<p>I’d rather your team needs me less over time, not more.</p>
 		</div>
 
-		<aside class="self-start rounded-box border border-base-300 bg-base-100 p-6 sm:p-8">
+		<aside class="self-start rounded-box border border-base-300 bg-base-200 p-6 sm:p-8">
 			<h3 class="text-sm font-semibold tracking-wider text-muted uppercase">What I bring</h3>
 			<ul class="mt-5 space-y-3">
 				{#each strengths as strength (strength)}
@@ -329,7 +242,7 @@
 </Section>
 
 <!-- FAQ -->
-<Section id="faq" eyebrow="FAQ" title="Common questions">
+<Section id="faq" tone="muted" eyebrow="FAQ" title="Common questions">
 	<div class="max-w-3xl divide-y divide-base-300 border-y border-base-300">
 		{#each faqs as faq (faq.question)}
 			<details class="group py-2">
@@ -369,14 +282,23 @@
 				id="contact-heading"
 				class="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
 			>
-				Let’s talk about your team
+				Tell me what you’re working through
 			</h2>
 			<p class="mt-6 text-lg leading-relaxed text-neutral-content/80">
-				If your team is capable but stretched, or you’re not sure where to start, a conversation is
-				a good first step. Tell me what’s going on and we’ll work out together whether I can help.
+				A short conversation is usually enough to work out whether I can help. It might be:
 			</p>
+			<ul class="mt-5 space-y-3 text-lg">
+				<li class="flex gap-3">
+					<span class="mt-3 h-1 w-3 flex-none rounded-full bg-secondary" aria-hidden="true"></span>
+					<span>a technical team you want to strengthen, or</span>
+				</li>
+				<li class="flex gap-3">
+					<span class="mt-3 h-1 w-3 flex-none rounded-full bg-secondary" aria-hidden="true"></span>
+					<span>a technology decision or challenge you need guidance with.</span>
+				</li>
+			</ul>
 			<div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-				<CtaBtn btnText="Let’s talk about your team" variant="light" size="lg" />
+				<CtaBtn btnText="Let’s talk" variant="light" size="lg" />
 				<p class="text-neutral-content/80">
 					Or email <a
 						class="font-medium text-neutral-content underline decoration-secondary underline-offset-4 hover:decoration-2"
