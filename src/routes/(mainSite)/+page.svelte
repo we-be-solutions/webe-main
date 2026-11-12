@@ -34,7 +34,7 @@
 			email: site.email,
 			description: site.description,
 			areaServed: { '@type': 'Country', name: 'Australia' },
-			sameAs: [site.linkedin],
+			...(site.linkedin ? { sameAs: [site.linkedin] } : {}),
 			knowsAbout: [
 				'Fractional engineering leadership',
 				'Solution architecture',
