@@ -12,7 +12,7 @@ export const site = {
 	linkedin: null as string | null,
 	ogImage: 'https://webe.au/og-image.png',
 	description:
-		'Fractional engineering leadership, solution architecture and delivery improvement for Australian businesses that want to get more from the software teams they already have.'
+		'Practical technology leadership and independent advice for Australian businesses. Strengthen your engineering team or make your next technology decision with confidence.'
 } as const;
 
 /**

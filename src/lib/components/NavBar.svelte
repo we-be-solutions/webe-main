@@ -6,8 +6,8 @@
 	let menuOpen = $state(false);
 
 	const links = [
-		{ href: '/#services', label: 'Services' },
-		{ href: '/#engagements', label: 'Ways to work together' },
+		{ href: '/engineering-enablement', label: 'Engineering Enablement' },
+		{ href: '/technology-advisory', label: 'Technology Advisory' },
 		{ href: '/#approach', label: 'How I work' },
 		{ href: '/#about', label: 'About' },
 		{ href: '/#faq', label: 'FAQ' }
@@ -85,7 +85,7 @@
 					</li>
 				{/each}
 				<li class="pt-2 sm:hidden">
-					<CtaBtn btnText="Let’s talk about your team" class="w-full" />
+					<CtaBtn btnText="Let’s talk" class="w-full" />
 				</li>
 			</ul>
 		</div>
