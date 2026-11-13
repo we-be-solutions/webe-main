@@ -3,7 +3,6 @@ import { env } from '$env/dynamic/private';
 import { Resend } from 'resend';
 import * as z from 'zod';
 import { site } from '$lib/config';
-import { contactTopics, type ContactTopic } from '$lib/content/site';
 
 const formSchema = z
 	.object({
@@ -14,7 +13,6 @@ const formSchema = z
 			.min(1, 'Email is required')
 			.email('Please enter a valid email address'),
 		company: z.string().trim().min(1, 'Company is required').max(100, 'Company name is too long'),
-		topic: z.enum(Object.keys(contactTopics) as [ContactTopic, ...ContactTopic[]]).optional(),
 		message: z.string().trim().max(2000, 'Message is too long').optional().default(''),
 		honeypot: z.string().max(0, 'honeypot'),
 		'cf-turnstile-response': z.string()
@@ -66,7 +64,6 @@ export const contactAction = async ({ request }: RequestEvent) => {
 	const email = escapeHtml(result.data.email);
 	const company = escapeHtml(result.data.company);
 	const message = escapeHtml(result.data.message).replace(/\n/g, '<br />');
-	const topic = result.data.topic ? contactTopics[result.data.topic] : 'Not specified';
 
 	const sender = env.SENDER_EMAIL || '';
 	const receiver = env.RECEIVER_EMAIL || '';
@@ -83,7 +80,6 @@ export const contactAction = async ({ request }: RequestEvent) => {
 				<p><strong>Name:</strong> ${name}</p>
 				<p><strong>Email:</strong> ${email}</p>
 				<p><strong>Company:</strong> ${company}</p>
-				<p><strong>Topic:</strong> ${topic}</p>
 				<p><strong>Message:</strong><br />${message || '<em>Not provided</em>'}</p>
 			`
 		});
@@ -97,11 +93,11 @@ export const contactAction = async ({ request }: RequestEvent) => {
 				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; padding: 20px; line-height: 1.6;">
 					<h2 style="color: #007a99; margin-top: 0;">Thanks for getting in touch</h2>
 					<p>Hi ${name},</p>
-					<p>Thanks for reaching out. I’ve received your message and will get back to you personally to arrange a time to talk.</p>
+					<p>Thanks for reaching out about your team. I’ve received your message and will get back to you personally to arrange a time to talk.</p>
 					<p>If there’s anything you’d like me to know beforehand, just reply to this email.</p>
 					<hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
 					<p style="margin-bottom: 0; font-size: 14px; color: #64748b;">
-						${site.name} · Technology leadership and advisory ·
+						${site.name} · Engineering Capability Accelerator ·
 						<a href="${site.url}" style="color: #007a99; text-decoration: none;">webe.au</a>${
 							site.linkedin
 								? ` · <a href="${site.linkedin}" style="color: #007a99; text-decoration: none;">LinkedIn</a>`

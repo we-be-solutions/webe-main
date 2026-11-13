@@ -12,7 +12,7 @@ export const site = {
 	linkedin: null as string | null,
 	ogImage: 'https://webe.au/og-image.png',
 	description:
-		'Practical technology leadership and independent advice for Australian businesses. Strengthen your engineering team or make your next technology decision with confidence.'
+		'Help your developers step up. The Engineering Capability Accelerator builds more capable, confident and independent software engineers through personalised coaching on real work.'
 } as const;
 
 /**
