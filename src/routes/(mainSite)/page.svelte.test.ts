@@ -10,25 +10,27 @@ describe('/+page.svelte', () => {
 	test('renders the headline', () => {
 		render(Page);
 		expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-			'Better technology decisions. Stronger teams.'
+			'Help your developers step up.'
 		);
 	});
 
-	test('links to both services', () => {
+	test('presents the four capabilities', () => {
 		render(Page);
-		expect(screen.getByRole('link', { name: /Engineering Enablement/ })).toHaveAttribute(
-			'href',
-			'/engineering-enablement'
-		);
-		expect(screen.getByRole('link', { name: /Technology Advisory/ })).toHaveAttribute(
-			'href',
-			'/technology-advisory'
-		);
+		for (const name of [
+			'Technical judgement',
+			'Problem-solving',
+			'Engineering ownership',
+			'Engineering practices'
+		]) {
+			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
+		}
 	});
 
 	test('has the primary call to action', () => {
 		render(Page);
-		expect(screen.getAllByRole('button', { name: 'Let’s talk' }).length).toBeGreaterThan(0);
+		expect(
+			screen.getAllByRole('button', { name: 'Let’s talk about your team' }).length
+		).toBeGreaterThan(0);
 	});
 
 	test('avoids obsolete or off-limits claims', () => {
@@ -36,7 +38,8 @@ describe('/+page.svelte', () => {
 		const text = container.textContent ?? '';
 		expect(text).not.toMatch(/\$800/);
 		expect(text).not.toMatch(/don.t pay/i);
-		expect(text).not.toMatch(/\bC[TI]O\b/);
+		expect(text).not.toMatch(/guarantee/i);
+		expect(text).not.toMatch(/unlock your potential|supercharge|10x/i);
 		expect(text).not.toMatch(/\/blog/);
 	});
 });

@@ -19,8 +19,8 @@
 
 	<h2>1. About our services</h2>
 	<p>
-		WeBe provides technology leadership and advisory services, including engineering enablement for
-		existing technical teams and independent technology advice for business leaders. The website
+		WeBe provides technical coaching, mentoring and guidance for software engineers and their teams,
+		delivered through the Engineering Capability Accelerator and related consulting. The website
 		describes these services in general terms. It isn’t an offer and doesn’t create an engagement.
 	</p>
 	<p>
@@ -31,10 +31,11 @@
 
 	<h2>2. Advice and decisions</h2>
 	<p>
-		Our role is to advise, guide and support your team. Decisions about your systems, people and
-		business remain yours, as does responsibility for implementing them. WeBe doesn’t provide
-		managed IT support, certified security audits, or legal or compliance assurance, and our risk
-		assessments aren’t a substitute for them.
+		Our role is to coach, advise and support your team. We don’t guarantee any particular
+		progression, promotion or level of capability for individual engineers. Decisions about your
+		systems, people and business remain yours, as does responsibility for implementing them. WeBe
+		doesn’t provide managed IT support, certified security audits, or legal or compliance assurance,
+		and our risk assessments aren’t a substitute for them.
 	</p>
 
 	<h2>3. Website content</h2>

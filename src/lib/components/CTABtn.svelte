@@ -4,22 +4,18 @@
 	import type { SubmitFunction } from '@sveltejs/kit';
 	import CloudFlareTurnStile from './CloudFlareTurnStile.svelte';
 	import { site } from '$lib/config';
-	import { contactTopics, type ContactTopic } from '$lib/content/site';
 
 	type Props = {
 		btnText?: string;
 		variant?: 'primary' | 'light' | 'outline';
 		size?: 'md' | 'lg';
-		/** Pre-selects the topic on the form, e.g. from a service page. */
-		topic?: ContactTopic;
 		class?: string;
 	};
 
 	let {
-		btnText = 'Let’s talk',
+		btnText = 'Let’s talk about your team',
 		variant = 'primary',
 		size = 'md',
-		topic,
 		class: className = ''
 	}: Props = $props();
 
@@ -131,11 +127,11 @@
 				</div>
 			{:else}
 				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">
-					Tell me what you’re working through
+					Let’s talk about your team
 				</h2>
 				<p class="mt-3 leading-relaxed text-muted">
-					Whether it’s a team you want to strengthen or a technology decision you need help with,
-					start with a no-obligation conversation. Leave a few details and I’ll be in touch.
+					Tell me where your developers are today and where you’d like them to be. Leave a few
+					details and I’ll be in touch to arrange a no-obligation conversation.
 				</p>
 
 				<form method="POST" action="/" use:enhance={submit} class="mt-6 space-y-4" novalidate>
@@ -168,31 +164,9 @@
 						</div>
 					{/each}
 
-					<fieldset>
-						<legend class="mb-1.5 block text-sm font-medium">
-							What’s it about? <span class="font-normal text-muted">(optional)</span>
-						</legend>
-						<div class="flex flex-col gap-2">
-							{#each Object.entries(contactTopics) as [value, label] (value)}
-								<label
-									class="flex cursor-pointer items-center gap-3 rounded-field border border-base-300 px-3 py-2.5 text-sm has-checked:border-primary has-checked:bg-primary/5"
-								>
-									<input
-										type="radio"
-										name="topic"
-										{value}
-										checked={topic === value}
-										class="radio radio-sm radio-primary"
-									/>
-									{label}
-								</label>
-							{/each}
-						</div>
-					</fieldset>
-
 					<div>
 						<label class="mb-1.5 block text-sm font-medium" for={fieldId('message')}>
-							Tell me a little more <span class="font-normal text-muted">(optional)</span>
+							Tell me about your team <span class="font-normal text-muted">(optional)</span>
 						</label>
 						<textarea
 							id={fieldId('message')}
@@ -200,7 +174,7 @@
 							rows="4"
 							maxlength="2000"
 							class="textarea w-full {fieldError('message') ? 'textarea-error' : ''}"
-							placeholder="Your team, the decision in front of you, what’s on your mind…"
+							placeholder="Team size, what they’re working on, where you’d like them to grow…"
 						></textarea>
 						{#if fieldError('message')}
 							<p class="mt-1 text-sm text-error">{fieldError('message')}</p>
