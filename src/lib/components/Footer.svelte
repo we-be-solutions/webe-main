@@ -12,8 +12,7 @@
 					<span class="text-lg font-bold tracking-tight">{site.name}</span>
 				</a>
 				<p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-					The Engineering Capability Accelerator: personalised coaching that helps software
-					engineers step up, on the work they’re already doing.
+					Practical technology consulting. Better systems, stronger teams and smarter decisions.
 				</p>
 			</div>
 

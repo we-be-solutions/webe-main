@@ -7,10 +7,11 @@
 		title: string;
 		intro?: string;
 		tone?: 'light' | 'muted' | 'dark';
+		align?: 'left' | 'center';
 		children: Snippet;
 	};
 
-	let { id, eyebrow, title, intro, tone = 'light', children }: Props = $props();
+	let { id, eyebrow, title, intro, tone = 'light', align = 'left', children }: Props = $props();
 
 	const tones = {
 		light: 'bg-base-100 text-base-content',
@@ -21,7 +22,7 @@
 
 <section {id} class="{tones[tone]} py-20 md:py-28" aria-labelledby="{id}-heading">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<header class="max-w-3xl">
+		<header class="max-w-3xl {align === 'center' ? 'mx-auto text-center' : ''}">
 			{#if eyebrow}
 				<p
 					class="text-sm font-semibold tracking-wider uppercase {tone === 'dark'
