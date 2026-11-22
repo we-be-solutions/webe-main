@@ -12,7 +12,7 @@ export const site = {
 	linkedin: null as string | null,
 	ogImage: 'https://webe.au/og-image.png',
 	description:
-		'Practical technology consulting. I help businesses choose the right technology, build better systems and grow teams that can do more on their own.'
+		'Senior tech leadership, without hiring a CTO. Technology consulting for Australian businesses without a dedicated tech lead: better systems, stronger teams and smarter decisions.'
 } as const;
 
 /**

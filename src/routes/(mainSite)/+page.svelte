@@ -3,7 +3,18 @@
 	import Section from '$lib/components/Section.svelte';
 	import Seo from '$lib/components/Seo.svelte';
 	import { site } from '$lib/config';
-	import { experience, problems, promise, services, steps, tagline } from '$lib/content/site';
+	import {
+		cta,
+		experience,
+		faqs,
+		headline,
+		problems,
+		promise,
+		reassurance,
+		services,
+		steps,
+		tagline
+	} from '$lib/content/site';
 
 	const jsonLd = [
 		{
@@ -22,15 +33,24 @@
 				itemOffered: {
 					'@type': 'Service',
 					name: service.title,
-					description: `${service.headline} ${service.body}`
+					description: `${service.outcome} ${service.body}`
 				}
+			}))
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: faqs.map((faq) => ({
+				'@type': 'Question',
+				name: faq.question,
+				acceptedAnswer: { '@type': 'Answer', text: faq.answer }
 			}))
 		}
 	];
 </script>
 
 <Seo
-	title="Technology Consulting: Strategy, System Design and Team Capability | WeBe Solutions"
+	title="Technology Consultant for Businesses Without a CTO | WeBe Solutions"
 	description={site.description}
 	path="/"
 	{jsonLd}
@@ -48,6 +68,24 @@
 	</svg>
 {/snippet}
 
+{#snippet reassure(className = '', tickClass = 'text-primary')}
+	<ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm {className}" aria-label="What to expect">
+		{#each reassurance as item (item)}
+			<li class="flex items-center gap-2">
+				{@render tick(tickClass)}
+				{item}
+			</li>
+		{/each}
+	</ul>
+{/snippet}
+
+{#snippet nextStep(lead: string)}
+	<div class="mt-12 flex flex-col items-center gap-4 text-center">
+		<p class="text-lg font-medium">{lead}</p>
+		<CtaBtn btnText={cta} />
+	</div>
+{/snippet}
+
 <!-- Hero -->
 <section class="relative overflow-hidden bg-base-100">
 	<div
@@ -61,21 +99,19 @@
 				class="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-100 px-3.5 py-1.5 text-sm font-medium text-muted"
 			>
 				<span class="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden="true"></span>
-				Technology consulting
+				Technology consulting for growing businesses
 			</p>
 			<h1
 				class="mt-7 text-[2.6rem] leading-[1.05] font-semibold tracking-tight sm:text-6xl md:text-7xl"
 			>
-				{#each tagline as line, i (line)}
-					<span class="block {i === tagline.length - 1 ? 'text-primary' : ''}">{`${line} `}</span>
-				{/each}
+				{headline}
 			</h1>
 			<p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				I help businesses choose the right technology, build better systems and grow teams that can
-				do more on their own.
+				For businesses without a dedicated tech lead. I help you choose the right technology, build
+				better systems and grow a team that can do more on its own.
 			</p>
 			<div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-				<CtaBtn btnText="Let’s talk" size="lg" />
+				<CtaBtn btnText={cta} size="lg" />
 				<a
 					href="#problems"
 					class="group inline-flex items-center gap-2 font-semibold text-base-content hover:text-primary"
@@ -84,6 +120,7 @@
 					<span class="transition-transform group-hover:translate-y-0.5" aria-hidden="true">↓</span>
 				</a>
 			</div>
+			{@render reassure('mt-8 text-muted')}
 		</div>
 	</div>
 </section>
@@ -95,7 +132,7 @@
 	align="center"
 	eyebrow="Sound familiar?"
 	title="Problems I help businesses solve"
-	intro="Most businesses don’t need a full-time technology leader or a big consulting firm. They need the right help at the right time."
+	intro="You don’t need a full-time CTO or a big consulting firm. You need the right help at the right time."
 >
 	<ul class="mx-auto max-w-3xl space-y-3">
 		{#each problems as item (item.problem)}
@@ -110,6 +147,7 @@
 			</li>
 		{/each}
 	</ul>
+	{@render nextStep('Recognise one of these?')}
 </Section>
 
 <!-- Services -->
@@ -138,6 +176,7 @@
 					{service.title}
 				</h3>
 				<p class="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">{service.headline}</p>
+				<p class="mt-3 text-xl font-medium tracking-tight">{service.outcome}</p>
 				<p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{service.body}</p>
 
 				<div class="mt-8 border-t border-base-300 pt-6">
@@ -156,6 +195,7 @@
 			</article>
 		{/each}
 	</div>
+	{@render nextStep('Not sure which you need? That’s what the first chat is for.')}
 </Section>
 
 <!-- How it works -->
@@ -164,14 +204,15 @@
 	tone="muted"
 	align="center"
 	eyebrow="How it works"
-	title="Simple, from the first chat"
+	title="Simple, from the first message"
+	intro="No long sales process. Here’s exactly what happens when you get in touch."
 >
-	<div class="relative mx-auto max-w-5xl">
+	<div class="relative mx-auto max-w-6xl">
 		<div
-			class="absolute top-6 right-[16.66%] left-[16.66%] hidden h-px bg-base-300 md:block"
+			class="absolute top-6 right-[12.5%] left-[12.5%] hidden h-px bg-base-300 lg:block"
 			aria-hidden="true"
 		></div>
-		<ol class="relative grid gap-10 md:grid-cols-3 md:gap-8">
+		<ol class="relative mx-auto grid max-w-md gap-10 lg:max-w-none lg:grid-cols-4 lg:gap-8">
 			{#each steps as step, i (step.title)}
 				<li class="text-center">
 					<span
@@ -206,14 +247,7 @@
 			Good help should leave you stronger. I fix today’s problem and help you handle the next one
 			yourself.
 		</p>
-		<ul class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 font-medium">
-			{#each ['Better decisions', 'Stronger teams', 'Lasting results'] as item (item)}
-				<li class="flex items-center gap-2">
-					{@render tick('text-secondary')}
-					{item}
-				</li>
-			{/each}
-		</ul>
+		<p class="mt-10 font-medium">{tagline}</p>
 	</div>
 </section>
 
@@ -221,16 +255,16 @@
 <Section id="about" eyebrow="About WeBe" title="Advice from someone who builds.">
 	<div class="max-w-2xl space-y-5 text-lg leading-relaxed">
 		<p>
-			Hi, I’m Brett. I’m a software engineer and technology consultant. I’ve spent years building
-			products, designing systems and leading tech teams.
+			Hi, I’m Brett. I’m a software engineer, solution architect and technical lead. I’ve spent my
+			career building products, designing systems and helping other people grow.
 		</p>
 		<p class="text-muted">
 			So my advice comes from real work, not theory. I don’t just tell you what to do. I can roll up
 			my sleeves and help you do it.
 		</p>
 		<p class="text-muted">
-			I started WeBe so businesses can get that kind of help without hiring a full-time technology
-			leader.
+			I started WeBe because many businesses need senior tech help but aren’t ready for a full-time
+			CTO. Now they can get it a few hours at a time.
 		</p>
 	</div>
 	<ul class="mt-10 flex max-w-3xl flex-wrap gap-2.5" aria-label="Background">
@@ -242,10 +276,39 @@
 	</ul>
 </Section>
 
+<!-- FAQ -->
+<Section id="faq" tone="muted" align="center" eyebrow="Questions" title="Good to know">
+	<div class="mx-auto max-w-3xl space-y-3">
+		{#each faqs as faq (faq.question)}
+			<details class="group rounded-box border border-base-300 bg-base-100 px-6 sm:px-8">
+				<summary
+					class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-semibold tracking-tight [&::-webkit-details-marker]:hidden"
+				>
+					{faq.question}
+					<svg
+						class="h-5 w-5 flex-none text-primary transition-transform group-open:rotate-45"
+						viewBox="0 0 20 20"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M10 4v12M4 10h12"
+							stroke="currentColor"
+							stroke-width="1.75"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</summary>
+				<p class="pr-10 pb-6 leading-relaxed text-muted">{faq.answer}</p>
+			</details>
+		{/each}
+	</div>
+</Section>
+
 <!-- Final CTA -->
 <section
 	id="contact"
-	class="bg-base-100 px-4 pb-20 sm:px-6 md:pb-28 lg:px-8"
+	class="bg-base-100 px-4 py-20 sm:px-6 md:py-28 lg:px-8"
 	aria-labelledby="contact-heading"
 >
 	<div
@@ -266,22 +329,12 @@
 				Tell me what’s slowing you down.
 			</h2>
 			<p class="mt-6 text-lg leading-relaxed text-neutral-content/75">
-				Send a few lines about the problem. I’ll reply myself and we’ll set up a short chat. You’ll
-				come away with clear next steps, even if we never work together.
+				Send a few lines about the problem. I’ll reply myself within 1 business day and we’ll set up
+				a short chat. You’ll come away with clear next steps, even if we never work together.
 			</p>
 			<div class="mt-10 flex flex-col items-center gap-6">
-				<CtaBtn btnText="Tell me what you need" variant="light" size="lg" />
-				<ul
-					class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-content/80"
-					aria-label="What to expect"
-				>
-					{#each ['Takes two minutes', 'No obligation', 'No hard sell'] as item (item)}
-						<li class="flex items-center gap-2">
-							{@render tick('text-secondary')}
-							{item}
-						</li>
-					{/each}
-				</ul>
+				<CtaBtn btnText={cta} variant="light" size="lg" />
+				{@render reassure('justify-center text-neutral-content/80', 'text-secondary')}
 				<p class="text-sm text-neutral-content/70">
 					Prefer email? <a
 						class="font-medium text-neutral-content underline decoration-secondary underline-offset-4 hover:decoration-2"
