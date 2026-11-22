@@ -25,7 +25,7 @@
 		<li>your name</li>
 		<li>your email address</li>
 		<li>your company name</li>
-		<li>anything you choose to tell us about your team in the optional message field.</li>
+		<li>anything you choose to tell us in the optional message field.</li>
 	</ul>
 	<p>
 		If you email us directly or become a client, we also hold the correspondence and business

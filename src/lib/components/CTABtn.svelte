@@ -13,7 +13,7 @@
 	};
 
 	let {
-		btnText = 'Let’s talk about your team',
+		btnText = 'Let’s talk',
 		variant = 'primary',
 		size = 'md',
 		class: className = ''
@@ -126,12 +126,10 @@
 					<button type="button" class="btn btn-primary mt-6" onclick={closeDialog}>Close</button>
 				</div>
 			{:else}
-				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">
-					Let’s talk about your team
-				</h2>
+				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">Let’s talk</h2>
 				<p class="mt-3 leading-relaxed text-muted">
-					Tell me where your developers are today and where you’d like them to be. Leave a few
-					details and I’ll be in touch to arrange a no-obligation conversation.
+					Tell me what you’re working on or where you’d like your team to be. Leave a few details
+					and I’ll be in touch to arrange a no-obligation conversation.
 				</p>
 
 				<form method="POST" action="/" use:enhance={submit} class="mt-6 space-y-4" novalidate>
@@ -166,7 +164,7 @@
 
 					<div>
 						<label class="mb-1.5 block text-sm font-medium" for={fieldId('message')}>
-							Tell me about your team <span class="font-normal text-muted">(optional)</span>
+							What are you trying to achieve? <span class="font-normal text-muted">(optional)</span>
 						</label>
 						<textarea
 							id={fieldId('message')}
@@ -174,7 +172,7 @@
 							rows="4"
 							maxlength="2000"
 							class="textarea w-full {fieldError('message') ? 'textarea-error' : ''}"
-							placeholder="Team size, what they’re working on, where you’d like them to grow…"
+							placeholder="A system you’re planning, a technology decision, a team you’d like to develop…"
 						></textarea>
 						{#if fieldError('message')}
 							<p class="mt-1 text-sm text-error">{fieldError('message')}</p>

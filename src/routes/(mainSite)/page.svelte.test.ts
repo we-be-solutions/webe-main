@@ -10,27 +10,27 @@ describe('/+page.svelte', () => {
 	test('renders the headline', () => {
 		render(Page);
 		expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-			'Help your developers step up.'
+			'Better products. Stronger teams. Smarter technology decisions.'
 		);
 	});
 
-	test('presents the four capabilities', () => {
+	test('presents both services', () => {
 		render(Page);
-		for (const name of [
-			'Technical judgement',
-			'Problem-solving',
-			'Engineering ownership',
-			'Engineering practices'
-		]) {
+		for (const name of ['Technology Strategy & System Design', 'Team Capability & Development']) {
 			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
 		}
 	});
 
 	test('has the primary call to action', () => {
 		render(Page);
+		expect(screen.getAllByRole('button', { name: 'Let’s talk' }).length).toBeGreaterThan(0);
+	});
+
+	test('states the central promise', () => {
+		render(Page);
 		expect(
-			screen.getAllByRole('button', { name: 'Let’s talk about your team' }).length
-		).toBeGreaterThan(0);
+			screen.getByRole('heading', { name: 'Build capability, not dependency.' })
+		).toBeInTheDocument();
 	});
 
 	test('avoids obsolete or off-limits claims', () => {
@@ -41,5 +41,6 @@ describe('/+page.svelte', () => {
 		expect(text).not.toMatch(/guarantee/i);
 		expect(text).not.toMatch(/unlock your potential|supercharge|10x/i);
 		expect(text).not.toMatch(/\/blog/);
+		expect(text).not.toMatch(/Capability Accelerator/);
 	});
 });

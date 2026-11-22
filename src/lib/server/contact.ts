@@ -93,11 +93,11 @@ export const contactAction = async ({ request }: RequestEvent) => {
 				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; padding: 20px; line-height: 1.6;">
 					<h2 style="color: #007a99; margin-top: 0;">Thanks for getting in touch</h2>
 					<p>Hi ${name},</p>
-					<p>Thanks for reaching out about your team. I’ve received your message and will get back to you personally to arrange a time to talk.</p>
+					<p>Thanks for reaching out. I’ve received your message and will get back to you personally to arrange a time to talk.</p>
 					<p>If there’s anything you’d like me to know beforehand, just reply to this email.</p>
 					<hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
 					<p style="margin-bottom: 0; font-size: 14px; color: #64748b;">
-						${site.name} · Engineering Capability Accelerator ·
+						${site.name} · Technology Consulting ·
 						<a href="${site.url}" style="color: #007a99; text-decoration: none;">webe.au</a>${
 							site.linkedin
 								? ` · <a href="${site.linkedin}" style="color: #007a99; text-decoration: none;">LinkedIn</a>`
