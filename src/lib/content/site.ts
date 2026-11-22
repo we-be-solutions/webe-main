@@ -127,12 +127,12 @@ export const faqs: Faq[] = [
 	{
 		question: 'How does working together work?',
 		answer:
-			'Most clients use a simple retainer. That might be a few set hours each week, or help when you need it. We agree what’s included up front.'
+			'You choose a simple monthly plan. Some clients have regular time booked each week. Others keep me on call for help when they need it. We agree what’s included up front.'
 	},
 	{
 		question: 'What does it cost?',
 		answer:
-			'I charge by the hour. After our first chat you’ll get a clear quote based on what you need, so there are no surprises.'
+			'It depends on how much help you need. After our first chat you’ll get a clear monthly price, so there are no surprises.'
 	},
 	{
 		question: 'Do I need a tech team already?',
