@@ -256,20 +256,34 @@
 			aria-hidden="true"
 		></div>
 		<div class="relative mx-auto max-w-2xl">
+			<p class="text-sm font-semibold tracking-wider text-secondary uppercase">
+				Not sure where to start?
+			</p>
 			<h2
 				id="contact-heading"
-				class="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
+				class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
 			>
-				Let’s work through your next challenge.
+				Tell me what’s slowing you down.
 			</h2>
 			<p class="mt-6 text-lg leading-relaxed text-neutral-content/75">
-				Tell me what you’re trying to do. We’ll work out the best next step together. No pressure,
-				no hard sell.
+				Send a few lines about the problem. I’ll reply myself and we’ll set up a short chat. You’ll
+				come away with clear next steps, even if we never work together.
 			</p>
-			<div class="mt-10 flex flex-col items-center gap-5">
-				<CtaBtn btnText="Get in touch" variant="light" size="lg" />
+			<div class="mt-10 flex flex-col items-center gap-6">
+				<CtaBtn btnText="Tell me what you need" variant="light" size="lg" />
+				<ul
+					class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-content/80"
+					aria-label="What to expect"
+				>
+					{#each ['Takes two minutes', 'No obligation', 'No hard sell'] as item (item)}
+						<li class="flex items-center gap-2">
+							{@render tick('text-secondary')}
+							{item}
+						</li>
+					{/each}
+				</ul>
 				<p class="text-sm text-neutral-content/70">
-					Or email <a
+					Prefer email? <a
 						class="font-medium text-neutral-content underline decoration-secondary underline-offset-4 hover:decoration-2"
 						href="mailto:{site.email}">{site.email}</a
 					>
