@@ -31,16 +31,16 @@ export const problems: Problem[] = [
 		fix: 'Get a straight answer you can take back to them.'
 	},
 	{
-		problem: 'What you sell is moving faster than your team’s skills.',
-		fix: 'Grow their skills on real client work.'
+		problem: 'You’re building your own systems, but not sure you’re doing it right.',
+		fix: 'Build them with an engineer beside you, and learn as you go.'
 	},
 	{
 		problem: 'Clients want AI and you’re not sure what you can deliver.',
 		fix: 'Work out what you can offer, and how to build it properly.'
 	},
 	{
-		problem: 'Your team gets stuck waiting on one person.',
-		fix: 'Spread the know-how, so more people can solve problems.'
+		problem: 'Every client project still needs you in the room.',
+		fix: 'Grow a team that can run projects from brief to delivery.'
 	}
 ];
 
@@ -57,6 +57,20 @@ export type Service = {
 
 export const services: Service[] = [
 	{
+		id: 'coaching',
+		title: 'Hands-on Coaching',
+		headline: 'Grow the people.',
+		outcome: 'Get the work done properly, and keep the skills in your business.',
+		body: 'We set goals and work through problems, build together on your real work, then finish with a short retro on what worked. You and your team learn the technical side and the delivery around it: briefs, planning, building and shipping.',
+		helpsWith: [
+			'Building together on your real work',
+			'Solution architecture',
+			'Writing briefs and planning work',
+			'Delivering projects end to end',
+			'Progress updates for you'
+		]
+	},
+	{
 		id: 'advisory',
 		title: 'Technical Advice for Leaders',
 		headline: 'Make better tech calls.',
@@ -68,20 +82,6 @@ export const services: Service[] = [
 			'Where AI fits in what you sell',
 			'Checking what your team or vendors propose',
 			'Cutting risk and cost'
-		]
-	},
-	{
-		id: 'team',
-		title: 'Team Capability & Development',
-		headline: 'Grow the people.',
-		outcome: 'A team that delivers more on its own and needs you less.',
-		body: 'You don’t always need to hire more people to get more done. I work with your team on real client work, so they learn by doing and get more confident every week.',
-		helpsWith: [
-			'One-on-one mentoring and coaching',
-			'Building technical skills',
-			'Better ways of working',
-			'Getting the most from new tools and AI',
-			'Solving problems without getting stuck'
 		]
 	}
 ];
@@ -103,7 +103,7 @@ export const steps: Step[] = [
 	},
 	{
 		title: 'Work together',
-		body: 'A few hours a week, or help when you need it. I step back as your team grows.'
+		body: 'Regular sessions, or help when you need it. I step back as your team grows.'
 	}
 ];
 

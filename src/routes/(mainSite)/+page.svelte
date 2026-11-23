@@ -107,9 +107,9 @@
 				{headline}
 			</h1>
 			<p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				For agencies and consultancies without a senior tech lead. I help you choose platforms,
-				design systems and check proposals before you commit. And I mentor your team so they need
-				you less.
+				For agencies and consultancies without a senior tech lead. I work hands-on with whoever is
+				building, your team or you, so the work gets done properly and the skills stay in your
+				business. And I’m on hand for the big tech calls.
 			</p>
 			<div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
 				<CtaBtn btnText={cta} size="lg" />
@@ -157,7 +157,7 @@
 	align="center"
 	eyebrow="How I can help"
 	title="Two ways I help"
-	intro="One helps you make better calls. The other grows the team that delivers them. Most clients start with the first and add the second."
+	intro="One grows the people doing the work. The other helps you make the big calls. Most clients need a bit of both."
 >
 	<div class="mx-auto max-w-4xl space-y-8">
 		{#each services as service, i (service.id)}

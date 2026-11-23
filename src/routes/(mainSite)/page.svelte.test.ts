@@ -16,7 +16,7 @@ describe('/+page.svelte', () => {
 
 	test('presents both services', () => {
 		render(Page);
-		for (const name of ['Technical Advice for Leaders', 'Team Capability & Development']) {
+		for (const name of ['Hands-on Coaching', 'Technical Advice for Leaders']) {
 			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
 		}
 	});
@@ -45,5 +45,6 @@ describe('/+page.svelte', () => {
 		expect(text).not.toMatch(/\/blog/);
 		expect(text).not.toMatch(/Capability Accelerator/);
 		expect(text).not.toMatch(/growing businesses/i);
+		expect(text).not.toMatch(/junior/i);
 	});
 });
