@@ -10,7 +10,7 @@ describe('/+page.svelte', () => {
 	test('renders the headline', () => {
 		render(Page);
 		expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-			'Senior tech leadership, without hiring a CTO.'
+			'Senior technical leadership, without the full-time hire.'
 		);
 	});
 

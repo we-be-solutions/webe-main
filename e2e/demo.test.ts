@@ -2,7 +2,9 @@ import { expect, test } from '@playwright/test';
 
 test('home page has expected h1', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.locator('h1')).toHaveText('Senior tech leadership, without hiring a CTO.');
+	await expect(page.locator('h1')).toHaveText(
+		'Senior technical leadership, without the full-time hire.'
+	);
 });
 
 test('retired service pages redirect home', async ({ page }) => {

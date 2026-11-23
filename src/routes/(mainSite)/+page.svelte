@@ -50,7 +50,7 @@
 </script>
 
 <Seo
-	title="Technology Consultant for Businesses Without a CTO | WeBe Solutions"
+	title="Technical Leadership and Technology Consulting | WeBe Solutions"
 	description={site.description}
 	path="/"
 	{jsonLd}
@@ -132,7 +132,7 @@
 	align="center"
 	eyebrow="Sound familiar?"
 	title="Problems I help businesses solve"
-	intro="You don’t need a full-time CTO or a big consulting firm. You need the right help at the right time."
+	intro="You don’t need a full-time technical leader or a big consulting firm. You need the right help at the right time."
 >
 	<ul class="mx-auto max-w-3xl space-y-3">
 		{#each problems as item (item.problem)}
@@ -264,7 +264,7 @@
 		</p>
 		<p class="text-muted">
 			I started WeBe because many businesses need senior tech help but aren’t ready for a full-time
-			CTO. Now they can get it a few hours at a time.
+			technical leader. Now they can get it a few hours at a time.
 		</p>
 	</div>
 	<ul class="mt-10 flex max-w-3xl flex-wrap gap-2.5" aria-label="Background">

@@ -6,7 +6,7 @@
  * couldn't follow a line, rewrite it.
  */
 
-export const headline = 'Senior tech leadership, without hiring a CTO.';
+export const headline = 'Senior technical leadership, without the full-time hire.';
 
 export const tagline = 'Better products. Stronger teams. Smarter technology decisions.';
 
@@ -122,7 +122,7 @@ export const faqs: Faq[] = [
 	{
 		question: 'Who do you work with?',
 		answer:
-			'Businesses across Australia that rely on technology but don’t have a dedicated tech lead or CTO. Some have a small tech team. Some have none.'
+			'Businesses across Australia that rely on technology but don’t have a dedicated technical leader. Some have a small tech team. Some have none.'
 	},
 	{
 		question: 'How does working together work?',
