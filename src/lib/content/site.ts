@@ -39,8 +39,8 @@ export const problems: Problem[] = [
 		fix: 'Work out what you can offer, and how to build it properly.'
 	},
 	{
-		problem: 'Your team gets stuck waiting on one person.',
-		fix: 'Spread the know-how, so more people can solve problems.'
+		problem: 'Your juniors can code, but you can’t put them in front of a client.',
+		fix: 'Grow them into consultants who can run a project end to end.'
 	}
 ];
 
@@ -72,16 +72,16 @@ export const services: Service[] = [
 	},
 	{
 		id: 'team',
-		title: 'Team Capability & Development',
+		title: 'Developer Mentoring',
 		headline: 'Grow the people.',
-		outcome: 'A team that delivers more on its own and needs you less.',
-		body: 'You don’t always need to hire more people to get more done. I work with your team on real client work, so they learn by doing and get more confident every week.',
+		outcome: 'Junior developers who can run a client project, from the first meeting to delivery.',
+		body: 'Each week we set goals and work through problems. Then we spend two hours coding together on real client work, and finish with a short look back at what worked. Your developers learn the technical work and the consulting around it: client meetings, writing briefs, planning and delivery.',
 		helpsWith: [
-			'One-on-one mentoring and coaching',
-			'Building technical skills',
-			'Better ways of working',
-			'Getting the most from new tools and AI',
-			'Solving problems without getting stuck'
+			'Pair coding on real client work',
+			'Solution architecture',
+			'Client meetings and briefs',
+			'Planning and delivering projects',
+			'Weekly goals and retros'
 		]
 	}
 ];
