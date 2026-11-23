@@ -74,14 +74,14 @@ export const services: Service[] = [
 		id: 'advisory',
 		title: 'Technical Advice for Leaders',
 		headline: 'Make better tech calls.',
-		outcome: 'Know what to choose, what it will cost and what could go wrong, before you commit.',
-		body: 'You run the business, but technology shapes what you can sell and deliver. I’m the senior technical person you check things with: platform choices, system designs, vendor quotes and what your team proposes. You get a clear recommendation and the reasons behind it.',
+		outcome: 'Know where to put your time and money, and why.',
+		body: 'You run the business, but technology shapes what you can sell and deliver. I’m the senior technical person you think things through with: where technology and your market are heading, how your systems fit together, what your team can do, and what to improve next.',
 		helpsWith: [
-			'Big technology and platform decisions',
-			'System design and architecture',
-			'Where AI fits in what you sell',
-			'Checking what your team or vendors propose',
-			'Cutting risk and cost'
+			'Where technology and your market are heading',
+			'How your systems work as a whole',
+			'What your team can do, and what’s missing',
+			'What to improve next',
+			'Big platform and vendor decisions'
 		]
 	}
 ];
