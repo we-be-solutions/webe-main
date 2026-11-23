@@ -68,13 +68,6 @@ export const contactAction = async ({ request }: RequestEvent) => {
 	const sender = env.SENDER_EMAIL || '';
 	const receiver = env.RECEIVER_EMAIL || '';
 
-	// Send the confirmation as Brett, so the enquirer's replies reach him and his reply
-	// (sent from his copy of the confirmation) lands in the same thread. This needs the
-	// site email's domain to be verified in Resend, which it is whenever the sender shares it.
-	const domainOf = (address: string) => address.split('@').pop()?.replace(/>$/, '').toLowerCase();
-	const canSendAsBrett = domainOf(sender) === domainOf(site.email);
-	const confirmationFrom = canSendAsBrett ? `Brett at ${site.shortName} <${site.email}>` : sender;
-
 	try {
 		// Notify WeBe
 		await getResend().emails.send({
@@ -88,22 +81,14 @@ export const contactAction = async ({ request }: RequestEvent) => {
 				<p><strong>Email:</strong> ${email}</p>
 				<p><strong>Company:</strong> ${company || '<em>Not provided</em>'}</p>
 				<p><strong>Message:</strong><br />${message || '<em>Not provided</em>'}</p>
-				${
-					canSendAsBrett
-						? '<p style="color: #64748b; font-size: 14px;">Tip: reply to your copy of their confirmation email (“Thanks for getting in touch”) to keep everything in one thread.</p>'
-						: ''
-				}
 			`
 		});
 
 		// Acknowledgement to the enquirer
 		await getResend().emails.send({
-			from: confirmationFrom,
+			from: sender,
 			to: result.data.email,
-			// Brett gets a copy to reply from. When it's sent as him, replying to that copy goes
-			// to the enquirer; a Reply-To would point it back at himself, so only set one otherwise.
-			bcc: receiver || undefined,
-			...(canSendAsBrett ? {} : { replyTo: site.email }),
+			replyTo: site.email,
 			subject: `Thanks for getting in touch, ${result.data.name}`,
 			html: `
 				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; padding: 20px; line-height: 1.6;">
@@ -111,12 +96,6 @@ export const contactAction = async ({ request }: RequestEvent) => {
 					<p>Hi ${name},</p>
 					<p>Thanks for reaching out. I’ve received your message and will reply myself within 1 business day to set up a short chat.</p>
 					<p>If there’s anything you’d like me to know beforehand, just reply to this email.</p>
-					<p>Cheers,<br />Brett</p>
-					${
-						message
-							? `<div style="margin-top: 24px; padding: 12px 16px; border-left: 3px solid #e2e8f0; color: #64748b;"><p style="margin: 0 0 4px; font-size: 14px;">What you sent:</p><p style="margin: 0;">${message}</p></div>`
-							: ''
-					}
 					<hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
 					<p style="margin-bottom: 0; font-size: 14px; color: #64748b;">
 						${site.name} · Technology Consulting ·
