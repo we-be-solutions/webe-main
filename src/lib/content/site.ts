@@ -8,7 +8,7 @@
 
 export const headline = 'Senior technical leadership, without the full-time hire.';
 
-export const tagline = 'Better products. Stronger teams. Smarter technology decisions.';
+export const tagline = 'Better tech decisions. Stronger teams.';
 
 /** The one action the whole page asks for. Use it on every button. */
 export const cta = 'Tell me what you need';
@@ -23,24 +23,24 @@ export type Problem = { problem: string; fix: string };
 /** The problems a visitor should recognise. Write them in the visitor's own words. */
 export const problems: Problem[] = [
 	{
-		problem: 'You’re not sure which technology to choose.',
-		fix: 'Get clear, independent advice before you spend.'
+		problem: 'You’re making big tech calls with nobody to check them.',
+		fix: 'Check them first with someone who has made them before.'
 	},
 	{
-		problem: 'Your systems don’t talk to each other.',
-		fix: 'Connect them, so work flows without double handling.'
+		problem: 'Clients ask about tech you can’t properly judge.',
+		fix: 'Get a straight answer you can take back to them.'
 	},
 	{
-		problem: 'You know AI could help, but not where to start.',
-		fix: 'Find the simple wins and put them to work.'
+		problem: 'What you sell is moving faster than your team’s skills.',
+		fix: 'Grow their skills on real client work.'
+	},
+	{
+		problem: 'Clients want AI and you’re not sure what you can deliver.',
+		fix: 'Work out what you can offer, and how to build it properly.'
 	},
 	{
 		problem: 'Your team gets stuck waiting on one person.',
-		fix: 'Grow their skills, so more people can solve problems.'
-	},
-	{
-		problem: 'You need senior tech help, but not full-time.',
-		fix: 'Get experienced help, only when you need it.'
+		fix: 'Spread the know-how, so more people can solve problems.'
 	}
 ];
 
@@ -57,25 +57,25 @@ export type Service = {
 
 export const services: Service[] = [
 	{
-		id: 'strategy',
-		title: 'Technology Strategy & System Design',
-		headline: 'Fix the technology.',
-		outcome: 'Spend on the right things and stop fighting your systems.',
-		body: 'Good technology starts with the problem, not the tools. I help you choose, plan and design systems that fit your business, your budget and the way you work.',
+		id: 'advisory',
+		title: 'Technical Advice for Leaders',
+		headline: 'Make better tech calls.',
+		outcome: 'Know what to choose, what it will cost and what could go wrong, before you commit.',
+		body: 'You run the business, but technology shapes what you can sell and deliver. I’m the senior technical person you check things with: platform choices, system designs, vendor quotes and what your team proposes. You get a clear recommendation and the reasons behind it.',
 		helpsWith: [
-			'Planning your tech direction',
-			'Designing new systems',
-			'Choosing software and platforms',
-			'Connecting systems, AI and automation',
+			'Big technology and platform decisions',
+			'System design and architecture',
+			'Where AI fits in what you sell',
+			'Checking what your team or vendors propose',
 			'Cutting risk and cost'
 		]
 	},
 	{
-		id: 'capability',
+		id: 'team',
 		title: 'Team Capability & Development',
 		headline: 'Grow the people.',
-		outcome: 'A team that solves more on its own and needs you less.',
-		body: 'You don’t always need to hire more people to get more done. I work with your team on their real work, so they learn by doing and get more confident every week.',
+		outcome: 'A team that delivers more on its own and needs you less.',
+		body: 'You don’t always need to hire more people to get more done. I work with your team on real client work, so they learn by doing and get more confident every week.',
 		helpsWith: [
 			'One-on-one mentoring and coaching',
 			'Building technical skills',
@@ -108,6 +108,7 @@ export const steps: Step[] = [
 ];
 
 export const experience: string[] = [
+	'Advising founders and leaders',
 	'Software engineering',
 	'Solution architecture',
 	'Integrations and business systems',
@@ -122,7 +123,12 @@ export const faqs: Faq[] = [
 	{
 		question: 'Who do you work with?',
 		answer:
-			'Businesses across Australia that rely on technology but don’t have a dedicated technical leader. Some have a small tech team. Some have none.'
+			'Founders and leaders of agencies, consultancies and other service firms across Australia. Your business runs on technology, but you don’t have a senior technical leader. Some have a small tech team. Some have none.'
+	},
+	{
+		question: 'Is this just about AI?',
+		answer:
+			'No. AI is one part of it. Most of the work is platform choices, system design and helping your team deliver. When something new comes along, I help you work out if it matters to your business.'
 	},
 	{
 		question: 'How does working together work?',

@@ -16,7 +16,7 @@ describe('/+page.svelte', () => {
 
 	test('presents both services', () => {
 		render(Page);
-		for (const name of ['Technology Strategy & System Design', 'Team Capability & Development']) {
+		for (const name of ['Technical Advice for Leaders', 'Team Capability & Development']) {
 			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
 		}
 	});
@@ -44,5 +44,6 @@ describe('/+page.svelte', () => {
 		expect(text).not.toMatch(/unlock your potential|supercharge|10x/i);
 		expect(text).not.toMatch(/\/blog/);
 		expect(text).not.toMatch(/Capability Accelerator/);
+		expect(text).not.toMatch(/growing businesses/i);
 	});
 });

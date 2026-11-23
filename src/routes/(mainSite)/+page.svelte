@@ -50,7 +50,7 @@
 </script>
 
 <Seo
-	title="Technical Leadership and Technology Consulting | WeBe Solutions"
+	title="Technical Leadership for Agencies and Consultancies | WeBe Solutions"
 	description={site.description}
 	path="/"
 	{jsonLd}
@@ -99,7 +99,7 @@
 				class="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-100 px-3.5 py-1.5 text-sm font-medium text-muted"
 			>
 				<span class="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden="true"></span>
-				Technology consulting for growing businesses
+				Technical advisor to agency and consultancy leaders
 			</p>
 			<h1
 				class="mt-7 text-[2.6rem] leading-[1.05] font-semibold tracking-tight sm:text-6xl md:text-7xl"
@@ -107,8 +107,9 @@
 				{headline}
 			</h1>
 			<p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				For businesses without a dedicated tech lead. I help you choose the right technology, build
-				better systems and grow a team that can do more on its own.
+				For agencies and consultancies without a senior tech lead. I help you choose platforms,
+				design systems and check proposals before you commit. And I mentor your team so they need
+				you less.
 			</p>
 			<div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
 				<CtaBtn btnText={cta} size="lg" />
@@ -155,8 +156,8 @@
 	id="services"
 	align="center"
 	eyebrow="How I can help"
-	title="Two ways to make technology work for you"
-	intro="One improves the technology. The other improves the people who use it. Most clients need a bit of both."
+	title="Two ways I help"
+	intro="One helps you make better calls. The other grows the team that delivers them. Most clients start with the first and add the second."
 >
 	<div class="mx-auto max-w-4xl space-y-8">
 		{#each services as service, i (service.id)}
@@ -263,8 +264,8 @@
 			my sleeves and help you do it.
 		</p>
 		<p class="text-muted">
-			I started WeBe because many businesses need senior tech help but aren’t ready for a full-time
-			technical leader. Now they can get it a few hours at a time.
+			I started WeBe because many agency and consultancy leaders make big tech calls without a
+			senior technical person to talk them through. Now they can have one, a few hours at a time.
 		</p>
 	</div>
 	<ul class="mt-10 flex max-w-3xl flex-wrap gap-2.5" aria-label="Background">
