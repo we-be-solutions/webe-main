@@ -16,7 +16,7 @@ describe('/+page.svelte', () => {
 
 	test('presents both services', () => {
 		render(Page);
-		for (const name of ['Technical Advice for Leaders', 'Developer Mentoring']) {
+		for (const name of ['Technical Advice for Leaders', 'Team Capability & Development']) {
 			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
 		}
 	});
