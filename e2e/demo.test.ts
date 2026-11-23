@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('home page has expected h1', async ({ page }) => {
 	await page.goto('/');
 	await expect(page.locator('h1')).toHaveText(
-		'Better products. Stronger teams. Smarter technology decisions.'
+		'Senior technical leadership, without the full-time hire.'
 	);
 });
 
@@ -23,7 +23,7 @@ test('articles are hidden', async ({ page }) => {
 
 test('contact dialog opens from the hero', async ({ page }) => {
 	await page.goto('/');
-	await page.getByRole('button', { name: 'Let’s talk', exact: true }).first().click();
+	await page.getByRole('button', { name: 'Tell me what you need' }).first().click();
 	await expect(page.getByRole('dialog')).toBeVisible();
 	await expect(page.getByLabel('Work email')).toBeVisible();
 });

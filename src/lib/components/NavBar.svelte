@@ -2,6 +2,7 @@
 	import LogoNoWords from '../../components/svg/logoNoWords.svelte';
 	import CtaBtn from './CTABtn.svelte';
 	import { clickOutside } from '$lib/clickOutside';
+	import { cta } from '$lib/content/site';
 
 	let menuOpen = $state(false);
 
@@ -9,7 +10,8 @@
 		{ href: '/#problems', label: 'Problems I solve' },
 		{ href: '/#services', label: 'Services' },
 		{ href: '/#how-it-works', label: 'How it works' },
-		{ href: '/#about', label: 'About' }
+		{ href: '/#about', label: 'About' },
+		{ href: '/#faq', label: 'FAQ' }
 	];
 </script>
 
@@ -40,7 +42,7 @@
 		</ul>
 
 		<div class="flex items-center gap-2">
-			<CtaBtn btnText="Let’s talk" class="btn-sm hidden sm:inline-flex" />
+			<CtaBtn btnText={cta} class="btn-sm hidden sm:inline-flex" />
 			<button
 				class="btn btn-ghost btn-square lg:hidden"
 				aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -84,7 +86,7 @@
 					</li>
 				{/each}
 				<li class="pt-2 sm:hidden">
-					<CtaBtn btnText="Let’s talk" class="w-full" />
+					<CtaBtn btnText={cta} class="w-full" />
 				</li>
 			</ul>
 		</div>

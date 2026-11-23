@@ -10,7 +10,7 @@ describe('/+page.svelte', () => {
 	test('renders the headline', () => {
 		render(Page);
 		expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-			'Better products. Stronger teams. Smarter technology decisions.'
+			'Senior technical leadership, without the full-time hire.'
 		);
 	});
 
@@ -23,7 +23,9 @@ describe('/+page.svelte', () => {
 
 	test('has the primary call to action', () => {
 		render(Page);
-		expect(screen.getAllByRole('button', { name: 'Let’s talk' }).length).toBeGreaterThan(0);
+		expect(screen.getAllByRole('button', { name: 'Tell me what you need' }).length).toBeGreaterThan(
+			0
+		);
 	});
 
 	test('states the central promise', () => {

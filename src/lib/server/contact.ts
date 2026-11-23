@@ -12,7 +12,7 @@ const formSchema = z
 			.trim()
 			.min(1, 'Email is required')
 			.email('Please enter a valid email address'),
-		company: z.string().trim().min(1, 'Company is required').max(100, 'Company name is too long'),
+		company: z.string().trim().max(100, 'Company name is too long').optional().default(''),
 		message: z.string().trim().max(2000, 'Message is too long').optional().default(''),
 		honeypot: z.string().max(0, 'honeypot'),
 		'cf-turnstile-response': z.string()
@@ -74,12 +74,12 @@ export const contactAction = async ({ request }: RequestEvent) => {
 			from: sender,
 			to: receiver,
 			replyTo: result.data.email,
-			subject: `New enquiry: ${result.data.name} (${result.data.company})`,
+			subject: `New enquiry: ${result.data.name}${result.data.company ? ` (${result.data.company})` : ''}`,
 			html: `
 				<h2>New enquiry from webe.au</h2>
 				<p><strong>Name:</strong> ${name}</p>
 				<p><strong>Email:</strong> ${email}</p>
-				<p><strong>Company:</strong> ${company}</p>
+				<p><strong>Company:</strong> ${company || '<em>Not provided</em>'}</p>
 				<p><strong>Message:</strong><br />${message || '<em>Not provided</em>'}</p>
 			`
 		});
@@ -93,7 +93,7 @@ export const contactAction = async ({ request }: RequestEvent) => {
 				<div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; padding: 20px; line-height: 1.6;">
 					<h2 style="color: #007a99; margin-top: 0;">Thanks for getting in touch</h2>
 					<p>Hi ${name},</p>
-					<p>Thanks for reaching out. I’ve received your message and will get back to you personally to arrange a time to talk.</p>
+					<p>Thanks for reaching out. I’ve received your message and will reply myself within 1 business day to set up a short chat.</p>
 					<p>If there’s anything you’d like me to know beforehand, just reply to this email.</p>
 					<hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
 					<p style="margin-bottom: 0; font-size: 14px; color: #64748b;">

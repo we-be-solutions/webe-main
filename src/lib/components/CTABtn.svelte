@@ -13,7 +13,7 @@
 	};
 
 	let {
-		btnText = 'Let’s talk',
+		btnText = 'Tell me what you need',
 		variant = 'primary',
 		size = 'md',
 		class: className = ''
@@ -33,9 +33,15 @@
 	const fieldError = (name: string) => issues.find((issue) => issue.path[0] === name)?.message;
 
 	const fields = [
-		{ name: 'name', label: 'Full name', type: 'text', autocomplete: 'name' },
-		{ name: 'email', label: 'Work email', type: 'email', autocomplete: 'email' },
-		{ name: 'company', label: 'Company', type: 'text', autocomplete: 'organization' }
+		{ name: 'name', label: 'Full name', type: 'text', autocomplete: 'name', required: true },
+		{ name: 'email', label: 'Work email', type: 'email', autocomplete: 'email', required: true },
+		{
+			name: 'company',
+			label: 'Company',
+			type: 'text',
+			autocomplete: 'organization',
+			required: false
+		}
 	] as const;
 
 	const variants = {
@@ -120,16 +126,18 @@
 						Thanks, message sent
 					</h2>
 					<p class="mt-3 leading-relaxed text-muted">
-						I’ll read through what you’ve shared and get back to you personally to arrange a time to
-						talk. A confirmation is on its way to your inbox.
+						I’ll read what you’ve shared and reply myself within 1 business day to set up a short
+						chat. A confirmation is on its way to your inbox.
 					</p>
 					<button type="button" class="btn btn-primary mt-6" onclick={closeDialog}>Close</button>
 				</div>
 			{:else}
-				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">Let’s talk</h2>
+				<h2 id="{uid}-title" class="pr-8 text-2xl font-semibold tracking-tight">
+					Tell me what you need
+				</h2>
 				<p class="mt-3 leading-relaxed text-muted">
-					Tell me what you’re working on or where you’d like your team to be. Leave a few details
-					and I’ll be in touch to arrange a no-obligation conversation.
+					A few lines is plenty. I’ll reply within 1 business day to set up a short, free chat. No
+					obligation, no hard sell.
 				</p>
 
 				<form method="POST" action="/" use:enhance={submit} class="mt-6 space-y-4" novalidate>
@@ -141,13 +149,14 @@
 						<div>
 							<label class="mb-1.5 block text-sm font-medium" for={fieldId(field.name)}>
 								{field.label}
+								{#if !field.required}<span class="font-normal text-muted">(optional)</span>{/if}
 							</label>
 							<input
 								id={fieldId(field.name)}
 								name={field.name}
 								type={field.type}
 								autocomplete={field.autocomplete}
-								required
+								required={field.required}
 								class="input w-full {fieldError(field.name) ? 'input-error' : ''}"
 								aria-invalid={fieldError(field.name) ? 'true' : undefined}
 								aria-describedby={fieldError(field.name)
@@ -164,7 +173,7 @@
 
 					<div>
 						<label class="mb-1.5 block text-sm font-medium" for={fieldId('message')}>
-							What are you trying to achieve? <span class="font-normal text-muted">(optional)</span>
+							What do you need help with? <span class="font-normal text-muted">(optional)</span>
 						</label>
 						<textarea
 							id={fieldId('message')}
