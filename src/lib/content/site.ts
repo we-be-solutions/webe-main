@@ -1,14 +1,14 @@
 /**
- * Homepage copy for WeBe Technology Consulting.
+ * Homepage copy for WeBe, a fractional tech lead for teams of one to five developers, and owners who build it themselves.
  * Kept as data so the page, structured data and tests share one source.
  *
  * Style: Australian English. Plain words, short sentences. If a twelve-year-old
  * couldn't follow a line, rewrite it.
  */
 
-export const headline = 'Senior technical leadership, without the full-time hire.';
+export const headline = 'Your senior tech lead, whether you’re a team of one or five.';
 
-export const tagline = 'Better tech decisions. Stronger teams.';
+export const tagline = 'Clear goals. Stronger teams. Better output.';
 
 /** The one action the whole page asks for. Use it on every button. */
 export const cta = 'Tell me what you need';
@@ -23,24 +23,32 @@ export type Problem = { problem: string; fix: string };
 /** The problems a visitor should recognise. Write them in the visitor's own words. */
 export const problems: Problem[] = [
 	{
-		problem: 'You’re making big tech calls with nobody to check them.',
-		fix: 'Check them first with someone who has made them before.'
+		problem: 'The business and the engineers don’t speak the same language.',
+		fix: 'Turn business goals into clear work, and technical trade-offs into plain English.'
 	},
 	{
-		problem: 'Clients ask about tech you can’t properly judge.',
-		fix: 'Get a straight answer you can take back to them.'
+		problem: 'You’re building it yourself, with nobody to check your work.',
+		fix: 'Build with a senior engineer beside you, and learn as you go.'
 	},
 	{
-		problem: 'You’re building your own systems, but not sure you’re doing it right.',
-		fix: 'Build them with an engineer beside you, and learn as you go.'
+		problem: 'Software isn’t your field, and your developers have nobody senior to guide them.',
+		fix: 'Give them an experienced lead, and get the plain-English version yourself.'
 	},
 	{
-		problem: 'Clients want AI and you’re not sure what you can deliver.',
-		fix: 'Work out what you can offer, and how to build it properly.'
+		problem: 'Work ships late, or not how you pictured it.',
+		fix: 'Set up a simple way of working, from brief to release.'
 	},
 	{
-		problem: 'Every client project still needs you in the room.',
-		fix: 'Grow a team that can run projects from brief to delivery.'
+		problem: 'You can’t tell if the team is getting better.',
+		fix: 'Agree on goals and a few useful measures, then improve step by step.'
+	},
+	{
+		problem: 'Everything still waits on you, or one developer.',
+		fix: 'Spread the know-how, so more people can move work forward.'
+	},
+	{
+		problem: 'You’re building with AI, but not sure the result is sound.',
+		fix: 'Decide where it helps, and how its work gets checked.'
 	}
 ];
 
@@ -57,31 +65,45 @@ export type Service = {
 
 export const services: Service[] = [
 	{
-		id: 'coaching',
-		title: 'Hands-on Coaching',
-		headline: 'Grow the people.',
-		outcome: 'Get the work done properly, and keep the skills in your business.',
-		body: 'We set goals and work through problems, build together on your real work, then finish with a short retro on what worked. You and your team learn the technical side and the delivery around it: briefs, planning, building and shipping.',
+		id: 'guidance',
+		title: 'Technical Guidance',
+		headline: 'Connect business and engineering.',
+		outcome: 'Build the things that matter, and know why.',
+		body: 'I work between the people running the business and the people building the product. I help turn goals into technical plans, then bring the costs, risks and choices back in plain English so you can decide.',
 		helpsWith: [
-			'Building together on your real work',
-			'Solution architecture',
-			'Writing briefs and planning work',
-			'Delivering projects end to end',
-			'Progress updates for you'
+			'Turning business goals into technical plans',
+			'Explaining risks and trade-offs',
+			'Architecture and system design',
+			'Planning and priorities',
+			'Big platform and vendor decisions'
 		]
 	},
 	{
-		id: 'advisory',
-		title: 'Technical Advice for Leaders',
-		headline: 'Make better tech calls.',
-		outcome: 'Know where to put your time and money, and why.',
-		body: 'You run the business, but technology shapes what you can sell and deliver. I’m the senior technical person you think things through with: where technology and your market are heading, how your systems fit together, what your team can do, and what to improve next.',
+		id: 'coaching',
+		title: 'Hands-on Coaching',
+		headline: 'Grow whoever’s building.',
+		outcome: 'Get the work done properly, and keep the skills in your business.',
+		body: 'I build alongside you or your developers on real work. We set goals, solve problems together and look back at what worked, so each person can take on more.',
 		helpsWith: [
-			'Where technology and your market are heading',
-			'How your systems work as a whole',
-			'What your team can do, and what’s missing',
-			'What to improve next',
-			'Big platform and vendor decisions'
+			'Building together on your real work',
+			'Code and design reviews',
+			'Solution architecture skills',
+			'Individual goals and feedback',
+			'Using AI tools well'
+		]
+	},
+	{
+		id: 'delivery',
+		title: 'Process & Delivery',
+		headline: 'Improve a little, every cycle.',
+		outcome: 'See what’s working, and keep getting better.',
+		body: 'We look at how work moves from idea to release and fix what slows it down most. Then we set goals, choose a few measures and make small changes your team can keep up. Measures are there to help the team, not rank people.',
+		helpsWith: [
+			'Software development lifecycle (SDLC)',
+			'Briefs, planning and estimates',
+			'Testing, reviews and releases',
+			'Team goals, measures and outcomes',
+			'Retros and steady improvement'
 		]
 	}
 ];
@@ -109,6 +131,7 @@ export const steps: Step[] = [
 
 export const experience: string[] = [
 	'Advising founders and leaders',
+	'Connecting business and engineering',
 	'Software engineering',
 	'Solution architecture',
 	'Integrations and business systems',
@@ -121,14 +144,29 @@ export type Faq = { question: string; answer: string };
 /** Answer the questions people ask before they get in touch. Add real ones as they come up. */
 export const faqs: Faq[] = [
 	{
+		question: 'What is a fractional tech lead?',
+		answer:
+			'A senior engineer who works with you or your team part-time. I help with architecture, review the work, build alongside whoever’s building and coach them as we go. I also help the business and the engineers understand each other.'
+	},
+	{
+		question: 'Is that the same as a fractional CTO?',
+		answer:
+			'No. A CTO usually owns technology strategy, budgets and hiring. I work closer to the team and the code. I can advise on the bigger calls, but you make the final decision.'
+	},
+	{
 		question: 'Who do you work with?',
 		answer:
-			'Founders and leaders of agencies, consultancies and other service firms across Australia. Your business runs on technology, but you don’t have a senior technical leader. Some have a small tech team. Some have none.'
+			'Two kinds of people, all over Australia: founders and owners building their own software, and leaders with up to five developers and no senior technical lead. Many are experts in their own field, and software isn’t it.'
+	},
+	{
+		question: 'How do you measure improvement?',
+		answer:
+			'We start with the outcome you want and how things work today. Then we choose a few useful measures, such as how long work takes to ship or how often it needs fixing, and review them together.'
 	},
 	{
 		question: 'Is this just about AI?',
 		answer:
-			'No. AI is one part of it. Most of the work is platform choices, system design and helping your team deliver. When something new comes along, I help you work out if it matters to your business.'
+			'No. AI is one part of it. Most of the work is system design, growing your team and improving how you deliver. When something new comes along, I help you work out if it matters to your business.'
 	},
 	{
 		question: 'How does working together work?',
@@ -143,7 +181,7 @@ export const faqs: Faq[] = [
 	{
 		question: 'Do I need a tech team already?',
 		answer:
-			'No. I can help you make the right calls now, and help the people you already have build their skills.'
+			'No. If you’re building it yourself, I work with you directly. If you’re about to hire your first developer, I can help you plan for that too.'
 	},
 	{
 		question: 'Do you build things, or only give advice?',

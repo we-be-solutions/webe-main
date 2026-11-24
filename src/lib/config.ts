@@ -12,7 +12,7 @@ export const site = {
 	linkedin: null as string | null,
 	ogImage: 'https://webe.au/og-image.png',
 	description:
-		'Senior technical leadership, without the full-time hire. A technical advisor for leaders of Australian agencies and consultancies: clear advice on platforms, system design and AI, and mentoring that grows your team.'
+		'A hands-on fractional tech lead for Australian teams of up to five developers, and founders building it themselves. Better decisions, skills and delivery.'
 } as const;
 
 /**

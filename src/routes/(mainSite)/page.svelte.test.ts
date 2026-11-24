@@ -10,13 +10,13 @@ describe('/+page.svelte', () => {
 	test('renders the headline', () => {
 		render(Page);
 		expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-			'Senior technical leadership, without the full-time hire.'
+			'Your senior tech lead, whether you’re a team of one or five.'
 		);
 	});
 
-	test('presents both services', () => {
+	test('presents all three services', () => {
 		render(Page);
-		for (const name of ['Hands-on Coaching', 'Technical Advice for Leaders']) {
+		for (const name of ['Technical Guidance', 'Hands-on Coaching', 'Process & Delivery']) {
 			expect(screen.getByRole('heading', { name })).toBeInTheDocument();
 		}
 	});
@@ -46,5 +46,6 @@ describe('/+page.svelte', () => {
 		expect(text).not.toMatch(/Capability Accelerator/);
 		expect(text).not.toMatch(/growing businesses/i);
 		expect(text).not.toMatch(/junior/i);
+		expect(text).not.toMatch(/agenc(y|ies)|consultanc(y|ies)/i);
 	});
 });

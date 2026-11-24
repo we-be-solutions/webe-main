@@ -50,7 +50,7 @@
 </script>
 
 <Seo
-	title="Technical Leadership for Agencies and Consultancies | WeBe Solutions"
+	title="Fractional Tech Lead for Small Teams and Founders | WeBe Solutions"
 	description={site.description}
 	path="/"
 	{jsonLd}
@@ -99,7 +99,7 @@
 				class="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-100 px-3.5 py-1.5 text-sm font-medium text-muted"
 			>
 				<span class="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden="true"></span>
-				Technical advisor to agency and consultancy leaders
+				Fractional tech lead for small teams and founders who build
 			</p>
 			<h1
 				class="mt-7 text-[2.6rem] leading-[1.05] font-semibold tracking-tight sm:text-6xl md:text-7xl"
@@ -107,9 +107,9 @@
 				{headline}
 			</h1>
 			<p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				For agencies and consultancies without a senior tech lead. I work hands-on with whoever is
-				building, your team or you, so the work gets done properly and the skills stay in your
-				business. And I’m on hand for the big tech calls.
+				Building it yourself, or leading up to five developers when software isn’t your field? I
+				connect what the business needs with what gets built, grow your skills on real work, and
+				improve how you deliver, step by step.
 			</p>
 			<div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
 				<CtaBtn btnText={cta} size="lg" />
@@ -133,7 +133,7 @@
 	align="center"
 	eyebrow="Sound familiar?"
 	title="Problems I help businesses solve"
-	intro="You don’t need a full-time technical leader or a big consulting firm. You need the right help at the right time."
+	intro="You don’t need another full-time hire or a big consulting firm. You need the right help at the right time."
 >
 	<ul class="mx-auto max-w-3xl space-y-3">
 		{#each problems as item (item.problem)}
@@ -156,8 +156,8 @@
 	id="services"
 	align="center"
 	eyebrow="How I can help"
-	title="Two ways I help"
-	intro="One grows the people doing the work. The other helps you make the big calls. Most clients need a bit of both."
+	title="Three ways I help"
+	intro="Get business and engineering on the same page, grow whoever’s building, and improve how work gets done. Most clients need a bit of each."
 >
 	<div class="mx-auto max-w-4xl space-y-8">
 		{#each services as service, i (service.id)}
@@ -264,8 +264,9 @@
 			my sleeves and help you do it.
 		</p>
 		<p class="text-muted">
-			I started WeBe because many agency and consultancy leaders make big tech calls without a
-			senior technical person to talk them through. Now they can have one, a few hours at a time.
+			I started WeBe because founders and small teams often make big tech calls without a senior
+			engineer to talk to. Small teams are where I do my best work: close to the code, the people
+			and the business.
 		</p>
 	</div>
 	<ul class="mt-10 flex max-w-3xl flex-wrap gap-2.5" aria-label="Background">

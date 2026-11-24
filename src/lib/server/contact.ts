@@ -98,7 +98,7 @@ export const contactAction = async ({ request }: RequestEvent) => {
 					<p>If there’s anything you’d like me to know beforehand, just reply to this email.</p>
 					<hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;" />
 					<p style="margin-bottom: 0; font-size: 14px; color: #64748b;">
-						${site.name} · Technology Consulting ·
+						${site.name} · Fractional Tech Lead ·
 						<a href="${site.url}" style="color: #007a99; text-decoration: none;">webe.au</a>${
 							site.linkedin
 								? ` · <a href="${site.linkedin}" style="color: #007a99; text-decoration: none;">LinkedIn</a>`

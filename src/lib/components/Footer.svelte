@@ -12,7 +12,8 @@
 					<span class="text-lg font-bold tracking-tight">{site.name}</span>
 				</a>
 				<p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-					Practical technology consulting. Better systems, stronger teams and smarter decisions.
+					Fractional tech lead for small teams and founders who build. Clear goals, stronger teams,
+					better output.
 				</p>
 			</div>
 
