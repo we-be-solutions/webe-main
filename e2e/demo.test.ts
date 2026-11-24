@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('home page has expected h1', async ({ page }) => {
 	await page.goto('/');
 	await expect(page.locator('h1')).toHaveText(
-		'Senior technical leadership, without the full-time hire.'
+		'Your senior tech lead, whether you’re a team of one or five.'
 	);
 });
 
