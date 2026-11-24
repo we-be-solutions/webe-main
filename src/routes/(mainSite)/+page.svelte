@@ -95,21 +95,13 @@
 
 	<div class="relative mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 md:pt-36 md:pb-28 lg:px-8">
 		<div class="max-w-4xl">
-			<p
-				class="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-100 px-3.5 py-1.5 text-sm font-medium text-muted"
-			>
-				<span class="h-1.5 w-1.5 rounded-full bg-secondary" aria-hidden="true"></span>
-				Fractional tech lead for small teams and founders who build
-			</p>
-			<h1
-				class="mt-7 text-[2.6rem] leading-[1.05] font-semibold tracking-tight sm:text-6xl md:text-7xl"
-			>
+			<h1 class="text-[2.6rem] leading-[1.05] font-semibold tracking-tight sm:text-6xl md:text-7xl">
 				{headline}
 			</h1>
 			<p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-				Building it yourself, or leading up to five developers when software isn’t your field? I
-				connect what the business needs with what gets built, grow your skills on real work, and
-				improve how you deliver, step by step.
+				Building it yourself, or leading up to five developers when software isn’t your field? As
+				your fractional tech lead, I connect what the business needs with what gets built, grow your
+				skills on real work, and improve how you deliver, step by step.
 			</p>
 			<div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
 				<CtaBtn btnText={cta} size="lg" />
